@@ -120,16 +120,19 @@ export default function Rank() {
     {/* SECONDARY INFO */}
     <div className="grid grid-cols-2 gap-4 mt-5 text-center">
       
-      {/* Percentile */}
-      <div className="bg-blue-500/30 rounded-xl p-4">
-        <p className="text-xs uppercase tracking-wide opacity-80">
-          Expected Percentile
-        </p>
-        <p className="text-xl font-bold mt-1">
-          {prediction.predicted_percentile} –{" "}
-          {(parseFloat(prediction.predicted_percentile) + 0.1).toFixed(2)}
-        </p>
-      </div>
+    {/* Percentile */}
+<div className="bg-blue-500/30 rounded-xl p-4">
+  <p className="text-xs uppercase tracking-wide opacity-80">
+    Expected Percentile
+  </p>
+  <p className="text-lg font-bold mt-1">
+    {prediction.predicted_percentile_range[0]}{" "}
+    <span className="mx-1">–</span>
+    {prediction.predicted_percentile_range[1]}
+  </p>
+</div>
+
+
 
       {/* Marks */}
       <div className="bg-blue-500/30 rounded-xl p-4">

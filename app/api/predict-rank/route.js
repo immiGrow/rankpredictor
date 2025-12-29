@@ -6,82 +6,132 @@ const client = new MongoClient(uri);
 export async function POST(req) {
   try {
     const { marks } = await req.json();
-    if (!marks) {
-      return new Response(JSON.stringify({ error: "Marks required" }), { status: 400 });
+
+    // ------------------ BASIC VALIDATION ------------------
+    if (marks === undefined || marks < 0 || marks > 300) {
+      return new Response(
+        JSON.stringify({ error: "Marks must be between 0 and 300" }),
+        { status: 400 }
+      );
     }
 
     await client.connect();
     const db = client.db("rank_predictor");
 
-    // Fetch 2024 and 2025 percentile data
-    const dataYears = [2024, 2025];
-    const percentileData = await Promise.all(
-      dataYears.map(async (year) => {
-        const docs = await db
-          .collection("jee_main_marks_percentile")
-          .find({ exam: "JEE_MAIN", year })
-          .sort({ marks_min: 1 })
-          .toArray();
+    // ------------------ FETCH HISTORICAL DATA ------------------
+    const years = [2024, 2025];
+    const percentiles = [];
 
-        // Find the range where marks fall
-        const doc = docs.find(d => marks >= d.marks_min && marks <= d.marks_max);
-        if (!doc) return null;
+    for (const year of years) {
+      const docs = await db
+        .collection("jee_main_marks_percentile")
+        .find({ exam: "JEE_MAIN", year })
+        .sort({ marks_min: 1 })
+        .toArray();
 
-        // Linear interpolation within the range
-        const percentile =
-          doc.percentile_min +
-          ((marks - doc.marks_min) / (doc.marks_max - doc.marks_min)) *
-            (doc.percentile_max - doc.percentile_min);
+      let range =
+        docs.find(d => marks >= d.marks_min && marks <= d.marks_max);
 
-        return { year, percentile };
-      })
-    );
+      // 🛟 If marks exceed historical max → clamp to top range
+      if (!range && marks > docs[docs.length - 1].marks_max) {
+        range = docs[docs.length - 1];
+      }
 
-    if (percentileData.includes(null)) {
-      return new Response(JSON.stringify({ error: "No historical data found for these marks" }), { status: 404 });
+      // 🛟 If marks below historical min → clamp to lowest range
+      if (!range && marks < docs[0].marks_min) {
+        range = docs[0];
+      }
+
+      const interpolated =
+        range.percentile_min +
+        ((marks - range.marks_min) /
+          (range.marks_max - range.marks_min)) *
+          (range.percentile_max - range.percentile_min);
+
+      percentiles.push(interpolated);
     }
 
-    const [p2024, p2025] = percentileData;
+    const p2024 = percentiles[0];
+    const p2025 = percentiles[1];
 
-    // Trend-based extrapolation for 2026
-    const trend = p2025.percentile - p2024.percentile;
-    let predicted_percentile_2026 = p2025.percentile + trend;
+    // ------------------ TREND LOGIC (SOFT) ------------------
+    let predictedPercentile =
+      p2025 + 0.5 * (p2025 - p2024);
 
-    // Clamp percentile between 0 and 100
-    predicted_percentile_2026 = Math.min(100, Math.max(0, predicted_percentile_2026));
+    // ------------------ HARD CLAMP ------------------
+    predictedPercentile = Number(predictedPercentile.toFixed(3));
+    predictedPercentile = Math.min(99.999, Math.max(0.001, predictedPercentile));
 
-    // Fetch total candidates for 2026
-    const meta2026 = await db.collection("jee_main_meta").findOne({ exam: "JEE_MAIN", year: 2026 });
-    if (!meta2026) {
-      return new Response(JSON.stringify({ error: "Meta data for 2026 not found" }), { status: 404 });
+    // ------------------ TOTAL CANDIDATES ------------------
+    const meta = await db
+      .collection("jee_main_meta")
+      .findOne({ exam: "JEE_MAIN", year: 2026 });
+
+    const totalCandidates = meta?.total_candidates || 1545000;
+
+    // ------------------ 🏆 TOPPER OVERRIDE ------------------
+    if (marks >= 295) {
+      return new Response(
+        JSON.stringify({
+          marks,
+          year: 2026,
+          predicted_percentile: "99.999",
+          predicted_percentile_range: ["99.995", "99.999"],
+          predicted_rank_range: [1, 20],
+          total_candidates: totalCandidates
+        }),
+        { status: 200 }
+      );
     }
 
-    const totalCandidates = meta2026.total_candidates;
+    // ------------------ UNCERTAINTY MODEL ------------------
+    let delta;
+if (predictedPercentile >= 99.995) delta = 0.001;
+else if (predictedPercentile >= 99.99) delta = 0.002;
+else if (predictedPercentile >= 99.9) delta = 0.004;
+else if (predictedPercentile >= 99) delta = 0.02;
+else if (predictedPercentile >= 95) delta = 0.05;
+else delta = 0.1;
 
-    // Apply smaller candidate buffer ±1.5% for realistic rank range
-    const totalMin = totalCandidates * 0.985;
-    const totalMax = totalCandidates * 1.015;
 
-    // Apply tiny percentile buffer ±0.05 for uncertainty
-    const percentileMin = predicted_percentile_2026 - 0.05;
-    const percentileMax = predicted_percentile_2026 + 0.05;
+  let pMin = Math.max(0.001, predictedPercentile - delta);
+let pMax = Math.min(99.999, predictedPercentile + delta);
 
-    // Calculate rank range
-    const rank_min = Math.round(totalMin * (100 - percentileMax) / 100);
-    const rank_max = Math.round(totalMax * (100 - percentileMin) / 100);
+// 🚨 CRITICAL: prevent touching 100 unless full marks
+if (marks < 300 && pMax >= 99.999) {
+  pMax = 99.995;
+}
 
+    // ------------------ RANK CALCULATION ------------------
+    let rankLow = Math.round((100 - pMax) * totalCandidates / 100);
+    let rankHigh = Math.round((100 - pMin) * totalCandidates / 100);
+
+    // ------------------ SAFETY GUARDS ------------------
+    rankLow = Math.max(1, rankLow);
+    rankHigh = Math.max(rankLow + 5, rankHigh);
+
+    // ------------------ FINAL RESPONSE ------------------
     return new Response(
       JSON.stringify({
         marks,
         year: 2026,
-        predicted_percentile: predicted_percentile_2026.toFixed(3),
-        predicted_rank_range: [rank_min, rank_max]
+        predicted_percentile: predictedPercentile.toFixed(3),
+        predicted_percentile_range: [
+          pMin.toFixed(3),
+          pMax.toFixed(3)
+        ],
+        predicted_rank_range: [rankLow, rankHigh],
+        total_candidates: totalCandidates
       }),
-      { status: 200, headers: { "Content-Type": "application/json" } }
+      { status: 200 }
     );
-  } catch (err) {
-    console.error(err);
-    return new Response(JSON.stringify({ error: "Server error" }), { status: 500 });
+
+  } catch (error) {
+    console.error(error);
+    return new Response(
+      JSON.stringify({ error: "Internal server error" }),
+      { status: 500 }
+    );
   } finally {
     await client.close();
   }
