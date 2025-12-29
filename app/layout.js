@@ -50,14 +50,14 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://rankpredictor.in",
+    canonical: "https://jeerankpredictor.in",
   },
 
   openGraph: {
     title: "RankPredictor – JEE Main Rank Predictor 2026",
     description:
       "Predict your JEE Main 2026 rank and percentile using marks. Based on previous year trends and public data. Free & accurate JEE Main Rank Predictor.",
-    url: "https://rankpredictor.in",
+    url: "https://jeerankpredictor.in",
     siteName: "RankPredictor",
     locale: "en_IN",
     type: "website",

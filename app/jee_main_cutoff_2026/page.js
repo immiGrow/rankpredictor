@@ -50,14 +50,14 @@ export const metadata = {
    
 
   alternates: {
-    canonical: "https://rankpredictor.in/jee_main_cutoff_2026",
+    canonical: "https://jeerankpredictor.in/jee_main_cutoff_2026",
   },
 
   openGraph: {
     title: "JEE Main 2026 Cutoff – Expected Category-wise Percentile & Marks",
     description:
       "Expected JEE Main 2026 cutoff with category-wise qualifying percentile, cutoff marks, and past year trend analysis. Updated for JEE Advanced eligibility.",
-    url: "https://rankpredictor.in/jee_main_cutoff_2026",
+    url: "https://jeerankpredictor.in/jee_main_cutoff_2026",
     siteName: "RankPredictor",
     type: "article",
     locale: "en_IN",

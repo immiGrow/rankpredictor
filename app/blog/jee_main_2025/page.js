@@ -2,10 +2,43 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "JEE Main 2025 Marks vs Percentile vs Rank – Complete Analysis",
+  title: "JEE Main 2025 Marks vs Percentile vs Rank – Official Trend Analysis",
+  
   description:
-    "Check detailed JEE Main 2025 marks vs percentile vs rank analysis. Understand score ranges, percentile mapping, rank trends, cutoff insights, and preparation guidance based on official data patterns.",
+    "Explore detailed JEE Main 2025 marks vs percentile vs rank analysis. See score-to-percentile mapping, expected rank ranges, cutoff trends, and expert insights based on official JEE Main data.",
+
+  keywords: [
+    "JEE Main 2025 Marks vs Percentile",
+    "JEE Main 2025 Marks vs Rank",
+    "JEE Main 2025 Percentile vs Rank",
+    "JEE Main 2025 Rank Predictor",
+    "JEE Main 2025 Analysis",
+    "JEE Main 2025 Cutoff Trends",
+    "JEE Main Score Calculator",
+  ],
+
+  alternates: {
+    canonical: "https://jeerankpredictor.in/jee_main_2025",
+  },
+
+  openGraph: {
+    title: "JEE Main 2025 Marks vs Percentile vs Rank – Full Analysis",
+    description:
+      "Detailed JEE Main 2025 marks vs percentile vs rank breakdown with cutoff trends and expert explanations.",
+    url: "https://jeerankpredictor.in/jee_main_2025",
+    siteName: "JEE Rank Predictor",
+    type: "article",
+    locale: "en_IN",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "JEE Main 2025 Marks vs Percentile vs Rank",
+    description:
+      "Understand JEE Main 2025 marks, percentile, and rank relationship with official trend analysis.",
+  },
 };
+
 
 export default function page() {
   return (
