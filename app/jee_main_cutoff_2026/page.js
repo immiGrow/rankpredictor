@@ -1,23 +1,7 @@
 
 import Link from "next/link";
 
-export const metadata = {
-  title: "JEE Main 2026 Cutoff – Category-wise Expected Percentile & Marks",
-  
-  description:
-    "Check the expected JEE Main 2026 cutoff for General, OBC, SC, ST, EWS & PwD categories. View qualifying percentile, cutoff marks, previous year trends (2024 & 2025), and expert analysis to estimate your chances.",
-
-  keywords: [
-    "JEE Main 2026 Cutoff",
-    "JEE Main Cutoff 2026 Category Wise",
-    "JEE Main Qualifying Percentile 2026",
-    "JEE Main Cutoff Marks 2026",
-    "JEE Main Expected Cutoff",
-    "JEE Main Cutoff Trends",
-    "JEE Main 2026 Minimum Marks",
-    "JEE Main Cutoff for JEE Advanced",
-  ],
-    faqSchema : {
+const  faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
@@ -46,7 +30,24 @@ export const metadata = {
         }
       }
     ]
-  },
+  }
+export const metadata = {
+  title: "JEE Main 2026 Cutoff – Category-wise Expected Percentile & Marks",
+  
+  description:
+    "Check the expected JEE Main 2026 cutoff for General, OBC, SC, ST, EWS & PwD categories. View qualifying percentile, cutoff marks, previous year trends (2024 & 2025), and expert analysis to estimate your chances.",
+
+  keywords: [
+    "JEE Main 2026 Cutoff",
+    "JEE Main Cutoff 2026 Category Wise",
+    "JEE Main Qualifying Percentile 2026",
+    "JEE Main Cutoff Marks 2026",
+    "JEE Main Expected Cutoff",
+    "JEE Main Cutoff Trends",
+    "JEE Main 2026 Minimum Marks",
+    "JEE Main Cutoff for JEE Advanced",
+  ],
+   
 
   alternates: {
     canonical: "https://rankpredictor.in/jee_main_cutoff_2026",
