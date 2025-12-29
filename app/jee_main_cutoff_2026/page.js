@@ -17,6 +17,36 @@ export const metadata = {
     "JEE Main 2026 Minimum Marks",
     "JEE Main Cutoff for JEE Advanced",
   ],
+    faqSchema : {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "When will the official JEE Main 2026 cutoff be released?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NTA usually releases the official JEE Main cutoff after the results of each session, typically a few days after the exam."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is qualifying cutoff same as admission cutoff?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Qualifying cutoff is the minimum score required to pass JEE Main, while admission cutoffs vary by institute, course, and category."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How should I use JEE Main cutoff predictions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Expected cutoffs help students set realistic preparation targets and evaluate their chances before official cutoffs are announced."
+        }
+      }
+    ]
+  },
 
   alternates: {
     canonical: "https://rankpredictor.in/jee_main_cutoff_2026",
@@ -41,10 +71,14 @@ export const metadata = {
 };
 
 
+
 export default function page() {
   return (
     <>
-
+  <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
     <main className="px-6 py-10 max-w-7xl mx-auto">
       {/* Hero Section */}
       <section className="text-center mb-12">
