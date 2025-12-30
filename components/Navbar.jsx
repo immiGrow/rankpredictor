@@ -14,15 +14,15 @@ function Navbar() {
 
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-3">
-          <Image src={logo} className="w-12" width={120} height={100} alt="RankPredictor Logo" />
-          <span className="text-2xl font-semibold">
+          <Image src={logo} className="w-10 md:w-12" width={120} height={100} alt="RankPredictor Logo" />
+          <span className="text-xl md:text-2xl font-semibold">
             <span className="text-blue-500 font-bold">Rank</span>
             <span className="text-green-500 font-bold">Predictor</span>
           </span>
         </Link>
 
         {/* Hamburger */}
-        <button
+        <button aria-label="Open Menu"
           onClick={() => setOpen(!open)}
           className="inline-flex items-center p-2 w-10 h-10 justify-center md:hidden rounded hover:bg-neutral-secondary-soft focus:outline-none"
         >

@@ -77,7 +77,7 @@ export default function Rank() {
               onChange={(e) => setMarks(Number(e.target.value))}
               className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
             />
-            <div className="flex justify-between text-sm text-gray-500 mt-1">
+            <div className="flex justify-between text-sm text-gray-600 mt-1">
               <span>0</span>
               <span>300</span>
             </div>
@@ -85,7 +85,7 @@ export default function Rank() {
         </div>
 
         {/* Predict Button */}
-        <button
+        <button aria-label="Rank Predictor"
           onClick={handlePredict}
           disabled={loading}
           className="w-full bg-blue-700 hover:bg-blue-600 cursor-pointer text-white py-3 rounded-lg font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed"
@@ -104,15 +104,15 @@ export default function Rank() {
 
     {/* MAIN RESULT – RANK */}
     <div className="bg-white text-blue-700 rounded-xl p-5 text-center shadow-md">
-      <p className="text-sm uppercase tracking-wide text-gray-500 mb-1">
+      <p className="text-sm uppercase tracking-wide text-gray-600 mb-1">
         Expected Rank
       </p>
       <p className="text-4xl md:text-5xl font-extrabold">
         {formatNumber(prediction.predicted_rank_range[0])}
-        <span className="text-2xl font-semibold text-gray-500 mx-2">–</span>
+        <span className="text-2xl font-semibold text-gray-600 mx-2">–</span>
         {formatNumber(prediction.predicted_rank_range[1])}
       </p>
-      <p className="text-sm text-gray-500 mt-1">
+      <p className="text-sm text-gray-600 mt-1">
         (Estimated for 2026)
       </p>
     </div>

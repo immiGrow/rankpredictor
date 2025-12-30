@@ -14,13 +14,13 @@ export default function Footer() {
             </span>
           </Link>
 
-          <p className="text-sm leading-relaxed text-gray-400">
+          <p className="text-sm leading-relaxed text-gray-300">
             <strong>RankPredictor</strong> is a free JEE Main Rank Predictor 2026
             that estimates your expected rank and percentile using previous year
             JEE Main data and trends.
           </p>
 
-          <ul className="mt-4 space-y-2 text-sm text-gray-400">
+          <ul className="mt-4 space-y-2 text-sm text-gray-300">
             <li>• Data sources: NTA & coaching institute reports</li>
             <li>• Predictions based on historical analysis</li>
             <li>• Not affiliated with NTA or JEE authorities</li>
