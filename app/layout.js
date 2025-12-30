@@ -73,19 +73,20 @@ export const metadata = {
   category: "Education",
 };
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      
-      <body
-        className={`${poppins.variable} `}
-      >
-        <Navbar/>
-        {children}
-         <Footer/>
+      <body className={poppins.variable}>
+        <Navbar />
+
+        {/* Main content landmark */}
+        <main id="main-content" className="min-h-screen">
+          {children}
+        </main>
+
+        <Footer />
       </body>
-     
     </html>
   );
 }
+
