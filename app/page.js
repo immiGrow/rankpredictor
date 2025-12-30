@@ -1,12 +1,5 @@
-"use client";
 import Script from "next/script";
-import dynamic from "next/dynamic";
-
-const Rank = dynamic(() => import("@/components/Rank"), {
-  ssr: false,
-  loading: () => <p className="text-center">Loading predictor...</p>,
-});
-
+import Rank from "@/components/Rank";
 
 export default function Home() {
   return (
