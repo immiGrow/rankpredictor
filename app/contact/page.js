@@ -13,8 +13,10 @@ export default function ContactPage() {
       {/* ================= HERO ================= */}
       <section className="text-center mb-14">
         <h1 className="text-4xl font-bold mb-4">
-          Contact <span className="text-blue-600">Rank</span>
-          <span className="text-green-600">Predictor</span>
+          Contact  <span className="">
+            <span className="text-blue-500 ">JEE</span>
+            <span className="text-gray-900">RankPredictor</span>
+          </span>
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           Have a question, suggestion, or found something that needs correction?

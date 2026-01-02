@@ -14,8 +14,10 @@ export default function page() {
       {/* ================= HERO ================= */}
       <section className="text-center mb-14">
         <h1 className="text-4xl font-bold mb-4">
-          About <span className="text-blue-600">Rank</span>
-          <span className="text-green-600">Predictor</span>
+          About  <span className="">
+            <span className="text-blue-500 ">JEE</span>
+            <span className="text-gray-900">RankPredictor</span>
+          </span>
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           A transparent, data-driven platform built to help JEE aspirants
@@ -36,14 +38,20 @@ export default function page() {
 
       {/* ================= WHY BUILT ================= */}
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-3">Why RankPredictor Exists</h2>
+        <h2 className="text-2xl font-semibold mb-3">Why  <span className="">
+            <span className="text-blue-500 ">JEE</span>
+            <span className="text-gray-900">RankPredictor</span>
+          </span> Exists</h2>
         <p className="leading-relaxed text-gray-700">
           Many students focus only on marks, but competitive exams like JEE Main
           are evaluated using percentiles and normalization. This often creates
           confusion and anxiety.
         </p>
         <p className="leading-relaxed text-gray-700 mt-3">
-          RankPredictor was built to bridge this gap by providing:
+           <span className="">
+            <span className="text-blue-500 ">JEE</span>
+            <span className="text-gray-900">RankPredictor</span>
+          </span> was built to bridge this gap by providing:
         </p>
         <ul className="list-disc pl-6 mt-3 space-y-2 text-gray-700">
           <li>Marks to percentile understanding</li>
@@ -79,7 +87,10 @@ export default function page() {
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-3">Data Sources & Accuracy</h2>
         <p className="leading-relaxed text-gray-700">
-          RankPredictor uses publicly available data from:
+           <span className="">
+            <span className="text-blue-500 ">JEE</span>
+            <span className="text-gray-900">RankPredictor</span>
+          </span>uses publicly available data from:
         </p>
         <ul className="list-disc pl-6 mt-3 space-y-2 text-gray-700">
           <li>National Testing Agency (NTA) public reports</li>
@@ -97,7 +108,10 @@ export default function page() {
       <section className="mb-12 border border-gray-200 p-6 rounded-xl">
         <h2 className="text-2xl font-semibold mb-3">Important Disclaimer</h2>
         <p className="text-gray-700 leading-relaxed">
-          RankPredictor is <strong>not affiliated</strong> with the National
+           <span className="">
+            <span className="text-blue-500 ">JEE</span>
+            <span className="text-gray-900">RankPredictor</span>
+          </span> is <strong>not affiliated</strong> with the National
           Testing Agency (NTA) or any coaching institute. All predictions are
           estimates intended for guidance purposes only.
         </p>

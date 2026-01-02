@@ -21,14 +21,14 @@ export default function sitemap() {
     {
       url: `${baseUrl}/blog/jee_main_2025`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 0.8,
     },
 
     {
       url: `${baseUrl}/jee_main_cutoff_2026`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 0.8,
     },
 
