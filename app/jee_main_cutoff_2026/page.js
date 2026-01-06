@@ -180,10 +180,10 @@ export default function page() {
           Tools & Resources for JEE Main 2026
         </h2>
         <div className="flex flex-wrap font-semibold justify-center gap-4">
-          <Link href="/" className="btn-primary">
+          <Link href="/jee-rank-predictor" className="bg-blue-500 py-2 px-3 text-white rounded-lg hover:bg-blue-600">
             Rank Predictor
           </Link>
-          <Link href="/" className="btn-primary">
+          <Link href="/jee_main_marks_vs_rank_2026" className="bg-gray-400 py-2 px-3 text-black rounded-lg hover:bg-gray-500">
             Marks vs Percentile
             </Link>
         </div>

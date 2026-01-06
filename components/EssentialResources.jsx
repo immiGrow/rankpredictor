@@ -11,7 +11,7 @@ export default function EssentialResources() {
       description:
         "Complete breakdown of score trends for the 2025 session. Check what marks you need for 99%ile.",
       icon: <AiOutlineBarChart size={28} className="text-blue-500" />,
-      redirect:"/blog/jee_main_2025"
+      redirect:"/jee-mains-marks-analysis-2025"
     },
     {
       type: "Prediction",
@@ -31,11 +31,11 @@ export default function EssentialResources() {
     },
     {
       type: "Tool",
-      title: "JEE Main Percentile Predictor",
+      title: "JEE Main Rank Predictor",
       description:
         "Calculate your expected percentile and rank instantly based on your mock test scores.",
       icon: <AiOutlineCalculator size={28} className="text-blue-500" />,
-        redirect:"/"
+        redirect:"/jee-rank-predictor"
     },
     {
       type: "Tool",

@@ -1,161 +1,232 @@
+"use client";
 
 import Head from "next/head";
 import Link from "next/link";
-
-export const metadata = {
-  title: "JEE Main Marks vs Rank 2026 (Expected) – Accurate Prediction",
-  description:
-    "Check expected JEE Main 2026 marks vs rank based on 2024 & 2025 trends. Get accurate rank prediction, percentile range, cutoff analysis & FAQs.",
-  alternates: {
-    canonical: "https://yourdomain.com/jee-main-marks-vs-rank-2026",
-  },
-};
+import Script from "next/script";
+import { motion } from "framer-motion";
+import { FaArrowRight, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { useState } from "react";
+import HubPage from "@/components/HubPage";
 
 export default function JeeMainMarksVsRank2026() {
+  // FAQ Accordion state
+  const [openFaq, setOpenFaq] = useState({});
+
+  const toggleFaq = (i) => {
+    setOpenFaq((prev) => ({ ...prev, [i]: !prev[i] }));
+  };
+
+  const keyMarks = ["94", "120", "150", "200"];
+
+  const quickTableData = [
+    ["300", "1"],
+    ["280 – 290", "20 – 60"],
+    ["250 – 270", "100 – 400"],
+    ["200 – 220", "1,000 – 3,000"],
+    ["150 – 180", "5,000 – 15,000"],
+    ["120 – 150", "15,000 – 40,000"],
+    ["94", "82,000 – 88,000"],
+  ];
+
+  const detailedTableData = [
+    ["290 – 300", "1 – 10"],
+    ["270 – 289", "20 – 60"],
+    ["250 – 269", "100 – 350"],
+    ["230 – 249", "350 – 900"],
+    ["210 – 229", "900 – 1,800"],
+    ["190 – 209", "1,800 – 3,200"],
+    ["170 – 189", "3,200 – 6,000"],
+    ["150 – 169", "6,000 – 12,000"],
+    ["130 – 149", "12,000 – 25,000"],
+    ["110 – 129", "25,000 – 45,000"],
+    ["100 – 109", "45,000 – 65,000"],
+    ["90 – 99", "78,000 – 95,000"],
+    ["80 – 89", "95,000 – 1,20,000"],
+    ["Below 80", "1,20,000+"],
+  ];
+
+  const faqs = [
+    {
+      question: "What is Marks vs Rank in JEE Main?",
+      answer:
+        "Marks vs Rank shows the expected All India Rank based on your JEE Main score and trends from previous years.",
+    },
+    {
+      question: "Can the same marks give different ranks in different shifts?",
+      answer:
+        "Yes, normalization and shift difficulty can lead to slightly different ranks for the same marks.",
+    },
+    {
+      question: "How is percentile related to rank?",
+      answer:
+        "Percentile shows the percentage of candidates who scored less than you; higher percentile generally means better rank.",
+    },
+    {
+      question: "How can I estimate my exact rank?",
+      answer:
+        "Use our interactive JEE Main Rank Predictor tool to input your marks and percentile to get an instant expected rank.",
+    },
+  ];
+
   return (
     <>
-   
-  
-    <main className="max-w-6xl mx-auto px-4 py-8">
-      {/* H1 */}
-      <h1 className="text-3xl md:text-4xl font-bold mb-4">
-        JEE Main Marks vs Rank 2026 (Expected & Accurate Prediction)
-      </h1>
+      <Head>
+        <title>JEE Main Marks vs Rank 2026 – Accurate Prediction</title>
+        <meta
+          name="description"
+          content="Check expected JEE Main 2026 marks vs rank based on 2024 & 2025 trends. Get accurate rank prediction, percentile range, cutoff analysis & FAQs."
+        />
+        <link
+          rel="canonical"
+          href="https://www.jeerankpredictor.in/jee_main_marks_vs_rank_2026"
+        />
+      </Head>
 
-      {/* Intro */}
-      <p className="text-gray-700 mb-6 leading-relaxed">
-        Understanding the expected <strong>JEE Main 2026 marks vs rank</strong>{" "}
-        helps aspirants set realistic score targets and prepare strategically.
-        Since NTA releases ranks only after results, this analysis is based on
-        official <strong>JEE Main 2024 and 2025 data</strong>, normalization
-        patterns, and candidate distribution trends.
-      </p>
+      {/* FAQ Schema */}
+      <Script
+        id="faq-schema-marks-vs-rank-2026"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((f) => ({
+              "@type": "Question",
+              name: f.question,
+              acceptedAnswer: { "@type": "Answer", text: f.answer },
+            })),
+          }),
+        }}
+      />
 
-      {/* CTA */}
-      <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-8">
-        <p className="font-semibold text-blue-900 mb-2">
-          🔍 Want a personalized estimate?
-        </p>
-        <p className="text-blue-800">
-          Try our{" "}
+      <main className="max-w-6xl mx-auto px-4 py-10">
+        {/* Hero + CTA */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="mb-10"
+        >
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+            JEE Main Marks vs Rank 2026 – Expected & Accurate Prediction
+          </h1>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Understanding your expected{" "}
+            <strong>JEE Main 2026 marks vs rank</strong> helps set realistic
+            targets. Analysis is based on official 2024–2025 trends and NTA
+            normalization.
+          </p>
           <Link
             href="/"
-            className="underline font-semibold"
+            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700"
           >
-            JEE Main Rank Predictor
-          </Link>{" "}
-          to get an instant expected rank and percentile.
-        </p>
-      </div>
+            Predict Your Rank Now <FaArrowRight className="inline ml-2" />
+          </Link>
+        </motion.div>
 
-      {/* Quick Estimate */}
-      <h2 className="text-2xl font-semibold mb-4">
-        JEE Main 2026 Marks vs Rank – Quick Estimate
-      </h2>
+     <HubPage/>
 
-      <div id="percentile_rank" className="overflow-x-auto mb-8">
-        <table className="w-full border border-gray-200 text-sm">
-          <thead className="bg-gray-100">
-            <tr>
-              <th className="border px-3 py-2">Marks</th>
-              <th className="border px-3 py-2">
-                Expected Rank Range (2026)
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td className="border px-3 py-2">300</td><td className="border px-3 py-2">1</td></tr>
-            <tr><td className="border px-3 py-2">280 – 290</td><td className="border px-3 py-2">20 – 60</td></tr>
-            <tr><td className="border px-3 py-2">250 – 270</td><td className="border px-3 py-2">100 – 400</td></tr>
-            <tr><td className="border px-3 py-2">200 – 220</td><td className="border px-3 py-2">1,000 – 3,000</td></tr>
-            <tr><td className="border px-3 py-2">150 – 180</td><td className="border px-3 py-2">5,000 – 15,000</td></tr>
-            <tr><td className="border px-3 py-2">120 – 150</td><td className="border px-3 py-2">15,000 – 40,000</td></tr>
-            <tr className="bg-green-50 font-semibold">
-              <td className="border px-3 py-2">94</td>
-              <td className="border px-3 py-2">82,000 – 88,000</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      {/* Detailed Table */}
-      <h2 className="text-2xl font-semibold mb-4">
-        Expected JEE Main 2026 Marks vs Rank (Based on Trend Analysis)
-      </h2>
-
-      <div className="overflow-x-auto mb-10">
-        <table className="w-full border border-gray-200 text-sm">
-          <thead className="bg-gray-100">
-            <tr>
-              <th className="border px-3 py-2">Marks Range</th>
-              <th className="border px-3 py-2">Expected Rank</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              ["290 – 300", "1 – 10"],
-              ["270 – 289", "20 – 60"],
-              ["250 – 269", "100 – 350"],
-              ["230 – 249", "350 – 900"],
-              ["210 – 229", "900 – 1,800"],
-              ["190 – 209", "1,800 – 3,200"],
-              ["170 – 189", "3,200 – 6,000"],
-              ["150 – 169", "6,000 – 12,000"],
-              ["130 – 149", "12,000 – 25,000"],
-              ["110 – 129", "25,000 – 45,000"],
-              ["100 – 109", "45,000 – 65,000"],
-              ["90 – 99", "78,000 – 95,000"],
-              ["80 – 89", "95,000 – 1,20,000"],
-              ["Below 80", "1,20,000+"],
-            ].map(([marks, rank]) => (
-              <tr key={marks}>
-                <td className="border px-3 py-2">{marks}</td>
-                <td className="border px-3 py-2">{rank}</td>
+        {/* Quick Table */}
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="overflow-x-auto mb-10">
+          <table className="w-full border text-sm border-gray-200">
+            <thead className="bg-gray-100">
+              <tr>
+                <th className="border px-3 py-2">Marks</th>
+                <th className="border px-3 py-2">Expected Rank (2026)</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            </thead>
+            <tbody>
+              {quickTableData.map(([marks, rank]) => (
+                <tr key={marks} className={marks === "94" ? "bg-green-50 font-semibold" : ""}>
+                  <td className="border px-3 py-2">{marks}</td>
+                  <td className="border px-3 py-2">{rank}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </motion.div>
 
-      {/* 94 Marks Explanation */}
-      <h2 className="text-2xl font-semibold mb-3">
-        What Rank Can You Expect at 94 Marks in JEE Main 2026?
-      </h2>
-      <p className="text-gray-700 mb-6 leading-relaxed">
-        Based on the average percentile mapping from JEE Main 2024 and 2025,
-        a score of <strong>94 marks</strong> usually corresponds to a percentile
-        range of <strong>94.1 – 94.6</strong>. Assuming approximately{" "}
-        <strong>10–11 lakh candidates</strong>, the most realistic rank range is:
-      </p>
+        {/* Detailed Table */}
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="overflow-x-auto mb-10">
+          <h2 className="text-2xl font-semibold mb-4">
+            Detailed Marks vs Rank – Trend Analysis
+          </h2>
+          <table className="w-full border text-sm border-gray-200">
+            <thead className="bg-gray-100">
+              <tr>
+                <th className="border px-3 py-2">Marks Range</th>
+                <th className="border px-3 py-2">Expected Rank</th>
+              </tr>
+            </thead>
+            <tbody>
+              {detailedTableData.map(([marks, rank]) => (
+                <tr key={marks}>
+                  <td className="border px-3 py-2">{marks}</td>
+                  <td className="border px-3 py-2">{rank}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </motion.div>
 
-      <p className="text-lg font-bold text-green-700 mb-8">
-        ✅ Expected Rank: 82,000 – 88,000
-      </p>
+        {/* Factors */}
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mb-10">
+          <h2 className="text-2xl font-semibold mb-3">Factors Affecting Marks vs Rank</h2>
+          <ul className="list-disc pl-6 text-gray-700 space-y-2">
+            <li>Total number of candidates appearing for JEE Main 2026</li>
+            <li>Difficulty level of different shifts</li>
+            <li>Normalization and percentile calculation by NTA</li>
+            <li>Score clustering at mid-range marks</li>
+            <li>Bonus or dropped questions</li>
+          </ul>
+        </motion.div>
 
-      {/* Factors */}
-      <h2 className="text-2xl font-semibold mb-3">
-        Factors Affecting JEE Main 2026 Marks vs Rank
-      </h2>
-      <ul className="list-disc pl-6 text-gray-700 mb-10 space-y-2">
-        <li>Total number of candidates appearing for JEE Main 2026</li>
-        <li>Difficulty level of different shifts</li>
-        <li>Normalization and percentile calculation by NTA</li>
-        <li>Score clustering at mid-range marks</li>
-        <li>Bonus or dropped questions</li>
-      </ul>
+        {/* Related Internal Links */}
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="bg-gray-50 border rounded-xl p-6 mb-10">
+          <h2 className="text-xl font-semibold mb-3">Related Resources</h2>
+          <ul className="list-disc pl-6 space-y-2 text-blue-600">
+            <li><Link href="/jee-rank-predictor">JEE Main Rank Predictor 2026</Link></li>
+            <li><Link href="/">JEE Main Percentile Predictor</Link></li>
+            <li><Link href="/jee_main_cutoff_2026">JEE Main Cutoff 2026</Link></li>
+            <li><Link href="/jee-mains-marks-analysis-2025">JEE Main Marks vs Percentile Analysis 2025</Link></li>
+          </ul>
+        </motion.div>
 
-      {/* Internal Links */}
-      <div className="bg-gray-50 border rounded-xl p-6">
-        <h2 className="text-xl font-semibold mb-3">Related JEE Main Resources</h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li><Link className="text-blue-600 underline" href="/">JEE Main 2026 Percentile Predictor</Link></li>
-          <li><Link className="text-blue-600 underline" href="/jee_main_cutoff_2026">JEE Main Cutoff 2026</Link></li>
-          <li><Link className="text-blue-600 underline" href="/">JEE Main Rank Predictor 2026</Link></li>
-          <li><Link className="text-blue-600 underline" href="/blog/jee_main_2025">JEE Main Marks vs Percentile 2025</Link></li>
-        </ul>
-      </div>
-    </main>
+        {/* FAQ Accordion */}
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mb-10">
+          <h2 className="text-2xl font-semibold mb-4">Frequently Asked Questions (FAQs)</h2>
+          {faqs.map((f, i) => (
+            <div key={i} className="border-b border-gray-200 mb-2">
+              <button
+                onClick={() => toggleFaq(i)}
+                className="w-full flex justify-between items-center py-3 font-semibold text-gray-800 hover:text-blue-600"
+              >
+                {f.question}
+                {openFaq[i] ? <FaChevronUp /> : <FaChevronDown />}
+              </button>
+              {openFaq[i] && (
+                <p className="text-gray-700 px-4 pb-3">{f.answer}</p>
+              )}
+            </div>
+          ))}
+        </motion.div>
 
-     </>
+        {/* External References */}
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mb-10">
+          <h2 className="text-xl font-semibold mb-3">External References</h2>
+          <ul className="list-disc pl-6 space-y-2 text-blue-600">
+            <li>
+              <a href="https://engineering.careers360.com/articles/marks-vs-percentile-jee-mains-2025" target="_blank" rel="nofollow">
+                Careers360 – Marks vs Percentile Analysis
+              </a>
+            </li>
+            <li>
+              <a href="https://nta.ac.in" target="_blank" rel="nofollow">
+                NTA Official Website
+              </a>
+            </li>
+          </ul>
+        </motion.div>
+      </main>
+    </>
   );
 }

@@ -11,10 +11,10 @@ import {
 export default function Footer() {
   return (
     <footer className="bg-gray-950 text-gray-300 mt-20">
-      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-5 gap-12">
 
         {/* BRAND + SEO */}
-        <div>
+        <div className="md:col-span-2">
           <Link href="/" className="inline-block mb-4">
             <h2 className="text-2xl font-extrabold tracking-tight">
               <span className="text-blue-500">JEE</span>
@@ -46,7 +46,7 @@ export default function Footer() {
             <li className="flex items-center gap-2">
               <FaChartLine className="text-blue-400" />
               <Link href="/" className="hover:text-white">
-                JEE Main Rank Predictor 2026
+                JEE Main Rank Predictor
               </Link>
             </li>
             <li className="flex items-center gap-2">
@@ -57,14 +57,60 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-2">
               <FaUniversity className="text-blue-400" />
-              <Link href="https://collegedunia.com/college-predictor" target="_blank" className="hover:text-white">
-                College Predictor (IITs, NITs, IIITs)
+              <a
+                href="https://collegedunia.com/college-predictor"
+                target="_blank"
+                rel="nofollow"
+                className="hover:text-white"
+              >
+                College Predictor (External)
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* MARKS ANALYSIS (SEO GOLD) */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-4">
+            Marks Analysis
+          </h3>
+          <ul className="space-y-3 text-sm">
+            <li>
+              <Link
+                href="/jee-mains-marks-analysis-2025"
+                className="hover:text-white"
+              >
+                JEE Main Marks Analysis 2025
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/jee-mains-120-marks-percentile-2025"
+                className="hover:text-white"
+              >
+                120 Marks in JEE Mains – Percentile & Rank
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/jee-mains-150-marks-percentile-2025"
+                className="hover:text-white"
+              >
+                150 Marks in JEE Mains – 99 Percentile Chances
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/jee-mains-200-marks-percentile-2025"
+                className="hover:text-white"
+              >
+                200 Marks in JEE Mains – Top Rank Analysis
               </Link>
             </li>
           </ul>
         </div>
 
-        {/* RESOURCES / BLOGS */}
+        {/* RESOURCES */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">
             JEE Main Resources
@@ -76,10 +122,9 @@ export default function Footer() {
                 href="/blog/nta_percentile_calculation"
                 className="hover:text-white"
               >
-                How NTA Calculates JEE Main Percentile
+                How NTA Calculates Percentile
               </Link>
             </li>
-
             <li className="flex items-center gap-2">
               <FaBookOpen className="text-blue-400" />
               <Link
@@ -89,17 +134,6 @@ export default function Footer() {
                 JEE Main Marks vs Rank 2026
               </Link>
             </li>
-
-            <li className="flex items-center gap-2">
-              <FaBookOpen className="text-blue-400" />
-              <Link
-                href="/jee_main_marks_vs_rank_2026"
-                className="hover:text-white"
-              >
-                JEE Main Marks vs Percentile 2026
-              </Link>
-            </li>
-
             <li className="flex items-center gap-2">
               <FaBookOpen className="text-blue-400" />
               <Link
@@ -112,7 +146,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* TRUST / LEGAL */}
+        {/* TRUST */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">
             Trust & Info
@@ -148,7 +182,7 @@ export default function Footer() {
 
       {/* BOTTOM BAR */}
       <div className="border-t border-gray-800 py-5 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} JEERankPredictor.in · Free JEE Main Rank & Percentile Predictor 2026
+        © {new Date().getFullYear()} JEERankPredictor.in · Free JEE Main Rank & Percentile Predictor
       </div>
     </footer>
   );

@@ -9,6 +9,7 @@ import PercentileRankTable from "@/components/PercentileRankTable";
 import MarksPercentileTable from "@/components/MarksPercentileTable";
 import EssentialResources from "@/components/EssentialResources";
 import FAQSection from "@/components/FAQSection";
+import HubPage from "@/components/HubPage";
 
 /* =======================
    SEO METADATA (HOMEPAGE)
@@ -173,6 +174,9 @@ export default function Home() {
 
 {/* Essential Resources Section */}
 <EssentialResources/>
+
+{/* JEE MAINS 120 150 200 marks pages links */}
+<HubPage/>
         {/* FAQ */}
         <FAQSection/>
       </main>

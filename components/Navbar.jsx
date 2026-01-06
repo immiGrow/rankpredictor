@@ -40,7 +40,7 @@ export default function Navbar() {
         <ul className="hidden md:flex items-center gap-8 font-medium text-sm">
 
           <li>
-            <Link href="/" className="hover:text-blue-400 transition">
+            <Link href="/jee-rank-predictor" className="hover:text-blue-400 transition">
               Rank Predictor
             </Link>
           </li>
@@ -58,7 +58,7 @@ export default function Navbar() {
 
           <li>
             <Link
-              href="/jee_main_marks_vs_rank_2026"
+              href="/jee-mains-marks-analysis-2025"
               className="hover:text-blue-400 transition"
             >
               Marks vs Rank
@@ -139,10 +139,10 @@ export default function Navbar() {
             <li className="flex items-center gap-2">
               <FaBookOpen className="text-blue-400" />
               <Link
-                href="/jee_main_marks_vs_rank_2026"
+                href="/jee-mains-marks-analysis-2025"
                 onClick={() => setOpen(false)}
               >
-                Marks vs Rank 2026
+                Marks vs Rank 
               </Link>
             </li>
 
