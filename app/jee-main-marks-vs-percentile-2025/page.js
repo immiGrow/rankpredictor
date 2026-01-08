@@ -2,6 +2,7 @@
 
 import HubPage from "@/components/HubPage";
 import { motion } from "framer-motion";
+import Head from "next/head";
 import Link from "next/link";
 import Script from "next/script";
 import { FaCheckCircle, FaExternalLinkAlt } from "react-icons/fa";
@@ -9,6 +10,36 @@ import { FaCheckCircle, FaExternalLinkAlt } from "react-icons/fa";
 export default function Page() {
   return (
     <>
+     <Head>
+        {/* Primary SEO */}
+        <title>JEE Main Marks vs Percentile 2025 (Shift-wise & Accurate Analysis)</title>
+
+        <meta
+          name="description"
+          content="Check JEE Main 2025 marks vs percentile with accurate shift-wise analysis, expected rank ranges, normalization logic, FAQs & expert insights."
+        />
+
+        {/* Canonical */}
+        <link
+          rel="canonical"
+          href="https://www.jeerankpredictor.in/jee-main-marks-vs-percentile-2025"
+        />
+
+        {/* Robots */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="JEE Main Marks vs Percentile 2025 – Shift-wise Analysis" />
+        <meta property="og:description" content="Accurate JEE Main 2025 marks vs percentile table with expected ranks, shift-wise difficulty impact & normalization explained." />
+        <meta property="og:url" content="https://www.jeerankpredictor.in/jee-main-marks-vs-percentile-2025" />
+        <meta property="og:site_name" content="JEERankPredictor.in" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="JEE Main Marks vs Percentile 2025 – Complete Analysis" />
+        <meta name="twitter:description" content="Know how marks convert to percentile in JEE Main 2025. Includes shift-wise impact, rank estimates & FAQs." />
+      </Head>
       {/* FAQ SCHEMA */}
      <Script
   id="faq-schema-marks-vs-percentile"
