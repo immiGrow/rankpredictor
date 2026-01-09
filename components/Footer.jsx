@@ -23,7 +23,7 @@ export default function Footer() {
           </Link>
 
           <p className="text-sm leading-relaxed text-gray-400">
-            <strong>JEERankPredictor.in</strong> is a free and accurate
+            <strong>JEERankPredictor.in</strong> is a free and data-driven
             <strong> JEE Main Rank Predictor 2026</strong> that helps students
             estimate their expected <strong>All India Rank (AIR)</strong>,
             percentile, and college chances using previous year trends and
