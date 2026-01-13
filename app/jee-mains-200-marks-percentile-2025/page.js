@@ -24,14 +24,14 @@ export default function Page() {
         />
         <link
           rel="canonical"
-          href="https://www.jeerankpredictor.in/jee-mains-200-marks-percentile-2025"
+          href="https://jeerankpredictor.in/jee-mains-200-marks-percentile-2025"
         />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="200 Marks in JEE Mains 2025 – Percentile, Rank & Analysis" />
         <meta property="og:description" content="Check what percentile and expected rank you can get in JEE Mains 2025 with 200 marks. Includes shift-wise analysis, trends, and rank estimates." />
-        <meta property="og:url" content="https://www.jeerankpredictor.in/jee-mains-200-marks-percentile-2025" />
+        <meta property="og:url" content="https://jeerankpredictor.in/jee-mains-200-marks-percentile-2025" />
         <meta property="og:site_name" content="JEERankPredictor.in" />
 
         {/* Twitter */}

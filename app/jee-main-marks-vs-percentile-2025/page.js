@@ -22,7 +22,7 @@ export default function Page() {
         {/* Canonical */}
         <link
           rel="canonical"
-          href="https://www.jeerankpredictor.in/jee-main-marks-vs-percentile-2025"
+          href="https://jeerankpredictor.in/jee-main-marks-vs-percentile-2025"
         />
 
         {/* Robots */}
@@ -32,7 +32,7 @@ export default function Page() {
         <meta property="og:type" content="article" />
         <meta property="og:title" content="JEE Main Marks vs Percentile 2025 – Shift-wise Analysis" />
         <meta property="og:description" content="Accurate JEE Main 2025 marks vs percentile table with expected ranks, shift-wise difficulty impact & normalization explained." />
-        <meta property="og:url" content="https://www.jeerankpredictor.in/jee-main-marks-vs-percentile-2025" />
+        <meta property="og:url" content="https://jeerankpredictor.in/jee-main-marks-vs-percentile-2025" />
         <meta property="og:site_name" content="JEERankPredictor.in" />
 
         {/* Twitter */}

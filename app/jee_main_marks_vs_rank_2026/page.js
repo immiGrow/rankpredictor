@@ -78,7 +78,7 @@ export default function JeeMainMarksVsRank2026() {
         />
         <link
           rel="canonical"
-          href="https://www.jeerankpredictor.in/jee_main_marks_vs_rank_2026"
+          href="https://jeerankpredictor.in/jee_main_marks_vs_rank_2026"
         />
       </Head>
 

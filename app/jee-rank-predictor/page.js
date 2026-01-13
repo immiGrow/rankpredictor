@@ -16,10 +16,10 @@ export default function JeeRankPredictorPage() {
           name="description"
           content="Use our JEE Rank Predictor 2026 tool to estimate your expected All India Rank (AIR) from your percentile. Accurate, free, and student-friendly."
         />
-        <link rel="canonical" href="https://www.jeerankpredictor.in/jee-rank-predictor" />
+        <link rel="canonical" href="https://jeerankpredictor.in/jee-rank-predictor" />
         <meta property="og:title" content="JEE Rank Predictor 2026 – Predict Your AIR" />
         <meta property="og:description" content="Estimate your expected JEE Main 2026 rank from your percentile using our free tool." />
-        <meta property="og:url" content="https://www.jeerankpredictor.in/jee-rank-predictor" />
+        <meta property="og:url" content="https://jeerankpredictor.in/jee-rank-predictor" />
         <meta property="og:type" content="website" />
       </Head>
       {/* FAQ SCHEMA */}
@@ -151,7 +151,7 @@ export default function JeeRankPredictorPage() {
           <ul className="list-disc ml-6 text-blue-600 space-y-2">
             <li>
               <a
-                href="https://www.quora.com/How-is-JEE-Main-rank-calculated-from-percentile"
+                href="https://quora.com/How-is-JEE-Main-rank-calculated-from-percentile"
                 target="_blank"
                 rel="nofollow ugc"
               >
