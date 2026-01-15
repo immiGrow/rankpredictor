@@ -1,54 +1,10 @@
-
+"use client";
 import { motion } from "framer-motion";
 import { AiOutlineCheckCircle, AiOutlineLink, AiOutlineClockCircle } from "react-icons/ai";
 import Link from "next/link";
+import Head from "next/head";
 
-export const metadata = {
-  title: "How NTA Calculates JEE Main Percentile Score (Step-by-Step)",
 
-  description:
-    "Understand how NTA calculates JEE Main percentile score with a clear step-by-step explanation. Learn the normalization formula, shift-wise calculation, examples, and common misconceptions.",
-
-  keywords: [
-    "NTA percentile calculation",
-    "How NTA calculates percentile",
-    "JEE Main percentile calculation",
-    "JEE percentile normalization",
-    "NTA normalization formula",
-    "JEE Main percentile explained",
-    "Percentile vs marks JEE",
-    "NTA score calculation",
-  ],
-
-  alternates: {
-    canonical:
-      "https://jeerankpredictor.in/blog/nta_percentile_calculation",
-  },
-
-  openGraph: {
-    title: "How NTA Calculates JEE Main Percentile Score",
-    description:
-      "Step-by-step guide to NTA’s JEE Main percentile calculation method, including normalization across shifts and real examples.",
-    url: "https://jeerankpredictor.in/blog/nta_percentile_calculation",
-    siteName: "JEERankPredictor",
-    locale: "en_IN",
-    type: "article",
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "How NTA Calculates JEE Main Percentile",
-    description:
-      "Complete explanation of NTA percentile calculation for JEE Main with normalization and examples.",
-  },
-
-  robots: {
-    index: true,
-    follow: true,
-  },
-
-  category: "Education",
-};
 
 export default function page() {
   const featureFade = {
@@ -57,6 +13,56 @@ export default function page() {
   };
 
   return (
+    <>
+     <Head>
+        {/* Primary Meta Tags */}
+        <title>How NTA Calculates JEE Main Percentile Score (Step-by-Step)</title>
+        <meta
+          name="description"
+          content="Understand how NTA calculates JEE Main percentile score with a clear step-by-step explanation. Learn the normalization formula, shift-wise calculation, examples, and common misconceptions."
+        />
+        <meta
+          name="keywords"
+          content="NTA percentile calculation, How NTA calculates percentile, JEE Main percentile calculation, JEE percentile normalization, NTA normalization formula, JEE Main percentile explained, Percentile vs marks JEE, NTA score calculation"
+        />
+
+        {/* Canonical */}
+        <link
+          rel="canonical"
+          href="https://jeerankpredictor.in/blog/nta_percentile_calculation"
+        />
+
+        {/* Robots */}
+        <meta
+          name="robots"
+          content="index, follow, max-snippet:-1, max-image-preview:large"
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="How NTA Calculates JEE Main Percentile Score" />
+        <meta
+          property="og:description"
+          content="Step-by-step guide to NTA’s JEE Main percentile calculation method, including normalization across shifts and real examples."
+        />
+        <meta
+          property="og:url"
+          content="https://jeerankpredictor.in/blog/nta_percentile_calculation"
+        />
+        <meta property="og:site_name" content="JEERankPredictor" />
+        <meta property="og:locale" content="en_IN" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="How NTA Calculates JEE Main Percentile"
+        />
+        <meta
+          name="twitter:description"
+          content="Complete explanation of NTA percentile calculation for JEE Main with normalization and examples."
+        />
+      </Head>
     <section className="max-w-6xl mx-auto px-4 py-16 space-y-12">
       {/* Hero Section */}
       <motion.div
@@ -209,5 +215,6 @@ export default function page() {
         </motion.div>
       </article>
     </section>
+    </>
   );
 }

@@ -1,63 +1,45 @@
-
+"use client";
 
 import HubPage from "@/components/HubPage";
 import { motion } from "framer-motion";
-
+import Head from "next/head";
 import Link from "next/link";
 import Script from "next/script";
 import { FaCheckCircle, FaExternalLinkAlt } from "react-icons/fa";
 
-/* ============================
-   SEO METADATA
-   /jee-main-marks-vs-percentile-2025
-============================ */
-export const metadata = {
-  title:
-    "JEE Main Marks vs Percentile 2025 (Shift-wise & Accurate Analysis)",
-
-  description:
-    "Check JEE Main 2025 marks vs percentile with accurate shift-wise analysis, expected rank ranges, normalization logic, FAQs, and expert insights.",
-
-  alternates: {
-    canonical:
-      "https://jeerankpredictor.in/jee-main-marks-vs-percentile-2025",
-  },
-
-  robots: {
-    index: true,
-    follow: true,
-    "max-snippet": -1,
-    "max-image-preview": "large",
-  },
-
-  openGraph: {
-    type: "article",
-    title:
-      "JEE Main Marks vs Percentile 2025 – Shift-wise Analysis",
-    description:
-      "Accurate JEE Main 2025 marks vs percentile table with expected ranks, shift-wise difficulty impact, and normalization explained.",
-    url:
-      "https://jeerankpredictor.in/jee-main-marks-vs-percentile-2025",
-    siteName: "JEERankPredictor.in",
-    locale: "en_IN",
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title:
-      "JEE Main Marks vs Percentile 2025 – Complete Analysis",
-    description:
-      "Know how marks convert to percentile in JEE Main 2025. Includes shift-wise impact, rank estimates, and FAQs.",
-  },
-
-  category: "Education",
-};
-
-
 export default function Page() {
   return (
     <>
-   
+     <Head>
+        {/* Primary SEO */}
+        <title>JEE Main Marks vs Percentile 2025 (Shift-wise & Accurate Analysis)</title>
+
+        <meta
+          name="description"
+          content="Check JEE Main 2025 marks vs percentile with accurate shift-wise analysis, expected rank ranges, normalization logic, FAQs & expert insights."
+        />
+
+        {/* Canonical */}
+        <link
+          rel="canonical"
+          href="https://jeerankpredictor.in/jee-main-marks-vs-percentile-2025"
+        />
+
+        {/* Robots */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="JEE Main Marks vs Percentile 2025 – Shift-wise Analysis" />
+        <meta property="og:description" content="Accurate JEE Main 2025 marks vs percentile table with expected ranks, shift-wise difficulty impact & normalization explained." />
+        <meta property="og:url" content="https://jeerankpredictor.in/jee-main-marks-vs-percentile-2025" />
+        <meta property="og:site_name" content="JEERankPredictor.in" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="JEE Main Marks vs Percentile 2025 – Complete Analysis" />
+        <meta name="twitter:description" content="Know how marks convert to percentile in JEE Main 2025. Includes shift-wise impact, rank estimates & FAQs." />
+      </Head>
       {/* FAQ SCHEMA */}
      <Script
   id="faq-schema-marks-vs-percentile"

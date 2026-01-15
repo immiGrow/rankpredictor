@@ -1,4 +1,5 @@
-
+"use client";
+import Head from "next/head";
 import Link from "next/link";
 
 const  faqSchema = {
@@ -31,51 +32,58 @@ const  faqSchema = {
       }
     ]
   }
-export const metadata = {
-  title: "JEE Main 2026 Cutoff – Category-wise Expected Percentile & Marks",
-  
-  description:
-    "Check the expected JEE Main 2026 cutoff for General, OBC, SC, ST, EWS & PwD categories. View qualifying percentile, cutoff marks, previous year trends (2024 & 2025), and expert analysis to estimate your chances.",
-
-  keywords: [
-    "JEE Main 2026 Cutoff",
-    "JEE Main Cutoff 2026 Category Wise",
-    "JEE Main Qualifying Percentile 2026",
-    "JEE Main Cutoff Marks 2026",
-    "JEE Main Expected Cutoff",
-    "JEE Main Cutoff Trends",
-    "JEE Main 2026 Minimum Marks",
-    "JEE Main Cutoff for JEE Advanced",
-  ],
-   
-
-  alternates: {
-    canonical: "https://jeerankpredictor.in/jee_main_cutoff_2026",
-  },
-
-  openGraph: {
-    title: "JEE Main 2026 Cutoff – Expected Category-wise Percentile & Marks",
-    description:
-      "Expected JEE Main 2026 cutoff with category-wise qualifying percentile, cutoff marks, and past year trend analysis. Updated for JEE Advanced eligibility.",
-    url: "https://jeerankpredictor.in/jee_main_cutoff_2026",
-    siteName: "JEERankPredictor",
-    type: "article",
-    locale: "en_IN",
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "JEE Main 2026 Cutoff – Expected Category-wise Percentile",
-    description:
-      "Know the expected JEE Main 2026 cutoff marks & qualifying percentile category-wise. Based on 2024–2025 trends.",
-  },
-};
 
 
 
 export default function page() {
   return (
     <>
+    <Head>
+        {/* Primary Meta Tags */}
+        <title>JEE Main 2026 Cutoff – Category-wise Expected Percentile & Marks</title>
+        <meta
+          name="description"
+          content="Check the expected JEE Main 2026 cutoff for General, OBC, SC, ST, EWS & PwD categories. View qualifying percentile, cutoff marks, previous year trends (2024 & 2025), and expert analysis to estimate your chances."
+        />
+        <meta
+          name="keywords"
+          content="JEE Main 2026 Cutoff, JEE Main Cutoff 2026 Category Wise, JEE Main Qualifying Percentile 2026, JEE Main Cutoff Marks 2026, JEE Main Expected Cutoff, JEE Main Cutoff Trends, JEE Main 2026 Minimum Marks, JEE Main Cutoff for JEE Advanced"
+        />
+
+        {/* Canonical */}
+        <link
+          rel="canonical"
+          href="https://jeerankpredictor.in/jee_main_cutoff_2026"
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:title"
+          content="JEE Main 2026 Cutoff – Expected Category-wise Percentile & Marks"
+        />
+        <meta
+          property="og:description"
+          content="Expected JEE Main 2026 cutoff with category-wise qualifying percentile, cutoff marks, and past year trend analysis. Updated for JEE Advanced eligibility."
+        />
+        <meta
+          property="og:url"
+          content="https://jeerankpredictor.in/jee_main_cutoff_2026"
+        />
+        <meta property="og:site_name" content="RankPredictor" />
+        <meta property="og:locale" content="en_IN" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="JEE Main 2026 Cutoff – Expected Category-wise Percentile"
+        />
+        <meta
+          name="twitter:description"
+          content="Know the expected JEE Main 2026 cutoff marks & qualifying percentile category-wise. Based on 2024–2025 trends."
+        />
+      </Head>
   <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
