@@ -18,45 +18,14 @@ export const metadata = {
   },
 
   description:
-    "JEERankPredictor is a free JEE Main Rank Predictor 2026. Estimate your expected rank and percentile using marks based on previous year JEE Main data, trends, and analysis. Check JEE Main marks vs rank, percentile, cutoff insights and more.",
-  keywords: [
-    "JEE Main Rank Predictor 2026",
-    "JEE Marks vs Rank",
-    "JEE Main Percentile Predictor",
-    "JEE Main 2026 Rank",
-    "JEE Main Cutoff 2026",
-    "JEE Main Marks Calculator",
-    "JEE Main Rank vs Percentile",
-    "JEE Main Analysis",
-    "JEE Main Prediction Tool",
-  ],
-
-  authors: [{ name: "JEERankPredictor" }],
-
-  creator: "JEERankPredictor",
-  publisher: "JEERankPredictor",
+    "JEERankPredictor is a free JEE Main Rank Predictor 2026. Estimate your expected rank and percentile using marks based on previous year JEE Main data, trends, and analysis.",
 
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-snippet": -1,
-      "max-image-preview": "large",
-      "max-video-preview": -1,
-    },
-  },
-
-  alternates: {
-    canonical: "https://jeerankpredictor.in",
   },
 
   openGraph: {
-    title: "JEERankPredictor – JEE Main Rank Predictor 2026",
-    description:
-      "Predict your JEE Main 2026 rank and percentile using marks. Based on previous year trends and public data. Free & accurate JEE Main Rank Predictor.",
-    url: "https://jeerankpredictor.in",
     siteName: "JEERankPredictor",
     locale: "en_IN",
     type: "website",
@@ -64,16 +33,13 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "JEERankPredictor – JEE Main Rank Predictor 2026",
-    description:
-      "Estimate your JEE Main 2026 rank & percentile using marks. Free rank predictor based on previous year analysis.",
   },
 
-  category: "Education",
   other: {
     "google-adsense-account": "ca-pub-9968150249925857",
   },
 };
+
 
 export default function RootLayout({ children }) {
   return (

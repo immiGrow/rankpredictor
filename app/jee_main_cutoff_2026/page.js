@@ -58,7 +58,7 @@ export const metadata = {
     description:
       "Expected JEE Main 2026 cutoff with category-wise qualifying percentile, cutoff marks, and past year trend analysis. Updated for JEE Advanced eligibility.",
     url: "https://jeerankpredictor.in/jee_main_cutoff_2026",
-    siteName: "RankPredictor",
+    siteName: "JEERankPredictor",
     type: "article",
     locale: "en_IN",
   },

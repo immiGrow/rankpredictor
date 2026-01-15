@@ -3,6 +3,53 @@ import { motion } from "framer-motion";
 import { AiOutlineCheckCircle, AiOutlineLink, AiOutlineClockCircle } from "react-icons/ai";
 import Link from "next/link";
 
+export const metadata = {
+  title: "How NTA Calculates JEE Main Percentile Score (Step-by-Step)",
+
+  description:
+    "Understand how NTA calculates JEE Main percentile score with a clear step-by-step explanation. Learn the normalization formula, shift-wise calculation, examples, and common misconceptions.",
+
+  keywords: [
+    "NTA percentile calculation",
+    "How NTA calculates percentile",
+    "JEE Main percentile calculation",
+    "JEE percentile normalization",
+    "NTA normalization formula",
+    "JEE Main percentile explained",
+    "Percentile vs marks JEE",
+    "NTA score calculation",
+  ],
+
+  alternates: {
+    canonical:
+      "https://jeerankpredictor.in/blog/nta_percentile_calculation",
+  },
+
+  openGraph: {
+    title: "How NTA Calculates JEE Main Percentile Score",
+    description:
+      "Step-by-step guide to NTA’s JEE Main percentile calculation method, including normalization across shifts and real examples.",
+    url: "https://jeerankpredictor.in/blog/nta_percentile_calculation",
+    siteName: "JEERankPredictor",
+    locale: "en_IN",
+    type: "article",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "How NTA Calculates JEE Main Percentile",
+    description:
+      "Complete explanation of NTA percentile calculation for JEE Main with normalization and examples.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  category: "Education",
+};
+
 export default function page() {
   const featureFade = {
     hidden: { opacity: 0, y: 20 },
