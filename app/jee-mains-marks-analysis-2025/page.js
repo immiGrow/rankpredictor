@@ -1,40 +1,60 @@
-"use client";
 
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Script from "next/script";
 import { FaCalculator, FaArrowRight } from "react-icons/fa";
-import Head from "next/head";
+
+/* ============================
+   SEO METADATA
+   /jee-mains-marks-analysis-2025
+============================ */
+export const metadata = {
+  title:
+    "JEE Mains Marks Analysis 2025 – Percentile, Rank & Trend Insights",
+
+  description:
+    "Detailed JEE Mains 2025 marks analysis with expected percentile and rank estimates. Understand shift-wise difficulty, normalization logic, previous year trends, and cutoff insights for smarter preparation.",
+
+  alternates: {
+    canonical:
+      "https://jeerankpredictor.in/jee-mains-marks-analysis-2025",
+  },
+
+  openGraph: {
+    type: "article",
+    title:
+      "JEE Mains Marks Analysis 2025 – Percentile & Rank Insights",
+    description:
+      "In-depth JEE Mains 2025 marks analysis covering percentile conversion, rank estimates, shift-wise difficulty impact, and normalization explained clearly.",
+    url:
+      "https://jeerankpredictor.in/jee-mains-marks-analysis-2025",
+    siteName: "JEERankPredictor.in",
+    locale: "en_IN",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "JEE Mains Marks Analysis 2025 – Percentile & Rank Insights",
+    description:
+      "Analyze JEE Mains 2025 marks with expected percentile and rank ranges. Includes shift-wise difficulty trends and normalization insights.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  category: "Education",
+};
+
 
 export default function Page() {
   return (
     <>
 
 
-     <Head>
-        {/* Primary Meta Tags */}
-        <title>JEE Mains Marks Analysis 2025 – Percentile & Rank Insights</title>
-        <meta
-          name="description"
-          content="Check JEE Mains 2025 marks analysis with expected percentile and rank estimates. Understand trends, shift difficulty, and normalization for smarter preparation."
-        />
-        <link
-          rel="canonical"
-          href="https://jeerankpredictor.in/jee-mains-marks-analysis-2025"
-        />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="JEE Mains Marks Analysis 2025 – Percentile & Rank Insights" />
-        <meta property="og:description" content="Check JEE Mains 2025 marks analysis with expected percentile and rank estimates. Understand trends, shift difficulty, and normalization for smarter preparation." />
-        <meta property="og:url" content="https://jeerankpredictor.in/jee-mains-marks-analysis-2025" />
-        <meta property="og:site_name" content="JEERankPredictor.in" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="JEE Mains Marks Analysis 2025 – Percentile & Rank Insights" />
-        <meta name="twitter:description" content="Check JEE Mains 2025 marks analysis with expected percentile and rank estimates. Understand trends, shift difficulty, and normalization for smarter preparation." />
-      </Head>
+  
 
       {/* FAQ SCHEMA */}
       <Script

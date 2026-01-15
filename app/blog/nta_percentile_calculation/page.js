@@ -1,4 +1,4 @@
-"use client";
+
 import { motion } from "framer-motion";
 import { AiOutlineCheckCircle, AiOutlineLink, AiOutlineClockCircle } from "react-icons/ai";
 import Link from "next/link";

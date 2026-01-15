@@ -1,27 +1,58 @@
-"use client";
 
 import { motion } from "framer-motion";
-import Head from "next/head";
+
 import Link from "next/link";
 import Script from "next/script";
 import { FaArrowRight, FaCheckCircle } from "react-icons/fa";
+
+/* ============================
+   SEO METADATA
+   /jee-rank-predictor
+============================ */
+export const metadata = {
+  title:
+    "JEE Rank Predictor 2026 – Predict Your All India Rank (AIR) from Percentile",
+
+  description:
+    "Use our free JEE Rank Predictor 2026 tool to estimate your expected All India Rank (AIR) from your percentile. Accurate, student-friendly, and based on previous year trends.",
+
+  alternates: {
+    canonical:
+      "https://jeerankpredictor.in/jee-rank-predictor",
+  },
+
+  openGraph: {
+    type: "website",
+    title:
+      "JEE Rank Predictor 2026 – Predict Your AIR",
+    description:
+      "Estimate your expected JEE Main 2026 rank from your percentile using our free, easy-to-use tool.",
+    url: "https://jeerankpredictor.in/jee-rank-predictor",
+    siteName: "JEERankPredictor.in",
+    locale: "en_IN",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "JEE Rank Predictor 2026 – Predict Your AIR",
+    description:
+      "Free tool to calculate your expected JEE Main 2026 All India Rank (AIR) from your percentile quickly and accurately.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  category: "Education",
+};
+
 
 export default function JeeRankPredictorPage() {
   return (
     <>
 
-    <Head>
-        <title>JEE Rank Predictor 2026 – Predict Your AIR from Percentile</title>
-        <meta
-          name="description"
-          content="Use our JEE Rank Predictor 2026 tool to estimate your expected All India Rank (AIR) from your percentile. Accurate, free, and student-friendly."
-        />
-        <link rel="canonical" href="https://jeerankpredictor.in/jee-rank-predictor" />
-        <meta property="og:title" content="JEE Rank Predictor 2026 – Predict Your AIR" />
-        <meta property="og:description" content="Estimate your expected JEE Main 2026 rank from your percentile using our free tool." />
-        <meta property="og:url" content="https://jeerankpredictor.in/jee-rank-predictor" />
-        <meta property="og:type" content="website" />
-      </Head>
       {/* FAQ SCHEMA */}
       <Script
         id="faq-schema"

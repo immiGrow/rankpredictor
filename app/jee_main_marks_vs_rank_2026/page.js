@@ -1,12 +1,54 @@
-"use client";
 
-import Head from "next/head";
 import Link from "next/link";
 import Script from "next/script";
 import { motion } from "framer-motion";
 import { FaArrowRight, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { useState } from "react";
 import HubPage from "@/components/HubPage";
+
+/* ============================
+   SEO METADATA – HIGH TRUST
+   /jee_main_marks_vs_rank_2026
+============================ */
+export const metadata = {
+  title:
+    "JEE Main Marks vs Rank 2026 – Expected Rank, Percentile & Cutoff Analysis",
+
+  description:
+    "Check expected JEE Main 2026 marks vs rank using official NTA data and 2024–2025 trends. Get realistic rank and percentile ranges, cutoff insights, normalization explanation, and FAQs for accurate prediction.",
+
+  alternates: {
+    canonical:
+      "https://jeerankpredictor.in/jee_main_marks_vs_rank_2026",
+  },
+
+  openGraph: {
+    title:
+      "JEE Main Marks vs Rank 2026 – Expected Rank & Percentile Analysis",
+    description:
+      "Detailed JEE Main 2026 marks vs rank analysis based on previous year data, normalization method, cutoff trends, and expert insights.",
+    url: "https://jeerankpredictor.in/jee_main_marks_vs_rank_2026",
+    siteName: "JEERankPredictor",
+    locale: "en_IN",
+    type: "article",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "JEE Main Marks vs Rank 2026 – Expected Rank & Percentile",
+    description:
+      "Expected JEE Main 2026 marks vs rank with percentile ranges, cutoff analysis, and normalization explained clearly.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  category: "Education",
+};
+
 
 export default function JeeMainMarksVsRank2026() {
   // FAQ Accordion state
@@ -70,18 +112,7 @@ export default function JeeMainMarksVsRank2026() {
 
   return (
     <>
-      <Head>
-        <title>JEE Main Marks vs Rank 2026 – Accurate Prediction</title>
-        <meta
-          name="description"
-          content="Check expected JEE Main 2026 marks vs rank based on 2024 & 2025 trends. Get accurate rank prediction, percentile range, cutoff analysis & FAQs."
-        />
-        <link
-          rel="canonical"
-          href="https://jeerankpredictor.in/jee_main_marks_vs_rank_2026"
-        />
-      </Head>
-
+      
       {/* FAQ Schema */}
       <Script
         id="faq-schema-marks-vs-rank-2026"
