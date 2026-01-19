@@ -23,7 +23,7 @@ export default function WhyChooseRP() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16 bg-gray-50">
       <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-gray-900">
-        Why Choose JEE   <span className="">
+        Why Choose <span className="">
             <span className="text-blue-500 ">JEE</span>
             <span className="text-gray-900">RankPredictor</span>
           </span>?

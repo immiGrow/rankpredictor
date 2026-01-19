@@ -10,38 +10,41 @@ import { FaCheckCircle, FaExternalLinkAlt } from "react-icons/fa";
 export default function Page() {
   return (
     <>
-     <Head>
-        {/* Primary SEO */}
-        <title>JEE Main Marks vs Percentile 2025 (Shift-wise & Accurate Analysis)</title>
+  <Head>
+  {/* Primary SEO */}
+  <title>JEE Main Marks vs Percentile 2025 – Shift-wise Analysis & Rank Estimates</title>
 
-        <meta
-          name="description"
-          content="Check JEE Main 2025 marks vs percentile with accurate shift-wise analysis, expected rank ranges, normalization logic, FAQs & expert insights."
-        />
+  <meta
+    name="description"
+    content="Check JEE Main 2025 marks vs percentile with shift-wise analysis, expected rank ranges, normalization logic & expert insights. Predict your JEE rank accurately for IITs, NITs, IIITs & GFTIs."
+  />
 
-        {/* Canonical */}
-        <link
-          rel="canonical"
-          href="https://jeerankpredictor.in/jee-main-marks-vs-percentile-2025"
-        />
+  {/* Canonical */}
+  <link
+    rel="canonical"
+    href="https://jeerankpredictor.in/jee-main-marks-vs-percentile-2025"
+  />
 
-        {/* Robots */}
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  {/* Robots */}
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
 
-        {/* Open Graph */}
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="JEE Main Marks vs Percentile 2025 – Shift-wise Analysis" />
-        <meta property="og:description" content="Accurate JEE Main 2025 marks vs percentile table with expected ranks, shift-wise difficulty impact & normalization explained." />
-        <meta property="og:url" content="https://jeerankpredictor.in/jee-main-marks-vs-percentile-2025" />
-        <meta property="og:site_name" content="JEERankPredictor.in" />
+  {/* Open Graph */}
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="JEE Main Marks vs Percentile 2025 – Shift-wise Analysis & Rank Estimates" />
+  <meta property="og:description" content="Explore JEE Main 2025 marks vs percentile tables with shift-wise difficulty impact, expected rank ranges & normalization explained. Accurate insights for IIT/NIT/GFTI aspirants." />
+  <meta property="og:url" content="https://jeerankpredictor.in/jee-main-marks-vs-percentile-2025" />
+  <meta property="og:site_name" content="JEERankPredictor.in" />
+  <meta property="og:image" content="https://jeerankpredictor.in/og-image-jee-main-marks-percentile-2025.jpg" />
 
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="JEE Main Marks vs Percentile 2025 – Complete Analysis" />
-        <meta name="twitter:description" content="Know how marks convert to percentile in JEE Main 2025. Includes shift-wise impact, rank estimates & FAQs." />
-      </Head>
-      {/* FAQ SCHEMA */}
-     <Script
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="JEE Main Marks vs Percentile 2025 – Shift-wise Analysis & Rank Estimates" />
+  <meta name="twitter:description" content="Know how JEE Main 2025 marks convert to percentile. Includes shift-wise impact, expected ranks, normalization & expert insights for IIT, NIT & GFTI planning." />
+  <meta name="twitter:image" content="https://jeerankpredictor.in/og-image-jee-main-marks-percentile-2025.jpg" />
+</Head>
+
+{/* FAQ SCHEMA */}
+<Script
   id="faq-schema-marks-vs-percentile"
   type="application/ld+json"
   dangerouslySetInnerHTML={{
@@ -96,11 +99,20 @@ export default function Page() {
             "@type": "Answer",
             "text": "A score above 150 marks is generally considered good in JEE Main 2025, as it places candidates among the top 1–2 percent. Scores above 200 marks are considered excellent."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What rank can I expect from my percentile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your percentile can be used to estimate an approximate All India Rank (AIR) using historical data. Higher percentiles correspond to better ranks; detailed rank estimates vary per shift and total candidates."
+          }
         }
       ]
     }),
   }}
 />
+
 
 
       <div className="bg-linear-to-b from-gray-50 to-white">

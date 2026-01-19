@@ -10,18 +10,31 @@ export default function JeeRankPredictorPage() {
   return (
     <>
 
-    <Head>
-        <title>JEE Rank Predictor 2026 – Predict Your AIR from Percentile</title>
-        <meta
-          name="description"
-          content="Use our JEE Rank Predictor 2026 tool to estimate your expected All India Rank (AIR) from your percentile. Accurate, free, and student-friendly."
-        />
-        <link rel="canonical" href="https://jeerankpredictor.in/jee-rank-predictor" />
-        <meta property="og:title" content="JEE Rank Predictor 2026 – Predict Your AIR" />
-        <meta property="og:description" content="Estimate your expected JEE Main 2026 rank from your percentile using our free tool." />
-        <meta property="og:url" content="https://jeerankpredictor.in/jee-rank-predictor" />
-        <meta property="og:type" content="website" />
-      </Head>
+   <Head>
+  {/* Primary Meta Tags */}
+  <title>JEE Rank Predictor 2026 – Estimate Your AIR for IITs, NITs & GFTIs</title>
+  <meta
+    name="description"
+    content="Use our free JEE Rank Predictor 2026 to accurately estimate your All India Rank (AIR) from your percentile. Plan your IIT, NIT & GFTI admissions smartly with category, quota & gender support."
+  />
+  <link rel="canonical" href="https://jeerankpredictor.in/jee-rank-predictor" />
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph / Facebook */}
+  <meta property="og:title" content="JEE Rank Predictor 2026 – Estimate Your AIR for IITs, NITs & GFTIs" />
+  <meta property="og:description" content="Accurately predict your JEE Main/Advanced All India Rank (AIR) from your percentile. Free and student-friendly tool for IIT, NIT & GFTI planning." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jeerankpredictor.in/jee-rank-predictor" />
+  <meta property="og:site_name" content="JEERankPredictor" />
+  <meta property="og:image" content="https://jeerankpredictor.in/og-image-jee-rank-predictor.jpg" />
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="JEE Rank Predictor 2026 – Estimate Your AIR for IITs, NITs & GFTIs" />
+  <meta name="twitter:description" content="Use our free JEE Rank Predictor to estimate your AIR from percentile. Plan IIT, NIT & GFTI admissions accurately with category & quota support." />
+  <meta name="twitter:image" content="https://jeerankpredictor.in/og-image-jee-rank-predictor.jpg" />
+</Head>
+
       {/* FAQ SCHEMA */}
       <Script
         id="faq-schema"
