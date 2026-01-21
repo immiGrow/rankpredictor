@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { FaArrowRight, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { useState } from "react";
 import HubPage from "@/components/HubPage";
+import ShiftWiseTable from "@/components/ShiftWiseTable";
 
 export default function JeeMainMarksVsRank2026() {
   // FAQ Accordion state
@@ -28,22 +29,7 @@ export default function JeeMainMarksVsRank2026() {
     ["94", "82,000 – 88,000"],
   ];
 
-  const detailedTableData = [
-    ["290 – 300", "1 – 10"],
-    ["270 – 289", "20 – 60"],
-    ["250 – 269", "100 – 350"],
-    ["230 – 249", "350 – 900"],
-    ["210 – 229", "900 – 1,800"],
-    ["190 – 209", "1,800 – 3,200"],
-    ["170 – 189", "3,200 – 6,000"],
-    ["150 – 169", "6,000 – 12,000"],
-    ["130 – 149", "12,000 – 25,000"],
-    ["110 – 129", "25,000 – 45,000"],
-    ["100 – 109", "45,000 – 65,000"],
-    ["90 – 99", "78,000 – 95,000"],
-    ["80 – 89", "95,000 – 1,20,000"],
-    ["Below 80", "1,20,000+"],
-  ];
+ 
 
   const faqs = [
     {
@@ -147,25 +133,82 @@ export default function JeeMainMarksVsRank2026() {
 
         {/* Detailed Table */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="overflow-x-auto mb-10">
-          <h2 className="text-2xl font-semibold mb-4">
-            Detailed Marks vs Rank – Trend Analysis
-          </h2>
-          <table className="w-full border text-sm border-gray-200">
-            <thead className="bg-gray-100">
-              <tr>
-                <th className="border px-3 py-2">Marks Range</th>
-                <th className="border px-3 py-2">Expected Rank</th>
-              </tr>
-            </thead>
-            <tbody>
-              {detailedTableData.map(([marks, rank]) => (
-                <tr key={marks}>
-                  <td className="border px-3 py-2">{marks}</td>
-                  <td className="border px-3 py-2">{rank}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+           {/* SHIFT WISE TABLE */}
+<section className="py-16 bg-linear-to-b from-gray-50 to-white">
+  <div className="max-w-6xl mx-auto px-6">
+
+    {/* Heading + Badge */}
+    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+      <div>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+          JEE Main 2026 Shift-Wise Marks vs Percentile
+        </h2>
+        <p className="mt-2 text-gray-600 max-w-2xl">
+          Estimated marks required in each shift to achieve a given percentile,
+          based on past-year normalization trends.
+        </p>
+      </div>
+
+      <span className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
+        🔴 Live Update
+        <span className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
+      </span>
+    </div>
+
+    {/* Info Card */}
+    <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 mb-8">
+      <ul className="grid md:grid-cols-3 gap-4 text-sm text-blue-900">
+        <li>📅 Shift-wise data unlocks automatically after each exam day</li>
+        <li>📊 Marks shown as ranges due to normalization</li>
+        <li>🎯 Useful for rank & college prediction</li>
+      </ul>
+    </div>
+
+    {/* Table */}
+    <div className="relative">
+      <ShiftWiseTable />
+    </div>
+
+    {/* Disclaimer */}
+    <p className="mt-4 text-xs text-gray-500 leading-relaxed">
+      * The above table is prepared using JEE Main 2025 shift-wise normalization
+      data mapped to JEE Main 2026 exam dates. Actual percentiles may vary based on
+      NTA normalization.
+    </p>
+  </div>
+</section>
+{/* COLLEGE PREDICTOR CTA */}
+<section className="py-16 md:px-8 bg-linear-to-br from-blue-600 to-blue-800 text-white">
+  <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+    
+    <div>
+      <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+        Predict Your Colleges Based on Your JEE Main 2026 Rank
+      </h2>
+      <p className="text-blue-100 mb-6 leading-relaxed">
+        After checking your estimated percentile and rank, take the next step: find out which NITs, IIITs, and top engineering colleges
+        you can realistically get based on JoSAA & CSAB trends.
+      </p>
+
+      <Link
+        href="/jee-college-predictor"
+        className="inline-block bg-white text-blue-700 px-8 py-3 rounded-xl font-semibold shadow hover:scale-105 transition"
+      >
+        Check College Predictor →
+      </Link>
+    </div>
+
+    <div className="bg-white/10 rounded-2xl p-6 text-sm text-blue-100">
+      <ul className="space-y-3">
+        <li>✔ Branch-wise cutoffs (CSE, ECE, EE, ME)</li>
+        <li>✔ Category-wise predictions</li>
+        <li>✔ JoSAA & CSAB trend-based logic</li>
+        <li>✔ Free & instant results</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
         </motion.div>
 
         {/* Factors */}
@@ -184,8 +227,9 @@ export default function JeeMainMarksVsRank2026() {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="bg-gray-50 border rounded-xl p-6 mb-10">
           <h2 className="text-xl font-semibold mb-3">Related Resources</h2>
           <ul className="list-disc pl-6 space-y-2 text-blue-600">
+            <li><Link href="/jee-mains-2026-shift-wise-marks-percentile-analysis">JEE Main Marks vs Percentile Shiftwise Analysis 2026</Link></li>
             <li><Link href="/jee-rank-predictor">JEE Main Rank Predictor 2026</Link></li>
-            <li><Link href="/">JEE Main Percentile Predictor</Link></li>
+            <li><Link href="/josaa-college-predictor">JoSAA AI College Predictor</Link></li>
             <li><Link href="/jee_main_cutoff_2026">JEE Main Cutoff 2026</Link></li>
             <li><Link href="/jee-mains-marks-analysis-2025">JEE Main Marks vs Percentile Analysis 2025</Link></li>
           </ul>

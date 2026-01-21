@@ -10,6 +10,7 @@ import MarksPercentileTable from "@/components/MarksPercentileTable";
 import EssentialResources from "@/components/EssentialResources";
 import FAQSection from "@/components/FAQSection";
 import HubPage from "@/components/HubPage";
+import ShiftWiseTable from "@/components/ShiftWiseTable";
 
 /* =======================
    SEO METADATA (HOMEPAGE)
@@ -167,10 +168,85 @@ export default function Home() {
       <WhyChooseRP/>
 
         {/* MARKS VS PERCENTILE TABLE  2026*/}
-      <PercentileRankTable/>
+        {/* SHIFT WISE TABLE */}
+      <section className="py-16 bg-linear-to-b from-gray-50 to-white">
+        <div className="max-w-6xl mx-auto px-6">
+      
+          {/* Heading + Badge */}
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+                JEE Main 2026 Shift-Wise Marks vs Percentile
+              </h2>
+              <p className="mt-2 text-gray-600 max-w-2xl">
+                Estimated marks required in each shift to achieve a given percentile,
+                based on past-year normalization trends.
+              </p>
+            </div>
+      
+            <span className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
+              🔴 Live Update
+              <span className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
+            </span>
+          </div>
+      
+          {/* Info Card */}
+          <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 mb-8">
+            <ul className="grid md:grid-cols-3 gap-4 text-sm text-blue-900">
+              <li>📅 Shift-wise data unlocks automatically after each exam day</li>
+              <li>📊 Marks shown as ranges due to normalization</li>
+              <li>🎯 Useful for rank & college prediction</li>
+            </ul>
+          </div>
+      
+          {/* Table */}
+          <div className="relative">
+            <ShiftWiseTable />
+          </div>
+      
+          {/* Disclaimer */}
+          <p className="mt-4 text-xs text-gray-500 leading-relaxed">
+            * The above table is prepared using JEE Main 2025 shift-wise normalization
+            data mapped to JEE Main 2026 exam dates. Actual percentiles may vary based on
+            NTA normalization.
+          </p>
+        </div>
+      </section>
+      
+{/* COLLEGE PREDICTOR CTA */}
+<section className="py-16 bg-linear-to-br from-blue-600 to-blue-800 text-white">
+  <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+    
+    <div>
+      <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+        Predict Your Colleges Based on Your JEE Main 2026 Rank
+      </h2>
+      <p className="text-blue-100 mb-6 leading-relaxed">
+        After checking your estimated percentile and rank, take the next step: find out which NITs, IIITs, and top engineering colleges
+        you can realistically get based on JoSAA & CSAB trends.
+      </p>
 
-      {/* Marks VS Percentile Table */}
-<MarksPercentileTable/>
+      <Link
+        href="/jee-college-predictor"
+        className="inline-block bg-white text-blue-700 px-8 py-3 rounded-xl font-semibold shadow hover:scale-105 transition"
+      >
+        Check College Predictor →
+      </Link>
+    </div>
+
+    <div className="bg-white/10 rounded-2xl p-6 text-sm text-blue-100">
+      <ul className="space-y-3">
+        <li>✔ Branch-wise cutoffs (CSE, ECE, EE, ME)</li>
+        <li>✔ Category-wise predictions</li>
+        <li>✔ JoSAA & CSAB trend-based logic</li>
+        <li>✔ Free & instant results</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
 
 {/* Essential Resources Section */}
 <EssentialResources/>

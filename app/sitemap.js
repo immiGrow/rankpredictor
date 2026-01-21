@@ -30,6 +30,12 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/jee-mains-2026-shift-wise-marks-percentile-analysis`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/jee-mains-marks-analysis-2025`,
       lastModified: new Date(),
       changeFrequency: "daily",

@@ -1,17 +1,7 @@
 "use client";
 
 export default function MarksPercentileTable() {
-  const tableData = [
-    { marks: "81 – 100", percentile: "93.5 – 96.1" },
-    { marks: "71 – 80", percentile: "91.8 – 93.2" },
-    { marks: "61 – 70", percentile: "87.0 – 91.7" },
-    { marks: "51 – 60", percentile: "78.0 – 86.9" },
-    { marks: "36 – 45", percentile: "58.0 – 68.9" },
-    { marks: "31 – 35", percentile: "47.0 – 58.7" },
-    { marks: "21 – 30", percentile: "32.0 – 48.9" },
-    { marks: "11 – 20", percentile: "17.0 – 31.9" },
-    { marks: "0 – 10", percentile: "0.8 – 16.9" }
-  ];
+ 
 
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">

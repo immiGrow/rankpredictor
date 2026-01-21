@@ -53,12 +53,20 @@ export default function Navbar() {
               Percentile Predictor
             </Link>
           </li>
+          <li>
+            <Link
+              href="/josaa-college-predictor"
+              className="hover:text-blue-400 transition"
+            >
+              College Predictor
+            </Link>
+          </li>
 
           
 
           <li>
             <Link
-              href="/jee-mains-marks-analysis-2025"
+              href="/jee-mains-2026-shift-wise-marks-percentile-analysis"
               className="hover:text-blue-400 transition"
             >
               Marks vs Rank
@@ -111,7 +119,7 @@ export default function Navbar() {
 
             <li className="flex items-center gap-2">
               <FaChartLine className="text-blue-400" />
-              <Link href="/" onClick={() => setOpen(false)}>
+              <Link href="/jee-rank-predictor" onClick={() => setOpen(false)}>
                 Rank Predictor
               </Link>
             </li>
@@ -119,7 +127,7 @@ export default function Navbar() {
             <li className="flex items-center gap-2">
               <FaCalculator className="text-blue-400" />
               <Link
-                href="/percentile-predictor"
+                href="/"
                 onClick={() => setOpen(false)}
               >
                 Percentile Predictor
@@ -129,7 +137,7 @@ export default function Navbar() {
             <li className="flex items-center gap-2">
               <FaUniversity className="text-blue-400" />
               <Link
-                href="/college-predictor"
+                href="/josaa-college-predictor"
                 onClick={() => setOpen(false)}
               >
                 College Predictor
@@ -139,7 +147,7 @@ export default function Navbar() {
             <li className="flex items-center gap-2">
               <FaBookOpen className="text-blue-400" />
               <Link
-                href="/jee-mains-marks-analysis-2025"
+                href="/jee-mains-2026-shift-wise-marks-percentile-analysis"
                 onClick={() => setOpen(false)}
               >
                 Marks vs Rank 

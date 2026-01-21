@@ -72,6 +72,11 @@ export default function Footer() {
           </h3>
           <ul className="space-y-3 text-sm">
             <li>
+              <Link href="/jee-mains-2026-shift-wise-marks-percentile-analysis" className="hover:text-white">
+                JEE Mains Marks Shiftwise Analysis 2026
+              </Link>
+            </li>
+            <li>
               <Link href="/jee-mains-marks-analysis-2025" className="hover:text-white">
                 JEE Main Marks Analysis 2025
               </Link>
@@ -108,7 +113,7 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-2">
               <FaBookOpen className="text-blue-400" />
-              <Link href="/jee_main_marks_vs_rank_2026" className="hover:text-white">
+              <Link href="/jee-mains-2026-shift-wise-marks-percentile-analysis" className="hover:text-white">
                 JEE Main Marks vs Rank 2026
               </Link>
             </li>

@@ -7,11 +7,11 @@ export default function EssentialResources() {
   const resources = [
     {
       type: "Analysis",
-      title: "Marks vs Percentile vs Rank 2025",
+      title: "Marks vs Percentile vs Rank 2026",
       description:
-        "Complete breakdown of score trends for the 2025 session. Check what marks you need for 99%ile.",
+        "Complete breakdown of score trends for the 2026 session 1. Check what marks you need for 99%ile.",
       icon: <AiOutlineBarChart size={28} className="text-blue-500" />,
-      redirect:"/jee-mains-marks-analysis-2025"
+      redirect:"/jee-mains-2026-shift-wise-marks-percentile-analysis"
     },
     {
       type: "Prediction",
@@ -43,7 +43,7 @@ export default function EssentialResources() {
       description:
         "Find the best IITs, NITs, and IIITs for your rank. Filter by branch and category.",
       icon: <AiOutlineProject size={28} className="text-blue-500" />,
-        redirect:"https://collegedunia.com/college-predictor"
+        redirect:"/josaa-college-predictor"
     }
   ];
 
@@ -62,7 +62,7 @@ export default function EssentialResources() {
             key={index}
             className="relative p-6 bg-white rounded-2xl shadow hover:shadow-2xl transition-shadow duration-300 flex flex-col"
           >
-            <Link href={res.redirect} target={res.redirect === "https://collegedunia.com/college-predictor" ? "_blank" : "_self"}>
+            <Link href={res.redirect} >
             {/* Badge with type */}
             <div className="absolute -top-3 -left-3 px-3 py-1 bg-blue-500 text-white text-sm font-semibold rounded-full shadow">
               {res.type}
