@@ -57,16 +57,41 @@ export default function JeeMainMarksVsRank2026() {
   return (
     <>
       <Head>
-        <title>JEE Main Marks vs Rank 2026 – Accurate Prediction</title>
-        <meta
-          name="description"
-          content="Check expected JEE Main 2026 marks vs rank based on 2024 & 2025 trends. Get accurate rank prediction, percentile range, cutoff analysis & FAQs."
-        />
-        <link
-          rel="canonical"
-          href="https://jeerankpredictor.in/jee_main_marks_vs_rank_2026"
-        />
-      </Head>
+  {/* Primary Meta Tags */}
+  <title>JEE Mains 2026 Shiftwise Marks vs Percentile  – Get into IITs, NITs, IIITs</title>
+  <meta
+    name="description"
+    content="Check expected JEE Main 2026 marks vs rank using 2024 & 2025 trends. Get accurate percentile predictions, expected cutoff analysis, college suggestions as IITs, NITs, IIITs, and FAQs for top engineering institutes."
+  />
+  <link
+    rel="canonical"
+    href="https://www.jeerankpredictor.in/jee_main_marks_vs_rank_2026"
+  />
+
+  {/* Open Graph / Facebook */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="JEE Main Marks vs Rank 2026 – Accurate Prediction" />
+  <meta
+    property="og:description"
+    content="Predict your JEE Main 2026 rank and percentile accurately based on previous year trends. Explore expected cutoffs and top college options."
+  />
+  <meta property="og:url" content="https://www.jeerankpredictor.in/jee_main_marks_vs_rank_2026" />
+  <meta property="og:site_name" content="JEE Rank Predictor 2026" />
+  <meta property="og:image" content="https://www.jeerankpredictor.in/logo.jpg" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="JEE Main Marks vs Rank 2026 – Accurate Prediction" />
+  <meta
+    name="twitter:description"
+    content="Check your expected JEE Main 2026 marks vs rank using past year trends. Get percentile predictions, cutoff analysis & college suggestions."
+  />
+  <meta name="twitter:image" content="https://www.jeerankpredictor.in/logo.jpg" />
+  <meta name="twitter:site" content="@jeerankpredictor" />
+
+  {/* Optional: structured data for FAQ can be added here as <script type="application/ld+json"> */}
+</Head>
+
 
       {/* FAQ Schema */}
       <Script

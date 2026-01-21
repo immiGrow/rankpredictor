@@ -56,22 +56,22 @@ export default function JosaaCollegePredictorPage() {
   name="description"
   content="Use your JEE Main/Advanced rank to predict admission chances in IITs, NITs, GFTIs & other top engineering colleges through our free JoSAA 2026 College Predictor. Plan choice filling smartly based on rank, category, quota & gender."
 />
-      <link rel="canonical" href="https://jeerankpredictor.in/josaa-college-predictor" />
+      <link rel="canonical" href="https://www.jeerankpredictor.in/josaa-college-predictor" />
       <meta name="robots" content="index, follow" />
 
       {/* Open Graph / Facebook */}
       <meta property="og:title" content="JoSAA College Predictor 2026 – Predict Your Realistic JEE College Options" />
       <meta property="og:description" content="Predict your JoSAA 2026 college options instantly using your JEE rank, category, quota & gender. Maximize admission chances with our free tool." />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://jeerankpredictor.in/josaa-college-predictor" />
+      <meta property="og:url" content="https://www.jeerankpredictor.in/josaa-college-predictor" />
       <meta property="og:site_name" content="JEERankPredictor" />
-      <meta property="og:image" content="https://jeerankpredictor.in/logo.jpg" />
+      <meta property="og:image" content="https://www.jeerankpredictor.in/logo.jpg" />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="JoSAA College Predictor 2026 – Predict Your Realistic JEE College Options" />
       <meta name="twitter:description" content="Predict your realistic JoSAA college options instantly with your JEE rank, category & quota. Free and accurate predictions." />
-      <meta name="twitter:image" content="https://jeerankpredictor.in/logo.jpg" />
+      <meta name="twitter:image" content="https://www.jeerankpredictor.in/logo.jpg" />
 
       {/* JSON-LD FAQ Schema */}
      

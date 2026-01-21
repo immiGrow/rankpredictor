@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = "https://jeerankpredictor.in";
+  const baseUrl = "https://www.jeerankpredictor.in";
 
   return [
     {

@@ -40,7 +40,7 @@ export default function page() {
     <>
     <Head>
         {/* Primary Meta Tags */}
-        <title>JEE Main 2026 Cutoff – Category-wise Expected Percentile & Marks</title>
+        <title>JEE Main 2026 Cutoff – Category-wise (General/OBC/SC/ST/EWS) Expected Percentile & Marks</title>
         <meta
           name="description"
           content="Check the expected JEE Main 2026 cutoff for General, OBC, SC, ST, EWS & PwD categories. View qualifying percentile, cutoff marks, previous year trends (2024 & 2025), and expert analysis to estimate your chances."
@@ -53,7 +53,7 @@ export default function page() {
         {/* Canonical */}
         <link
           rel="canonical"
-          href="https://jeerankpredictor.in/jee_main_cutoff_2026"
+          href="https://www.jeerankpredictor.in/jee_main_cutoff_2026"
         />
 
         {/* Open Graph / Facebook */}
@@ -68,9 +68,9 @@ export default function page() {
         />
         <meta
           property="og:url"
-          content="https://jeerankpredictor.in/jee_main_cutoff_2026"
+          content="https://www.jeerankpredictor.in/jee_main_cutoff_2026"
         />
-        <meta property="og:site_name" content="RankPredictor" />
+        <meta property="og:site_name" content="JEERankPredictor" />
         <meta property="og:locale" content="en_IN" />
 
         {/* Twitter */}

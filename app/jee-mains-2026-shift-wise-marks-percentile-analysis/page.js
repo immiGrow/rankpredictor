@@ -20,18 +20,18 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://jeerankpredictor.in/jee-mains-2026-shift-wise-marks-percentile-analysis"
+    canonical: "https://www.jeerankpredictor.in/jee-mains-2026-shift-wise-marks-percentile-analysis"
   },
 
   openGraph: {
     title: "JEE Main 2026 Shift Wise Marks vs Percentile vs Rank Analysis",
     description:
       "Detailed shift-wise marks vs percentile analysis for JEE Main 2026 Session 1 with rank & college prediction tools.",
-    url: "https://jeerankpredictor.in/jee-mains-2026-shift-wise-marks-percentile-analysis",
+    url: "https://www.jeerankpredictor.in/jee-mains-2026-shift-wise-marks-percentile-analysis",
     siteName: "JEERankPredictor",
     images: [
       {
-        url: "https://jeerankpredictor.in/logo.jpg",
+        url: "https://www.jeerankpredictor.in/logo.jpg",
         width: 1200,
         height: 630,
         alt: "JEE Main 2026 Shift Wise Analysis"
@@ -46,7 +46,7 @@ export const metadata = {
     title: "JEE Main 2026 Shift Wise Marks vs Percentile Analysis",
     description:
       "Estimate percentile, rank and colleges using JEE Main 2026 shift-wise marks vs percentile trends.",
-    images: ["https://jeerankpredictor.in/logo.jpg"]
+    images: ["https://www.jeerankpredictor.in/logo.jpg"]
   },
 
   robots: {
@@ -170,12 +170,12 @@ export default function JeeMain2026ShiftWiseAnalysis() {
         "name": "JEERankPredictor",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeerankpredictor.in/logo.jpg"
+          "url": "https://www.jeerankpredictor.in/logo.jpg"
         }
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://jeerankpredictor.in/jee-mains-2026-shift-wise-marks-percentile-analysis"
+        "@id": "https://www.jeerankpredictor.in/jee-mains-2026-shift-wise-marks-percentile-analysis"
       }
     })
   }}

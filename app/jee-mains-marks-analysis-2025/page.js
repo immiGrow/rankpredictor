@@ -20,14 +20,14 @@ export default function Page() {
         />
         <link
           rel="canonical"
-          href="https://jeerankpredictor.in/jee-mains-marks-analysis-2025"
+          href="https://www.jeerankpredictor.in/jee-mains-marks-analysis-2025"
         />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="JEE Mains Marks Analysis 2025 – Percentile & Rank Insights" />
         <meta property="og:description" content="Check JEE Mains 2025 marks analysis with expected percentile and rank estimates. Understand trends, shift difficulty, and normalization for smarter preparation." />
-        <meta property="og:url" content="https://jeerankpredictor.in/jee-mains-marks-analysis-2025" />
+        <meta property="og:url" content="https://www.jeerankpredictor.in/jee-mains-marks-analysis-2025" />
         <meta property="og:site_name" content="JEERankPredictor.in" />
 
         {/* Twitter */}

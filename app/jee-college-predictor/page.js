@@ -275,7 +275,7 @@ const toolSchema = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "JEE College Predictor 2026",
-    "url": "https://jeerankpredictor.in/jee-college-predictor",
+    "url": "https://www.jeerankpredictor.in/jee-college-predictor",
     "applicationCategory": "EducationApplication",
     "description": "Predict your eligible IITs, NITs, IIITs, and GFTIs using AI-assisted JoSAA cutoff analysis based on your JEE Main or Advanced rank. Supports category, quota & gender filters for accurate predictions.",
     "operatingSystem": "Web",
@@ -283,7 +283,7 @@ const toolSchema = {
     "creator": {
       "@type": "Organization",
       "name": "JEERankPredictor",
-      "url": "https://jeerankpredictor.in"
+      "url": "https://www.jeerankpredictor.in"
     },
     "featureList": [
       "Predict eligible IIT, NIT, IIIT, GFTI colleges",
@@ -373,22 +373,22 @@ const predict = async () => {
         name="description"
         content="Predict your eligible IITs, NITs, IIITs, and GFTIs using our free AI-assisted JEE College Predictor 2026. Supports JEE Main & Advanced ranks, category, quota & gender filters."
       />
-      <link rel="canonical" href="https://jeerankpredictor.in/jee-college-predictor" />
+      <link rel="canonical" href="https://www.jeerankpredictor.in/jee-college-predictor" />
       <meta name="robots" content="index, follow" />
 
       {/* Open Graph / Facebook */}
       <meta property="og:title" content="JEE College Predictor 2026 – Predict IITs, NITs & GFTIs Accurately" />
       <meta property="og:description" content="Find your realistic college options in IITs, NITs, IIITs, and GFTIs using our AI-powered JEE College Predictor 2026 tool. Free and student-friendly." />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://jeerankpredictor.in/jee-college-predictor" />
+      <meta property="og:url" content="https://www.jeerankpredictor.in/jee-college-predictor" />
       <meta property="og:site_name" content="JEERankPredictor" />
-      <meta property="og:image" content="https://jeerankpredictor.in/logo.jpg" />
+      <meta property="og:image" content="https://www.jeerankpredictor.in/logo.jpg" />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="JEE College Predictor 2026 – Predict IITs, NITs & GFTIs Accurately" />
       <meta name="twitter:description" content="Predict your eligible IIT, NIT, IIIT & GFTI colleges using AI-assisted JEE College Predictor 2026. Supports JEE Main & Advanced rank, category & quota filters." />
-      <meta name="twitter:image" content="https://jeerankpredictor.in/logo.jpg" />
+      <meta name="twitter:image" content="https://www.jeerankpredictor.in/logo.jpg" />
 
       {/* JSON-LD Tool Schema */}
      

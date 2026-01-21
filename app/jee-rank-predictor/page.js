@@ -17,22 +17,22 @@ export default function JeeRankPredictorPage() {
     name="description"
     content="Use our free JEE Rank Predictor 2026 to accurately estimate your All India Rank (AIR) from your percentile. Plan your IIT, NIT & GFTI admissions smartly with category, quota & gender support."
   />
-  <link rel="canonical" href="https://jeerankpredictor.in/jee-rank-predictor" />
+  <link rel="canonical" href="https://www.jeerankpredictor.in/jee-rank-predictor" />
   <meta name="robots" content="index, follow" />
 
   {/* Open Graph / Facebook */}
   <meta property="og:title" content="JEE Rank Predictor 2026 – Estimate Your AIR for IITs, NITs & GFTIs" />
   <meta property="og:description" content="Accurately predict your JEE Main/Advanced All India Rank (AIR) from your percentile. Free and student-friendly tool for IIT, NIT & GFTI planning." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://jeerankpredictor.in/jee-rank-predictor" />
+  <meta property="og:url" content="https://www.jeerankpredictor.in/jee-rank-predictor" />
   <meta property="og:site_name" content="JEERankPredictor" />
-  <meta property="og:image" content="https://jeerankpredictor.in/og-image-jee-rank-predictor.jpg" />
+  <meta property="og:image" content="https://www.jeerankpredictor.in/logo.jpg" />
 
   {/* Twitter Card */}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="JEE Rank Predictor 2026 – Estimate Your AIR for IITs, NITs & GFTIs" />
   <meta name="twitter:description" content="Use our free JEE Rank Predictor to estimate your AIR from percentile. Plan IIT, NIT & GFTI admissions accurately with category & quota support." />
-  <meta name="twitter:image" content="https://jeerankpredictor.in/og-image-jee-rank-predictor.jpg" />
+  <meta name="twitter:image" content="https://www.jeerankpredictor.in/logo.jpg" />
 </Head>
 
       {/* FAQ SCHEMA */}

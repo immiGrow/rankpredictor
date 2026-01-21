@@ -22,7 +22,7 @@ export default function Page() {
   {/* Canonical */}
   <link
     rel="canonical"
-    href="https://jeerankpredictor.in/jee-main-marks-vs-percentile-2025"
+    href="https://www.jeerankpredictor.in/jee-main-marks-vs-percentile-2025"
   />
 
   {/* Robots */}
@@ -32,15 +32,15 @@ export default function Page() {
   <meta property="og:type" content="article" />
   <meta property="og:title" content="JEE Main Marks vs Percentile 2025 – Shift-wise Analysis & Rank Estimates" />
   <meta property="og:description" content="Explore JEE Main 2025 marks vs percentile tables with shift-wise difficulty impact, expected rank ranges & normalization explained. Accurate insights for IIT/NIT/GFTI aspirants." />
-  <meta property="og:url" content="https://jeerankpredictor.in/jee-main-marks-vs-percentile-2025" />
+  <meta property="og:url" content="https://www.jeerankpredictor.in/jee-main-marks-vs-percentile-2025" />
   <meta property="og:site_name" content="JEERankPredictor.in" />
-  <meta property="og:image" content="https://jeerankpredictor.in/og-image-jee-main-marks-percentile-2025.jpg" />
+  <meta property="og:image" content="https://www.jeerankpredictor.in/logo.jpg" />
 
   {/* Twitter */}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="JEE Main Marks vs Percentile 2025 – Shift-wise Analysis & Rank Estimates" />
   <meta name="twitter:description" content="Know how JEE Main 2025 marks convert to percentile. Includes shift-wise impact, expected ranks, normalization & expert insights for IIT, NIT & GFTI planning." />
-  <meta name="twitter:image" content="https://jeerankpredictor.in/og-image-jee-main-marks-percentile-2025.jpg" />
+  <meta name="twitter:image" content="https://www.jeerankpredictor.in/logo.jpg" />
 </Head>
 
 {/* FAQ SCHEMA */}
