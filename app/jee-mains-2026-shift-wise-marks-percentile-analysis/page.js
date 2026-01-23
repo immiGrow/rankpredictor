@@ -284,6 +284,39 @@ export default function JeeMain2026ShiftWiseAnalysis() {
   </div>
 </section>
 
+{/* COLLEGE PREDICTOR CTA */}
+<section className="py-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+  <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+
+    <div>
+      <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+        Predict Your Colleges Based on JEE Main 2026 Rank
+      </h2>
+      <p className="text-blue-100 mb-6 leading-relaxed">
+        Once you estimate your percentile and rank using the shift-wise data,
+        take the next step. Find out which NITs, IIITs, and top engineering
+        colleges you can realistically get based on JoSAA trends.
+      </p>
+
+      <Link
+        href="/jee-college-predictor"
+        className="inline-block bg-white text-blue-700 px-8 py-3 rounded-xl font-semibold shadow hover:scale-105 transition"
+      >
+        Check College Predictor →
+      </Link>
+    </div>
+
+    <div className="bg-white/10 rounded-2xl p-6 text-sm text-blue-100">
+      <ul className="space-y-3">
+        <li>✔ Branch-wise cutoffs (CSE, ECE, EE, ME)</li>
+        <li>✔ Category-wise predictions</li>
+        <li>✔ JoSAA & CSAB trend-based logic</li>
+        <li>✔ Free & instant results</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
 
       {/* RANK TREND */}
       <section className="py-14 bg-white">
@@ -393,39 +426,7 @@ export default function JeeMain2026ShiftWiseAnalysis() {
 
   </div>
 </section>
-{/* COLLEGE PREDICTOR CTA */}
-<section className="py-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-  <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
 
-    <div>
-      <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-        Predict Your Colleges Based on JEE Main 2026 Rank
-      </h2>
-      <p className="text-blue-100 mb-6 leading-relaxed">
-        Once you estimate your percentile and rank using the shift-wise data,
-        take the next step. Find out which NITs, IIITs, and top engineering
-        colleges you can realistically get based on JoSAA trends.
-      </p>
-
-      <Link
-        href="/jee-college-predictor"
-        className="inline-block bg-white text-blue-700 px-8 py-3 rounded-xl font-semibold shadow hover:scale-105 transition"
-      >
-        Check College Predictor →
-      </Link>
-    </div>
-
-    <div className="bg-white/10 rounded-2xl p-6 text-sm text-blue-100">
-      <ul className="space-y-3">
-        <li>✔ Branch-wise cutoffs (CSE, ECE, EE, ME)</li>
-        <li>✔ Category-wise predictions</li>
-        <li>✔ JoSAA & CSAB trend-based logic</li>
-        <li>✔ Free & instant results</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
 {/* WHY SHIFT-WISE MATTERS */}
 <section className="py-16 bg-gray-50">
   <div className="max-w-6xl mx-auto px-6">
@@ -518,7 +519,7 @@ export default function JeeMain2026ShiftWiseAnalysis() {
           Find colleges and branches you can realistically get.
         </p>
         <Link
-          href="/jee-college-predictor"
+          href="/josaa-college-predictor"
           className="inline-block text-sm font-semibold bg-blue-600 text-white border border-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition"
         >
           Check College Predictor →

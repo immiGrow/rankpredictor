@@ -1,5 +1,8 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+
 
 const JAN_2026_DATES = [
   { label: "21 Jan 2026", value: "2026-01-21" },
@@ -9,11 +12,13 @@ const JAN_2026_DATES = [
   { label: "28 Jan 2026", value: "2026-01-28" }
 ];
 
-export default function Rank() {
+export default function Rank({prediction, setPrediction}) {
+  const router = useRouter();
+
   const [marks, setMarks] = useState(150);
   const [date, setDate] = useState("2026-01-21");
   const [shift, setShift] = useState(1);
-  const [prediction, setPrediction] = useState(null);
+  
   const [loading, setLoading] = useState(false);
 
   const handlePredict = async () => {
@@ -132,10 +137,11 @@ export default function Rank() {
         <button
           onClick={handlePredict}
           disabled={loading}
-          className="w-full bg-blue-700 hover:bg-blue-600 text-white py-3 rounded-lg font-semibold transition disabled:opacity-50"
+          className="w-full bg-blue-700 hover:bg-blue-600 cursor-pointer text-white py-3 rounded-lg font-semibold transition disabled:opacity-50"
         >
           {loading ? "Predicting..." : "Predict Rank"}
         </button>
+           
 
         {/* RESULT */}
         {prediction && (
@@ -182,6 +188,26 @@ export default function Rank() {
               <br />
               ⚠️ Jan 2026 predictions use shift-wise normalization
             </p>
+          {/* NEXT STEP: COLLEGE PREDICTOR */}
+<motion.button
+  initial={{ opacity: 0, y: 10 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.2 }}
+  onClick={() =>
+    router.push("/josaa-college-predictor")
+  }
+  className="mt-5 w-full bg-white cursor-pointer hover:scale-105 text-blue-700 font-bold py-3 rounded-xl
+             flex items-center justify-center gap-2
+             hover:bg-blue-50 transition-all"
+>
+  🎓 See Colleges You Can Get →
+</motion.button>
+
+<p className="text-center text-xs opacity-80 mt-2">
+  View IITs • NITs • IIITs • GFTIs • Category-wise cutoffs
+</p>
+
+
           </div>
         )}
       </div>

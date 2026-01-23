@@ -109,6 +109,40 @@ export default function JeeMainMarksVsRank2026() {
           }),
         }}
       />
+<Script
+  id="article-schema-marks-vs-rank-2026"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "JEE Main 2026 Expected Cutoff – Category-wise Percentile & Marks",
+    "description": "Know the expected JEE Main 2026 cutoff for General, OBC, SC, ST, EWS & PwD categories. View qualifying percentile, cutoff marks, previous year trends (2024 & 2025), and expert analysis to estimate your chances.",
+    "author": { "@type": "Person", "name": "JEERankPredictor Team" },
+    "publisher": { 
+      "@type": "Organization", 
+      "name": "JEERankPredictor", 
+      "logo": { "@type": "ImageObject", "url": "https://www.jeerankpredictor.in/logo.png" }
+    },
+    "datePublished": "2026-01-23",
+    "dateModified": "2026-01-23",
+    "mainEntityOfPage": "https://www.jeerankpredictor.in/jee_main_cutoff_2026"
+  })}}
+/>
+
+<Script
+  id="dataset-schema-marks-vs-rank-2026"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "JEE Main 2026 Cutoff Data",
+    "description": "Category-wise expected cutoff, safe scores, and marks vs percentile data for JEE Main 2026 based on 2024-25 trends.",
+    "url": "https://www.jeerankpredictor.in/jee_main_cutoff_2026",
+    "creator": { "@type": "Organization", "name": "JEERankPredictor" },
+    "datePublished": "2026-01-23"
+  })}}
+/>
+
 
       <main className="max-w-6xl mx-auto px-4 py-10">
         {/* Hero + CTA */}

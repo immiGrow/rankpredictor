@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import Script from "next/script";
 import Rank from "@/components/Rank";
 import Link from "next/link";
@@ -12,45 +14,57 @@ import FAQSection from "@/components/FAQSection";
 import HubPage from "@/components/HubPage";
 import ShiftWiseTable from "@/components/ShiftWiseTable";
 
-/* =======================
-   SEO METADATA (HOMEPAGE)
-======================= */
-export const metadata = {
-  title: "JEE Main Rank Predictor 2026 – Predict Rank & Percentile by Marks",
-  description:
-    "Use India’s free JEE Main Rank Predictor 2026 to estimate your expected rank and percentile based on marks. Built using past year JEE Main data, trends, and analysis. No login required.",
-  keywords: [
-    "JEE Main Rank Predictor 2026",
-    "JEE Main Marks vs Rank",
-    "JEE Main Percentile Predictor",
-    "JEE Rank Calculator",
-    "JEE Main Rank Estimator",
-    "JEE Main 2026 Rank Prediction",
-    "JEE Main Analysis Tool",
-  ],
-  alternates: {
-    canonical: "https://jeerankpredictor.in",
-  },
-  openGraph: {
-    title: "JEE Main Rank Predictor 2026 – Free Marks vs Rank Tool",
-    description:
-      "Predict your JEE Main 2026 rank & percentile using marks. Based on previous year trends and official data patterns.",
-    url: "https://jeerankpredictor.in",
-    siteName: "RankPredictor",
-    locale: "en_IN",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "JEE Main Rank Predictor 2026",
-    description:
-      "Estimate your JEE Main 2026 rank and percentile instantly using marks.",
-  },
-};
+
+import RankResult from "@/components/RankResult";
+import Head from "next/head";
+import { pre } from "framer-motion/client";
+
+
 
 export default function Home() {
+  const [prediction, setPrediction] = useState(null);
   return (
     <>
+    
+{/* =======================
+   SEO METADATA (HOMEPAGE)
+======================= */}
+    <Head>
+        {/* Primary SEO */}
+        <title>JEE Main Rank Predictor 2026 – Free Accurate Rank & Percentile Calculator by Marks</title>
+        <meta
+          name="description"
+          content="Estimate your expected JEE Main 2026 All India Rank (AIR), percentile & marks-vs-rank instantly with our free and accurate JEE Main Rank Predictor. No login, updated with latest normalization trends and past year data to help you plan college options like IIT, NIT & IIIT smartly.
+"
+        />
+        <meta
+          name="keywords"
+          content="JEE Main Rank Predictor 2026, JEE Main Marks vs Rank, JEE Main Percentile Predictor, JEE Rank Calculator, JEE Main Rank Estimator, JEE Main 2026 Rank Prediction, JEE Main Analysis Tool, College Predictor JEE Main, Free JEE Rank Tool, IIT NIT IIIT Rank Predictor"
+        />
+
+        {/* Canonical */}
+        <link rel="canonical" href="https://www.jeerankpredictor.in" />
+
+        {/* Open Graph (Facebook, LinkedIn, Bing, etc.) */}
+        <meta property="og:title" content="JEE Main Rank Predictor 2026 – Free Marks vs Rank Tool" />
+        <meta
+          property="og:description"
+          content="Predict your JEE Main 2026 rank & percentile using marks. Based on previous year trends and official data patterns."
+        />
+        <meta property="og:url" content="https://www.jeerankpredictor.in" />
+        <meta property="og:site_name" content="JEERankPredictor" />
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="JEE Main Rank Predictor 2026" />
+        <meta
+          name="twitter:description"
+          content="Estimate your JEE Main 2026 rank and percentile instantly using marks."
+        />
+      </Head>
+
       {/* =======================
           SOFTWARE APPLICATION SCHEMA
       ======================= */}
@@ -134,9 +148,19 @@ export default function Home() {
       <div className="max-w-6xl mx-auto px-4 py-16 lg:flex lg:items-center lg:justify-between gap-12">
         {/* Left: Hero Text */}
         <div className="lg:w-1/2">
-          <p className="text-blue-600 font-semibold uppercase mb-3 text-sm md:text-base">
-            Free • Accurate • Instant Results
-          </p>
+        <div className="flex flex-wrap gap-3 mb-4">
+  <span className="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold">
+    ✔ Free & Accurate
+  </span>
+  <span className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
+    📊 Based on 2021–2026 Data
+  </span>
+  <span className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-sm font-semibold">
+    ⏱ 3-second prediction
+  </span>
+</div>
+
+         
           <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
             JEE Main Rank Predictor 2026 – <span className="text-blue-600">Predict Rank & Percentile</span>
           </h1>
@@ -145,15 +169,33 @@ export default function Home() {
             and percentile based on marks. Calculations are based on previous year JEE Main data, normalization trends, 
             and official NTA statistics. No signup required.
           </p>
+          <div className="flex flex-wrap gap-5 text-sm text-gray-600 mb-6">
+  <span>🔒 No login • No signup</span>
+  <span>🧮 Shift-wise normalization applied</span>
+  <span>📈 Matches real AIR trends</span>
+</div>
+<p className="text-sm text-gray-500 italic">
+  👉 Enter your marks on the right to get your predicted rank instantly
+</p>
+
         </div>
 
         {/* Right: Rank Tool */}
         <div className="lg:w-1/2 flex justify-center">
           {/* Use your Rank component directly */}
-          <Rank />
+          <Rank prediction={prediction} setPrediction={setPrediction} />
         </div>
       </div>
+
     </section>
+      {/* TRUST + PERSONALIZATION STRIP */}
+{/* {prediction && <RankResult prediction={prediction}/>} */}
+
+       
+
+
+
+
 
         {/* TRUST SIGNALS */}
        <TrustSection/>

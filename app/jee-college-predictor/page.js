@@ -337,6 +337,7 @@ const predict = async () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         rank: Number(rank),
+
         rankType,
         ...form,
       }),
@@ -399,7 +400,7 @@ const predict = async () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
       />
     <main className="max-w-7xl mx-auto px-4 py-10">
-      <h1 className="text-3xl font-bold text-center">
+      <h1 className="text-3xl font-extrabold text-gray-900 text-center">
   JoSAA AI College Predictor 2026
 </h1>
 
