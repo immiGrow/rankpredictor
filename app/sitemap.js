@@ -36,6 +36,12 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/jee-main-2026-toughest-shift-analysis-january-session`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/jee-mains-marks-analysis-2025`,
       lastModified: new Date(),
       changeFrequency: "daily",
@@ -99,6 +105,12 @@ export default function sitemap() {
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/terms-and-conditions`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.4,
     },
 
     {

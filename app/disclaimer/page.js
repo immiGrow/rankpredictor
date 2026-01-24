@@ -1,91 +1,86 @@
+import { FaExclamationTriangle, FaChartBar, FaGlobe, FaShieldAlt } from "react-icons/fa";
+
 export const metadata = {
-  title: "Disclaimer – RankPredictor",
+  title: "Disclaimer | JEE RankPredictor – Accuracy & Official Notice",
   description:
-    "Official disclaimer for RankPredictor. Read important information regarding accuracy, affiliation, and usage.",
+    "Official disclaimer for JEE RankPredictor. Understand the limitations of our rank and college predictions for the JEE Main 2026 session.",
+  alternates: {
+    canonical: "https://www.jeerankpredictor.in/disclaimer",
+  },
 };
 
 export default function DisclaimerPage() {
   return (
-    <main className="max-w-5xl mx-auto px-6 py-12 text-gray-800">
+    <main className="max-w-4xl mx-auto px-6 py-12 text-gray-800 leading-relaxed">
+      {/* Header Section */}
+      <div className="text-center mb-12">
+        <FaExclamationTriangle className="text-amber-500 text-5xl mx-auto mb-4" />
+        <h1 className="text-4xl font-extrabold mb-4">Legal Disclaimer</h1>
+        <p className="text-gray-600">Please read this carefully before using our prediction tools.</p>
+      </div>
 
-      <h1 className="text-4xl font-bold mb-6">
-        Disclaimer
-      </h1>
-
-      <section className="space-y-8 leading-relaxed">
-
-        <div>
-          <h2 className="text-2xl font-semibold mb-3">General Information</h2>
-          <p>
-            The information provided on <strong>RankPredictor</strong> is for
-            educational and informational purposes only.
+      <section className="space-y-10">
+        {/* 1. Accuracy & Normalization */}
+        <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100 shadow-sm">
+          <h2 className="text-2xl font-bold mb-3 flex items-center gap-2">
+            <FaChartBar className="text-blue-600" /> Accuracy & Normalization
+          </h2>
+          <p className="mb-4">
+            The rank and percentile predictions provided by <strong>JEE RankPredictor</strong> are based on historical data analysis (2021-2025) and statistical trends. 
+          </p>
+          <p className="bg-white p-4 rounded-lg border-l-4 border-blue-600 italic text-sm">
+            <strong>Note on 2026 Session:</strong> NTA uses a specific normalization process based on the relative performance of all candidates in a specific shift. Since the exact number of candidates and their performance vary every year, our results are <strong>mathematical estimates</strong> and may differ from your final NTA scorecard.
           </p>
         </div>
 
+        {/* 2. Official Affiliation */}
         <div>
-          <h2 className="text-2xl font-semibold mb-3">
-            No Official Affiliation
+          <h2 className="text-2xl font-bold mb-3 flex items-center gap-2 text-gray-900">
+            <FaShieldAlt className="text-green-600" /> No Official Affiliation
           </h2>
           <p>
-            RankPredictor is not affiliated with the National Testing Agency (NTA)
-            or any government organization. We are also not associated with any
-            coaching institute.
+            JEE RankPredictor is an independent educational platform developed by <strong>Abhisha Kumar Chittore</strong>. We are <strong>NOT affiliated</strong>, associated, authorized, endorsed by, or in any way officially connected with:
+          </p>
+          <ul className="list-disc pl-6 mt-3 space-y-1 text-gray-700 font-medium">
+            <li>National Testing Agency (NTA)</li>
+            <li>Ministry of Education (MoE), Government of India</li>
+            <li>Joint Seat Allocation Authority (JoSAA) or CSAB</li>
+            <li>Any coaching institute or university (including VNIT Nagpur)</li>
+          </ul>
+        </div>
+
+        {/* 3. No Admission Guarantee */}
+        <div>
+          <h2 className="text-2xl font-bold mb-3">No Admission or Rank Guarantee</h2>
+          <p>
+            Usage of our <strong>JoSAA-AI College Predictor</strong> does not guarantee admission into any NIT, IIIT, GFTI, or IIT. Counseling outcomes depend on various factors including category-wise seat vacancy, choice filling, and official cutoff ranks which are subject to change annually.
           </p>
         </div>
 
+        {/* 4. External Links */}
         <div>
-          <h2 className="text-2xl font-semibold mb-3">
-            Accuracy of Predictions
+          <h2 className="text-2xl font-bold mb-3 flex items-center gap-2">
+            <FaGlobe className="text-purple-600" /> External Links Disclaimer
           </h2>
           <p>
-            Rank, percentile, and cutoff predictions shown on this website are
-            based on historical data, trends, and publicly available information.
-            Actual results may vary.
+            Our website may contain links to external sites (like jeemain.nta.nic.in). We do not monitor or check these external links for accuracy or reliability. We do not warrant, endorse, or guarantee the information offered by third-party websites.
           </p>
         </div>
 
-        <div>
-          <h2 className="text-2xl font-semibold mb-3">
-            No Admission Guarantee
-          </h2>
-          <p>
-            We do not guarantee admission, rank, percentile, or selection in any
-            exam or counseling process.
+        {/* 5. Limitation of Liability */}
+        <div className="bg-red-50 p-6 rounded-2xl border border-red-100">
+          <h2 className="text-xl font-bold mb-3 text-red-900">Limitation of Liability</h2>
+          <p className="text-sm text-red-800">
+            By using this website, you agree that <strong>JEE RankPredictor</strong> and its founder shall not be held responsible for any decisions made, or for any damages or losses incurred, as a result of using the information or tools provided on this site. You are advised to consult official NTA brochures for final information.
           </p>
         </div>
 
-        <div>
-          <h2 className="text-2xl font-semibold mb-3">
-            External Links
-          </h2>
-          <p>
-            Our website may contain links to external websites. We are not
-            responsible for the content or accuracy of information on those
-            sites.
+        {/* 6. Consent */}
+        <div className="text-center pt-8">
+          <p className="text-sm text-gray-500 italic">
+            By continuing to use our website, you hereby consent to this Disclaimer and agree to its terms.
           </p>
         </div>
-
-        <div>
-          <h2 className="text-2xl font-semibold mb-3">
-            User Responsibility
-          </h2>
-          <p>
-            By using this website, you agree that RankPredictor will not be held
-            liable for any losses, damages, or decisions made based on the
-            information provided here.
-          </p>
-        </div>
-
-        <div>
-          <h2 className="text-2xl font-semibold mb-3">
-            Consent
-          </h2>
-          <p>
-            By using RankPredictor, you hereby consent to this disclaimer and
-            agree to its terms.
-          </p>
-        </div>
-
       </section>
     </main>
   );
