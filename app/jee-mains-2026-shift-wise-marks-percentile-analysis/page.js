@@ -3,6 +3,7 @@ import Link from "next/link";
 import ShiftWiseTable from "@/components/ShiftWiseTable";
 import HubPage from "@/components/HubPage";
 import Script from "next/script";
+import { FaCheckCircle, FaExclamationTriangle } from "react-icons/fa";
 export const metadata = {
   title: "JEE Main 2026 Shift Wise Marks vs Percentile vs Rank Analysis (Session 1)",
   description:
@@ -284,7 +285,98 @@ export default function JeeMain2026ShiftWiseAnalysis() {
   </div>
 </section>
 
-{/* COLLEGE PREDICTOR CTA */}
+<section className="max-w-7xl mx-auto px-4 border-t border-slate-100">
+  <div className="bg-slate-50 rounded-[3rem] p-8 md:p-16 border border-slate-100 relative overflow-hidden">
+    
+    {/* Background Label */}
+    <div className="absolute top-10 right-10 opacity-[0.03] rotate-12 pointer-events-none">
+      <svg width="400" height="400" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"/>
+      </svg>
+    </div>
+
+    <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 className="text-3xl font-black text-slate-900 mb-6 leading-tight">
+          Wait! Did you check your <span className="text-red-600">Shift Difficulty?</span>
+        </h2>
+        <p className="text-slate-600 mb-8 leading-relaxed font-medium">
+          The Marks vs Percentile data above is an <strong>average estimate</strong>. However, NTA&apos;s normalization means that in a Tough Shift, you could achieve a 99 percentile with <strong>20-30 fewer marks</strong> than an Easy Shift.
+        </p>
+        
+        <div className="space-y-4 mb-8">
+          <div className="flex items-start gap-4 p-4 bg-white rounded-2xl shadow-sm border border-slate-100">
+            <div className="w-10 h-10 bg-red-50 text-red-600 rounded-xl flex items-center justify-center shrink-0">
+              <FaExclamationTriangle />
+            </div>
+            <div>
+              <h4 className="font-bold text-slate-900 text-sm">The Easy Shift Trap</h4>
+              <p className="text-xs text-slate-500">In shifts with easy Math/Physics, 210 marks might only fetch a 98.8 percentile.</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4 p-4 bg-white rounded-2xl shadow-sm border border-slate-100">
+            <div className="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center shrink-0">
+              <FaCheckCircle />
+            </div>
+            <div>
+              <h4 className="font-bold text-slate-900 text-sm">The Tough Shift Advantage</h4>
+              <p className="text-xs text-slate-500">In shifts like Jan 24 (Shift 1), 175 marks could easily cross the 99.2 percentile mark.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-slate-900 rounded-4xl p-8 text-white shadow-2xl shadow-blue-900/20">
+        <h3 className="text-xl font-bold mb-4">Is your shift in the Toughest list?</h3>
+        <p className="text-slate-400 text-sm mb-6 leading-relaxed">
+          We have analyzed every session of the 2026 January attempt to rank them from Hardest to Easiest. Check where your shift stands before finalizing your rank expectations.
+        </p>
+        
+        <Link 
+          href="/jee-main-2026-toughest-shift-analysis-january-session"
+          className="block w-full text-center py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-black text-xs uppercase tracking-[0.15em] transition-all shadow-lg shadow-blue-600/30"
+        >
+          View Toughest Shift Ranking →
+        </Link>
+        
+        <p className="text-center text-[10px] text-slate-500 mt-4 uppercase font-bold tracking-widest">
+          Updated: Jan 2026 Shift Data
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+      {/* RANK TREND */}
+      <section className="py-14 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-6">Expected Rank Range Based on Percentile</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[{
+              p: "99.9+",
+              r: "Top 100"
+            }, {
+              p: "99 – 99.9",
+              r: "100 – 3,000"
+            }, {
+              p: "95 – 99",
+              r: "3,000 – 50,000"
+            }].map(x => (
+              <div key={x.p} className="bg-blue-50 rounded-xl p-6 text-center shadow">
+                <p className="text-sm text-gray-600">Percentile</p>
+                <p className="text-2xl font-bold text-blue-700">{x.p}</p>
+                <p className="mt-2 text-gray-700">Expected Rank: <strong>{x.r}</strong></p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* COLLEGE PREDICTOR CTA */}
 <section className="py-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
   <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
 
@@ -318,32 +410,6 @@ export default function JeeMain2026ShiftWiseAnalysis() {
   </div>
 </section>
 
-
-
-      {/* RANK TREND */}
-      <section className="py-14 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-6">Expected Rank Range Based on Percentile</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[{
-              p: "99.9+",
-              r: "Top 100"
-            }, {
-              p: "99 – 99.9",
-              r: "100 – 3,000"
-            }, {
-              p: "95 – 99",
-              r: "3,000 – 50,000"
-            }].map(x => (
-              <div key={x.p} className="bg-blue-50 rounded-xl p-6 text-center shadow">
-                <p className="text-sm text-gray-600">Percentile</p>
-                <p className="text-2xl font-bold text-blue-700">{x.p}</p>
-                <p className="mt-2 text-gray-700">Expected Rank: <strong>{x.r}</strong></p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 <HubPage/>
 
 {/* PLACE THIS DIRECTLY BELOW YOUR MAIN MARKS/PERCENTILE TABLE */}
@@ -372,6 +438,8 @@ export default function JeeMain2026ShiftWiseAnalysis() {
     </div>
   </div>
 </div>
+
+
 
      {/* METHODOLOGY */}
 <section className="py-16 bg-white">

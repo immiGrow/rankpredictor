@@ -233,6 +233,46 @@ export default function ToughestShiftPage() {
       </div>
     </section>
 
+{/* PLACE THIS AFTER THE SHIFT RANKING SECTION */}
+<section className="my-12">
+  <div className="max-w-5xl mx-auto bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden border border-blue-500/30">
+    
+    {/* Decorative Background Element */}
+    <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/10 rounded-full blur-[80px] -mr-20 -mt-20"></div>
+
+    <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
+      <div className="flex-1 text-center md:text-left">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-[10px] font-black uppercase tracking-widest mb-4">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+          </span>
+          Next Step: Calculate Your Percentile
+        </div>
+        
+        <h2 className="text-2xl md:text-4xl font-black text-white mb-4 leading-tight">
+          Hard Shift? <span className="text-blue-400">See Your Adjusted Percentile</span>
+        </h2>
+        
+        <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-6">
+          Knowing which shift was tough is only half the battle. Use our <strong>Shift-Wise Normalization Data</strong> to see exactly how many marks you need for a 99+ percentile in your specific session.
+        </p>
+      </div>
+
+      <div className="w-full md:w-auto shrink-0">
+        <a 
+          href="/jee-mains-2026-shift-wise-marks-percentile-analysis" 
+          className="group flex items-center justify-center gap-3 w-full md:w-64 py-5 bg-white text-slate-900 rounded-2xl font-black text-xs uppercase tracking-widest shadow-xl hover:bg-blue-50 hover:scale-[1.02] transition-all"
+        >
+          Check Marks vs Percentile
+          <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
 {/* Subject Wise Analysis */}
 

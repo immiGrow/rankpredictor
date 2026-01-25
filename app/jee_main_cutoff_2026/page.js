@@ -214,6 +214,8 @@ export default function Page() {
           </p>
         </section>
 
+
+
         {/* Why Cutoffs Change */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">
@@ -373,7 +375,32 @@ export default function Page() {
     <strong>Tip:</strong> Aim for 240+ marks (~94+ percentile) to safely qualify for JEE Advanced. Percentiles are normalized across shifts, so small differences in marks at top scores result in large percentile differences.
   </p>
 </section>
-
+{/* PLACE THIS DIRECTLY BELOW YOUR MAIN MARKS/PERCENTILE TABLE */}
+<div className="my-10 p-6 bg-gradient-to-r  from-blue-600 to-indigo-600 rounded-3xl shadow-2xl">
+  <div className="bg-white rounded-[calc(1.5rem-1px)] p-6 md:p-8">
+    <div className="flex flex-col md:flex-row items-center gap-6">
+      <div className="flex-1 text-center md:text-left">
+        <span className="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+          Next Step: College Selection
+        </span>
+        <h3 className="text-2xl font-black text-slate-900 mt-3 mb-2">
+          Found your expected percentile?
+        </h3>
+        <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+          Don&apos;t stop at numbers. Check which <strong>NITs, IIITs, and GFTIs</strong> match your predicted percentile for the 2026 session.
+        </p>
+      </div>
+      <div className="flex flex-col gap-3 w-full md:w-auto">
+        <Link 
+          href="/josaa-opening-closing-rank-2026-nit-iiit-cutoff/nit-warangal" 
+          className="bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold text-center hover:bg-slate-800 transition-all shadow-lg hover:shadow-blue-200"
+        >
+          View All College Cutoffs →
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
 
         {/* Safe Scores */}
     {/* Safe Scores */}
