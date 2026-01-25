@@ -36,6 +36,12 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/jee-main-2026-official-answer-key-pdf-shiftwise-download`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/top-nits-for-computer-science-cse-cutoff-2026`,
       lastModified: new Date(),
       changeFrequency: "daily",
