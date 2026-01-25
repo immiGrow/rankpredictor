@@ -36,6 +36,55 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/josaa-opening-closing-rank-2026-nit-iiit-cutoff/mnit-allahabad`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/josaa-opening-closing-rank-2026-nit-iiit-cutoff/vnit-nagpur`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/josaa-opening-closing-rank-2026-nit-iiit-cutoff/nit-trichy`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/josaa-opening-closing-rank-2026-nit-iiit-cutoff/nit-rourkela`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/josaa-opening-closing-rank-2026-nit-iiit-cutoff/nit-warangal`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/josaa-opening-closing-rank-2026-nit-iiit-cutoff/nit-calicut`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/josaa-opening-closing-rank-2026-nit-iiit-cutoff/nit-kurukshetra`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/josaa-opening-closing-rank-2026-nit-iiit-cutoff/nit-karnataka`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+   
+    {
       url: `${baseUrl}/jee-main-2026-toughest-shift-analysis-january-session`,
       lastModified: new Date(),
       changeFrequency: "daily",

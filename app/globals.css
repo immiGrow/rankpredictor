@@ -5,6 +5,14 @@
   --font-poppins: "Poppins", sans-serif; 
 }
 
+@keyframes highlight-fade {
+  0% { background-color: rgba(59, 130, 246, 0.2); } /* Blue tint */
+  100% { background-color: transparent; }
+}
+.animate-highlight {
+  animation: highlight-fade 1s ease-out;
+}
+
 @keyframes slideUp {
   from {
     opacity: 0;
