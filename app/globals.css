@@ -5,6 +5,15 @@
   --font-poppins: "Poppins", sans-serif; 
 }
 
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+.animate-shine {
+  animation: shine 0.8s ease-in-out;
+}
+
 @keyframes highlight-fade {
   0% { background-color: rgba(59, 130, 246, 0.2); } /* Blue tint */
   100% { background-color: transparent; }

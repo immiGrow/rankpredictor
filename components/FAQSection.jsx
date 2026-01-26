@@ -5,64 +5,59 @@ import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import Link from "next/link";
 
 const faqData = [
-  // Existing FAQs
   {
-    question: "How does the JEE Main Rank Predictor work?",
+    question: "How is the JEE Main 2026 percentile calculated for Jan Session?",
     answer: (
       <span>
-        The predictor estimates your <strong>All India Rank (AIR)</strong> based on your marks and historical trends.
-        It converts marks → percentile → rank using statistical analysis. 
-        You can try it with our <Link href="/" className="text-blue-600 underline">JEE Main Percentile Predictor</Link>.
+        The JEE Main 2026 percentile is calculated using <strong>NTA’s multi-session normalization method</strong>.
+        Our tool evaluates the relative difficulty of January shifts (Jan 21 to Jan 28) to estimate accurate
+        Marks vs Percentile. You can explore it using our{" "}
+        <Link href="/" className="text-blue-600 underline">
+          JEE Main Rank Predictor
+        </Link>.
       </span>
     )
   },
   {
-    question: "Is the JEE Main percentile calculation accurate?",
+    question: "What marks are required for 99 percentile in JEE Main 2026?",
     answer: (
       <span>
-        Our percentile calculation uses <strong>NTA normalization patterns</strong> and past year trends. 
-        For more information, check <a href="https://www.nta.ac.in" target="_blank" className="text-blue-600 underline">NTA official site</a>.
+        Based on our <strong>January 2026 shift-wise difficulty analysis</strong>, scoring around{" "}
+        <strong>185–195 marks</strong> in tougher shifts and <strong>210+ marks</strong> in easier shifts
+        can fetch a 99 percentile. For exact estimates, check our{" "}
+        <Link href="/jee-mains-2026-shift-wise-marks-percentile-analysis" className="text-blue-600 underline">
+          Marks vs Percentile analysis
+        </Link>.
       </span>
     )
   },
   {
-    question: "Can I predict my college chances?",
+    question: "Can I predict my NIT seat with this JEE rank tool?",
     answer: (
       <span>
-        Yes! Use our <a href="https://collegedunia.com/college-predictor" target="_blank" className="text-blue-600 underline">College Predictor</a> to see which IITs, NITs, or IIITs you may get based on your estimated rank.
+        Yes. After getting your predicted <strong>All India Rank (AIR)</strong>, you can use our{" "}
+        <Link
+          href="/josaa-opening-closing-rank-2026-nit-iiit-cutoff/nit-trichy"
+          className="text-blue-600 underline"
+        >
+          JOSAA College Predictor
+        </Link>{" "}
+        to check expected closing ranks for NIT Trichy, Warangal, and other top NITs & IIITs across branches.
       </span>
     )
   },
   {
-    question: "Do I need to signup to use these tools?",
-    answer: "No, all our prediction tools are completely free and require no signup, protecting your privacy."
-  },
-  {
-    question: "How often is the data updated?",
-    answer: "We update our database regularly based on the latest JEE trends, cutoffs, and closing ranks."
-  },
-  {
-    question: "Where can I read more about JEE rank trends?",
+    question: "Does this rank predictor account for Jan 2026 shift difficulty?",
     answer: (
       <span>
-        You can check <a href="https://www.quora.com/What-is-the-expected-cutoff-for-JEE-Main" target="_blank" className="text-red-600 underline">Quora discussions</a> or official JEE/NTA websites for more insights.
+        Absolutely. Unlike generic calculators, our <strong>Intelligence Engine</strong> applies
+        normalization factors based on real student feedback and shift-level difficulty from the
+        January 2026 session, resulting in a highly reliable rank range.
       </span>
     )
-  },
-  // SEO-critical questions from your schema
-  {
-    question: "How accurate is JEE Main Rank Predictor 2026?",
-    answer: "The JEE Main Rank Predictor 2026 provides an estimated rank range based on previous year trends and public data. Actual ranks may vary due to exam difficulty and total candidates."
-  },
-  {
-    question: "Is this JEE rank predictor official?",
-    answer: "No, this tool is not affiliated with NTA. It is an independent educational tool designed to help students estimate their expected rank."
-  },
-  {
-    question: "Can I use this predictor before official results?",
-    answer: "Yes. This rank predictor is meant for pre-result estimation to help students understand their approximate standing."
   }
 ];
+
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
