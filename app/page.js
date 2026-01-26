@@ -147,7 +147,7 @@ export default function Home() {
 
 {/* FAQs Schema */}
      <Script
-  id="faq-schema-v2"
+  id="faq-schema"
   type="application/ld+json"
   strategy="afterInteractive"
   dangerouslySetInnerHTML={{

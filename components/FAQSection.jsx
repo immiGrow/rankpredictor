@@ -103,47 +103,7 @@ export default function FAQSection() {
         ))}
       </div>
 
-      {/* Structured Data for SEO */}
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "How accurate is JEE Main Rank Predictor 2026?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text:
-                    "The JEE Main Rank Predictor 2026 provides an estimated rank range based on previous year trends and public data. Actual ranks may vary due to exam difficulty and total candidates."
-                }
-              },
-              {
-                "@type": "Question",
-                name: "Is this JEE rank predictor official?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text:
-                    "No, this tool is not affiliated with NTA. It is an independent educational tool designed to help students estimate their expected rank."
-                }
-              },
-              {
-                "@type": "Question",
-                name: "Can I use this predictor before official results?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text:
-                    "Yes. This rank predictor is meant for pre-result estimation to help students understand their approximate standing."
-                }
-              }
-            ]
-          })
-        }}
-      />
+     
     </section>
   );
 }
