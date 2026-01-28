@@ -1,3 +1,5 @@
+"use client";
+import React, { useMemo } from "react";
 import { FaBell, FaCheckCircle, FaExternalLinkAlt } from "react-icons/fa";
 
 const OfficialTracker = () => {
