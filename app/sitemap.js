@@ -36,6 +36,12 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/jee-main-2026-marks-vs-rank-vs-college-list`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/jee-main-2026-official-answer-key-pdf-shiftwise-download`,
       lastModified: new Date(),
       changeFrequency: "daily",
