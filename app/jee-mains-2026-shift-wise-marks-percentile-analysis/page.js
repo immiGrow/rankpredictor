@@ -288,7 +288,7 @@ export default function JeeMain2026ShiftWiseAnalysis() {
   </div>
 </section>
 
- <div className="">
+ <div className=" mx-20 sm:mx-32">
              <OfficialTracker />
           </div>
 

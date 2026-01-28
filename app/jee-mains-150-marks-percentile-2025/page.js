@@ -11,15 +11,17 @@ import {
   FaChartLine
 } from "react-icons/fa";
 
+
 export default function Page() {
   return (
     <>
     <Head>
         {/* Primary Meta Tags */}
-        <title>150 Marks in JEE Mains 2025 – Percentile, Rank & Analysis</title>
+        <title>150 Marks in JEE Main 2026 Percentile: Is it Enough for Top NITs?
+</title>
         <meta
           name="description"
-          content="Check expected percentile and rank in JEE Mains 2025 for 150 marks. Includes shift-wise trends, normalization analysis, and detailed rank estimates."
+          content="Check your 98.5+ percentile rank with 150 marks in JEE Main 2026. Detailed shift-wise analysis, Marks vs Rank trends, and list of Top 10 NITs available for this score. No login required."
         />
         <link
           rel="canonical"

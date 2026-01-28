@@ -618,9 +618,9 @@ const faqs = [
     </section>
 
 <div className="max-w-5xl mx-auto px-4 my-12">
-  <div className="flex flex-col md:flex-row items-center gap-6 p-6 bg-white border border-slate-200 rounded-[2rem] shadow-sm">
+  <div className="flex flex-col md:flex-row items-center gap-6 p-6 bg-white border border-slate-200 rounded-4xl shadow-sm">
     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
-      <Image width={400} height={400} src="/founder.jpg" alt="Expert" className="rounded-full" />
+      <Image width={400} height={400} src="/founder.jpg" alt="Expert" className="rounded-full w-16 h-16 object-cover object-top-left" />
     </div>
     <div>
       <h4 className="font-bold text-slate-900 mb-1 italic">The 2026 Normalization Paradox</h4>

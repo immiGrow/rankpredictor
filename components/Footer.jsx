@@ -7,7 +7,9 @@ import {
   FaShieldAlt,
   FaInfoCircle,
   FaGavel,
-  FaEnvelope
+  FaEnvelope,
+  FaDownload,
+  FaHistory
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -39,22 +41,25 @@ export default function Footer() {
         </div>
 
         {/* PREDICTION TOOLS */}
+       {/* COLUMN 2: PREDICTION TOOLS */}
         <div>
-          <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-6">
-            Prediction Tools
-          </h3>
+          <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-6">Prediction Tools</h3>
           <ul className="space-y-4 text-sm">
             <li className="flex items-center gap-2">
               <FaChartLine className="text-blue-500 shrink-0" />
-              <Link href="/jee-rank-predictor" className="hover:text-blue-400 transition">JEE Rank Predictor</Link>
-            </li>
-            <li className="flex items-center gap-2">
-              <FaCalculator className="text-blue-500 shrink-0" />
-              <Link href="/" className="hover:text-blue-400 transition">Percentile Predictor</Link>
+              <Link href="/jee-rank-predictor" className="hover:text-blue-400 transition">Rank Predictor</Link>
             </li>
             <li className="flex items-center gap-2">
               <FaUniversity className="text-blue-500 shrink-0" />
-              <Link href="/josaa-college-predictor" className="hover:text-blue-400 transition">College Predictor</Link>
+              <Link href="/jee-college-predictor" className="hover:text-blue-400 transition">JEE College Predictor</Link>
+            </li>
+            <li className="flex items-center gap-2">
+              <FaCalculator className="text-blue-500 shrink-0" />
+              <Link href="/josaa-college-predictor" className="hover:text-blue-400 transition">JoSAA Predictor</Link>
+            </li>
+            <li className="flex items-center gap-2 ">
+              <FaDownload className="shrink-0 text-blue-500" />
+              <Link href="/jee-main-2026-official-answer-key-pdf-shiftwise-download" className="hover:text-blue-400 transition">Download Answer Key</Link>
             </li>
           </ul>
         </div>
@@ -66,11 +71,19 @@ export default function Footer() {
           </h3>
           <ul className="space-y-4 text-sm">
             <li><Link href="/jee-mains-2026-shift-wise-marks-percentile-analysis" className="hover:text-white transition">Shift-wise Analysis</Link></li>
-            <li><Link href="/jee_main_cutoff_2026" className="hover:text-white transition">Expected Cutoffs</Link></li>
-            <li><Link href="/jee_main_marks_vs_rank_2026" className="hover:text-white transition">Marks vs Rank</Link></li>
+            <li><Link href="/jee_main_cutoff_2026" className="hover:text-white transition">Expected Cutoffs </Link></li>
+          
             <li><Link href="/blog/nta_percentile_calculation" className="hover:text-white transition">NTA Normalization</Link></li>
+          
+            <li><Link href="/josaa-opening-closing-rank-2026-nit-iiit-cutoff/nit-trichy" className="hover:text-white transition">College Cutoffs</Link></li>
+            <li><Link href="/jee-main-2026-toughest-shift-analysis-january-session" className="hover:text-white transition">Toughest Shift Analysis</Link></li>
+
+            <li><Link href="/top-nits-for-computer-science-cse-cutoff-2026" className="hover:text-white transition">Top NITs for CSE</Link></li>
           </ul>
         </div>
+
+
+
 
         {/* LEGAL & TRUST (ADSENSE ESSENTIALS) */}
         <div>
@@ -101,7 +114,31 @@ export default function Footer() {
           </ul>
         </div>
       </div>
+    
 
+{/* COLUMN 5: NIT CUTOFFS (Horizontal List in Bottom Bar) */}
+      <div className="max-w-7xl mx-auto px-6 py-4 border-t border-gray-900">
+          <p className="text-xs text-gray-600 mb-2 font-bold uppercase">Quick 2025 Analysis:</p>
+          <div className="flex flex-wrap gap-x-4 gap-y-2 text-[11px] text-gray-500 list-none">
+              
+            <li><Link href="/jee-mains-200-marks-percentile-2025" className="hover:text-blue-400">200 Marks Percentile</Link></li>
+            <li><Link href="/jee-mains-150-marks-percentile-2025" className="hover:text-blue-400">150 Marks Percentile</Link></li>
+            <li><Link href="/jee-mains-120-marks-percentile-2025" className="hover:text-blue-400">120 Marks Percentile</Link></li>
+          </div>
+      </div>
+{/* COLUMN 5: NIT CUTOFFS (Horizontal List in Bottom Bar) */}
+      <div className="max-w-7xl mx-auto px-6 py-4 border-t border-gray-900">
+          <p className="text-xs text-gray-600 mb-2 font-bold uppercase">Quick Cutoff Links:</p>
+          <div className="flex flex-wrap gap-x-4 gap-y-2 text-[11px] text-gray-500">
+            <Link href="/josaa-opening-closing-rank-2026-nit-iiit-cutoff/nit-trichy" className="hover:text-blue-400">NIT Trichy</Link>
+            <Link href="/josaa-opening-closing-rank-2026-nit-iiit-cutoff/nit-surathkal" className="hover:text-blue-400">NIT Karnataka</Link>
+            <Link href="/josaa-opening-closing-rank-2026-nit-iiit-cutoff/nit-warangal" className="hover:text-blue-400">NIT Warangal</Link>
+            <Link href="/josaa-opening-closing-rank-2026-nit-iiit-cutoff/vnit-nagpur" className="hover:text-blue-400">VNIT Nagpur</Link>
+            <Link href="/josaa-opening-closing-rank-2026-nit-iiit-cutoff/nit-rourkela" className="hover:text-blue-400">NIT Rourkela</Link>
+            <Link href="/josaa-opening-closing-rank-2026-nit-iiit-cutoff/mnit-allahabad" className="hover:text-blue-400">MNNIT Allahabad</Link>
+            <Link href="/josaa-opening-closing-rank-2026-nit-iiit-cutoff/nit-calicut" className="hover:text-blue-400">NIT Calicut</Link>
+          </div>
+      </div>
       {/* BOTTOM COPYRIGHT BAR */}
       <div className="border-t border-gray-900 bg-black/30">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
