@@ -25,22 +25,25 @@ export const metadata = {
     canonical: "https://www.jeerankpredictor.in/jee-mains-2026-shift-wise-marks-percentile-analysis"
   },
 
+ // OPEN GRAPH - This is your "HOOK" for Google Discover
   openGraph: {
-    title: "JEE Main 2026 Shift Wise Marks vs Percentile vs Rank Analysis",
-    description:
-      "Detailed shift-wise marks vs percentile analysis for JEE Main 2026 Session 1 with rank & college prediction tools.",
+    // Strategy: Use an "Emotional/Urgent" title for the feed
+    title: "Why 160 Marks on Jan 28 might NOT get you 99 Percentile ? Jan 28 Marks vs Percentile 'Inflation' Alert! (LIVE)", 
+    description: "Our data shows a massive shift in Jan 28 percentiles. Check the expected rank for 120, 150, and 180 marks now.",
     url: "https://www.jeerankpredictor.in/jee-mains-2026-shift-wise-marks-percentile-analysis",
     siteName: "JEERankPredictor",
     images: [
       {
-        url: "https://www.jeerankpredictor.in/logo.jpg",
+        // IMPORTANT: DO NOT USE A LOGO. Use a 1200x630 image showing a 
+        // bright table or a graph comparing Jan 27 vs Jan 28.
+        url: "https://www.jeerankpredictor.in/28-jan-analysis-og.webp", 
         width: 1200,
         height: 630,
-        alt: "JEE Main 2026 Shift Wise Analysis"
+        alt: "JEE Main 2026 Jan 28 Marks vs Percentile Trend Chart",
       }
     ],
     locale: "en_IN",
-    type: "article"
+    type: "article",
   },
 
   twitter: {
@@ -51,10 +54,17 @@ export const metadata = {
     images: ["https://www.jeerankpredictor.in/logo.jpg"]
   },
 
-  robots: {
+robots: {
     index: true,
-    follow: true
-  }
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large', // REQUIRED for Google Discover large cards
+      'max-snippet': -1,
+    },
+  },
 };
 
 
