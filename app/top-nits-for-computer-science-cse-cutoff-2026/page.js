@@ -24,16 +24,21 @@ export default function TopNITsCSEPage() {
   <meta name="keywords" content="Best NIT for CSE 2026, NIT Computer Science Cutoff, NIT CSE Ranking, JoSAA 2026 Prediction, NIT Trichy vs NIT Surathkal CSE" />
   <link rel="canonical" href="https://www.jeerankpredictor.in/top-nits-for-computer-science-cse-cutoff-2026" />
   
-    <meta property="og:title" content="Top 10 NITs for Computer Science (CSE) 2026: Cutoffs & Safe Scores" />
-    <meta property="og:description" content="Official JoSAA analysis for Top NITs for CSE. Compare NIT Trichy, Surathkal, and Warangal 2026 expected cutoffs, placement trends, and safe marks vs percentile." />
+  <meta property="og:title" content="2026 CSE Cutoffs: Top 10 NITs Comparison Table" />
+  <meta property="og:description" content="Direct comparison of 2026 expected CSE cutoffs. See the 'Safe Percentile' for General, OBC, EWS, and SC/ST categories." />
+  
+  {/* The Power Image (1200x630) */}
+  <meta property="og:image" content="https://www.jeerankpredictor.in/top-nit-cse-og.jpg" />
+  <meta property="og:image:alt" content="Comparison table of Top 10 NITs for CSE with 2026 expected cutoffs" />
     <meta property="og:url" content="https://www.jeerankpredictor.in/top-nits-for-computer-science-cse-cutoff-2026" />
     <meta property="og:type" content="article" />
-    <meta property="og:image" content="https://www.jeerankpredictor.in/logo.jpg" />
+   
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Top 10 NITs for Computer Science (CSE) 2026: Cutoffs & Safe Scores" />
     <meta name="twitter:description" content="Official JoSAA analysis for Top NITs for CSE. Compare NIT Trichy, Surathkal, and Warangal 2026 expected cutoffs, placement trends, and safe marks vs percentile." />
     <meta name="twitter:image" content="https://www.jeerankpredictor.in/logo.jpg" />
-
+    {/* Discover Large Preview Flag */}
+  <meta name="robots" content="index, follow, max-image-preview:large" />
 
 </Head>
 {/* ADVANCED NESTED SCHEMA */}

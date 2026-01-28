@@ -152,7 +152,7 @@ const filteredColleges = college.filter(c =>
       <meta property="og:url" content={pageUrl} />
       <meta property="og:title" content={displayTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={`${baseUrl}/logo.jpg`} /> {/* Replace with your real OG image */}
+      <meta property="og:image" content={`${baseUrl}/nit-suratkal-warangal.jpg`} /> {/* Replace with your real OG image */}
       <meta property="og:site_name" content="JEE Rank Predictor" />
 
       {/* --- TWITTER (X) --- */}

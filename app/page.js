@@ -46,12 +46,17 @@ export default function Home() {
         <link rel="canonical" href="https://www.jeerankpredictor.in" />
 
         {/* Open Graph (Facebook, LinkedIn, Bing, etc.) */}
-        <meta property="og:title" content="JEE Main Rank Predictor 2026 – Free Marks vs Rank Tool" />
-        <meta
-          property="og:description"
-          content="Predict your JEE Main 2026 rank & percentile using marks. Based on previous year trends and official data patterns."
-        />
+       <meta property="og:title" content="JEE Main Rank Predictor 2026: Calculate AIR & Percentile Instantly (LIVE)" />
+    <meta
+      property="og:description"
+      content="The most accurate Rank Predictor for JEE 2026. Get shift-wise analysis and NIT/IIIT admission chances. Join 1.2 Lakh+ students today."
+    />
         <meta property="og:url" content="https://www.jeerankpredictor.in" />
+        {/* THE IMAGE: Use a high-quality dashboard preview card */}
+    <meta property="og:image" content="https://www.jeerankpredictor.in/jrp-og-img.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="JEE Main 2026 Rank Predictor Dashboard Preview" />
         <meta property="og:site_name" content="JEERankPredictor" />
         <meta property="og:locale" content="en_IN" />
         <meta property="og:type" content="website" />
@@ -63,6 +68,8 @@ export default function Home() {
           name="twitter:description"
           content="Estimate your JEE Main 2026 rank and percentile instantly using marks."
         />
+        {/* CRITICAL FOR GOOGLE DISCOVER: This enables the large image preview */}
+    <meta name="robots" content="index, follow, max-image-preview:large" />
       </Head>
 
      {/* SOFTWARE APPLICATION WITH RATINGS */}
