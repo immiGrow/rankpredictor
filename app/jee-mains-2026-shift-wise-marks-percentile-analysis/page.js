@@ -3,7 +3,8 @@ import Link from "next/link";
 import ShiftWiseTable from "@/components/ShiftWiseTable";
 import HubPage from "@/components/HubPage";
 import Script from "next/script";
-import { FaCheckCircle, FaExclamationTriangle } from "react-icons/fa";
+import { FaBell, FaCheckCircle, FaExclamationTriangle, FaExternalLinkAlt } from "react-icons/fa";
+import OfficialTracker from "@/components/OfficialTracker";
 export const metadata = {
   title: "JEE Main 2026 Shift Wise Marks vs Percentile vs Rank Analysis (Session 1)",
   description:
@@ -55,6 +56,8 @@ export const metadata = {
     follow: true
   }
 };
+
+
 
 export default function JeeMain2026ShiftWiseAnalysis() {
   return (
@@ -284,6 +287,10 @@ export default function JeeMain2026ShiftWiseAnalysis() {
     </p>
   </div>
 </section>
+
+ <div className="">
+             <OfficialTracker />
+          </div>
 
 <section className="max-w-7xl mx-auto px-4 border-t border-slate-100">
   <div className="bg-slate-50 rounded-[3rem] p-8 md:p-16 border border-slate-100 relative overflow-hidden">

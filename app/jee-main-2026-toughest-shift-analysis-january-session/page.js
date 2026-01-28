@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useMemo} from 'react';
 import Script from 'next/script';
 import { 
   FaFire, FaExclamationCircle, FaCheckCircle, 
@@ -14,9 +14,12 @@ import {
   FaAward,
   FaGraduationCap,
   FaBalanceScale,
-  FaQuestionCircle
+  FaQuestionCircle,
+  FaExternalLinkAlt,
+  FaBell
 } from 'react-icons/fa';
 import Link from 'next/link';
+import OfficialTracker from '@/components/OfficialTracker';
 
 // Metadata with Social & Search optimization
 export const metadata = {
@@ -83,16 +86,16 @@ const articleSchema = {
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "JEE Main 2026 Toughest Shift Analysis & Normalization Impact",
+      "headline": "JEE Main 2026 Jan 28 Shift 2 Paper Analysis | JEE Main 2026 Toughest Shift Analysis (January Session)",
       "author": { "@type": "Person", "name": "Abhisha Kumar Chittore", "url": "https://www.jeerankpredictor.in/about" },
       "datePublished": "2026-01-21T08:00:00+05:30",
-      "dateModified": "2026-01-24T21:00:00+05:30",
+      "dateModified": "2026-01-28T21:00:00+05:30",
       "publisher": { 
         "@type": "Organization", 
         "name": "JEE RankPredictor",
         "logo": { "@type": "ImageObject", "url": "https://www.jeerankpredictor.in/logo.png" }
       },
-      "description": "Expert analysis of JEE Main 2026 January shifts difficulty levels and normalization methodology."
+      "description": "Expert analysis and marks vs percentile for JEE Main 2026 Jan 28 Shift 2 based on students reactions."
     },
    
   ]
@@ -116,6 +119,10 @@ const faqs = [
       a: "2026 has seen a significant shift toward more conceptual Physics and even lengthier Mathematics. This suggests that the 99 percentile cutoff may drop to around 180-185 marks compared to 192 in 2025."
     }
   ];
+
+
+
+
 
 export default function ToughestShiftPage() {
   const lastUpdated = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -152,6 +159,8 @@ export default function ToughestShiftPage() {
   ];
 
   const shiftData = [
+    { shift: "Jan 28 Shift 2", difficulty: "Moderate", physics: "Moderate", chemistry: "Easy", maths: "Hard", target99: "183-188" },
+    { shift: "Jan 28 Shift 1", difficulty: "Moderate-Hard", physics: "Moderate", chemistry: "Easy", maths: "Hard", target99: "182-186" },
     { shift: "Jan 24 Shift 1", difficulty: "Hard", physics: "Moderate", chemistry: "Easy-Mod", maths: "Very Hard", target99: "178-182" },
     { shift: "Jan 23 Shift 2", difficulty: "Moderate-Hard", physics: "Moderate", chemistry: "Moderate", maths: "Hard", target99: "185-190" },
     { shift: "Jan 22 Shift 1", difficulty: "Moderate", physics: "Easy", chemistry: "Easy", maths: "Moderate-Hard", target99: "195-202" },
@@ -192,7 +201,11 @@ export default function ToughestShiftPage() {
           </div>
         </div>
       </section>
+    <div className="">
+             <OfficialTracker />
+          </div>
 
+          
    {/*Shiftwise Comparision Analysis */}
 <section className="my-20">
       <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2 underline decoration-blue-500 decoration-4 underline-offset-8">
@@ -275,7 +288,58 @@ export default function ToughestShiftPage() {
 </section>
 
 {/* Subject Wise Analysis */}
+{/* Jan 28 Shift 1 Detailed Verdict */}
+        <section className="my-16 space-y-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-black text-gray-900">Jan 28 Shift 1: Subject-Wise Verdict</h2>
+            <div className="flex justify-center gap-4 mt-4 font-bold text-sm">
+              <span className="text-red-600 uppercase tracking-widest">Maths: Lengthy</span>
+              <span className="text-gray-400">|</span>
+              <span className="text-blue-600 uppercase tracking-widest">Physics: Concept-Rich</span>
+              <span className="text-gray-400">|</span>
+              <span className="text-green-600 uppercase tracking-widest">Chem: Balanced</span>
+            </div>
+          </div>
 
+          <div className="grid lg:grid-cols-3 gap-6">
+            {/* MATHS */}
+            <div className="bg-white rounded-3xl p-8 border-t-8 border-red-500 shadow-lg relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-4 opacity-10"><FaSquareRootAlt size={80}/></div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Mathematics</h3>
+              <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                Followed the 2026 trend: **Time-consuming**. High weightage on Calculus (Integration) and 3D Geometry. Statistics question was a bit calculative.
+              </p>
+              <div className="bg-slate-50 p-4 rounded-xl">
+                <p className="text-xs font-bold text-slate-500 uppercase mb-2">Key Focus</p>
+                <div className="flex flex-wrap gap-2">
+                  {['Definite Integrals', '3D-Lines', 'Probability'].map(t => (
+                    <span key={t} className="text-[10px] bg-white border border-slate-200 px-2 py-1 rounded-md font-bold">{t}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* PHYSICS */}
+            <div className="bg-white rounded-3xl p-8 border-t-8 border-blue-500 shadow-lg relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-4 opacity-10"><FaAtom size={80}/></div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Physics</h3>
+              <ul className="text-xs space-y-2 text-gray-600">
+                <li className="flex gap-2 items-start"><FaCheckCircle className="text-green-500 mt-1 shrink-0"/> Current Electricity (2-3 Qs).</li>
+                <li className="flex gap-2 items-start"><FaExclamationTriangle className="text-orange-500 mt-1 shrink-0"/> Tricky question on Magnetic Effects.</li>
+                <li className="flex gap-2 items-start"><FaInfoCircle className="text-blue-500 mt-1 shrink-0"/> Formula based but required unit conversions.</li>
+              </ul>
+            </div>
+
+            {/* CHEMISTRY */}
+            <div className="bg-white rounded-3xl p-8 border-t-8 border-green-500 shadow-lg relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-4 opacity-10"><FaFlask size={80}/></div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Chemistry</h3>
+              <p className="text-sm text-gray-600">
+                NCERT is King. Inorganic was easy; Organic saw questions on Biomolecules and Name reactions. Physical was restricted to integers.
+              </p>
+            </div>
+          </div>
+        </section>
 <section className="my-16 space-y-8">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-black text-gray-900">Jan 24 Shift 1: Detailed Subject Verdict</h2>
