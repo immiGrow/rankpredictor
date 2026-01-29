@@ -8,6 +8,12 @@ export default function sitemap() {
       changeFrequency: "daily",
       priority: 1.0,
     },
+    {
+      url: `${baseUrl}/jee-main-2026-session-1-result-scorecard-download`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 1.0,
+    },
 
    
 
