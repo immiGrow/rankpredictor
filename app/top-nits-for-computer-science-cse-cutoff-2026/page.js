@@ -32,13 +32,14 @@ export default function TopNITsCSEPage() {
   <meta property="og:image:alt" content="Comparison table of Top 10 NITs for CSE with 2026 expected cutoffs" />
     <meta property="og:url" content="https://www.jeerankpredictor.in/top-nits-for-computer-science-cse-cutoff-2026" />
     <meta property="og:type" content="article" />
+
    
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Top 10 NITs for Computer Science (CSE) 2026: Cutoffs & Safe Scores" />
     <meta name="twitter:description" content="Official JoSAA analysis for Top NITs for CSE. Compare NIT Trichy, Surathkal, and Warangal 2026 expected cutoffs, placement trends, and safe marks vs percentile." />
     <meta name="twitter:image" content="https://www.jeerankpredictor.in/logo.jpg" />
     {/* Discover Large Preview Flag */}
-  <meta name="robots" content="index, follow, max-image-preview:large" />
+ <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
 </Head>
 {/* ADVANCED NESTED SCHEMA */}

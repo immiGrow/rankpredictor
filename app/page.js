@@ -69,7 +69,7 @@ export default function Home() {
           content="Estimate your JEE Main 2026 rank and percentile instantly using marks."
         />
         {/* CRITICAL FOR GOOGLE DISCOVER: This enables the large image preview */}
-    <meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       </Head>
 
      {/* SOFTWARE APPLICATION WITH RATINGS */}
