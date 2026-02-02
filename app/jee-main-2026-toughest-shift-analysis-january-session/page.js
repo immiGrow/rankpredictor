@@ -20,6 +20,7 @@ import {
 } from 'react-icons/fa';
 import Link from 'next/link';
 import OfficialTracker from '@/components/OfficialTracker';
+import Session1QuickHub from '@/components/Session1QuickHub';
 
 // Metadata with Social & Search optimization
 export const metadata = {
@@ -201,9 +202,7 @@ export default function ToughestShiftPage() {
           </div>
         </div>
       </section>
-    <div className="">
-             <OfficialTracker />
-          </div>
+   <Session1QuickHub/>
 
           
    {/*Shiftwise Comparision Analysis */}

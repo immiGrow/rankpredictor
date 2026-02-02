@@ -18,6 +18,7 @@ import ShiftWiseTable from "@/components/ShiftWiseTable";
 import RankResult from "@/components/RankResult";
 import Head from "next/head";
 import { pre } from "framer-motion/client";
+import Session1QuickHub from "@/components/Session1QuickHub";
 
 
 
@@ -256,7 +257,7 @@ export default function Home() {
       {/* ... Add more links to your NIT-CSE and Josaa pages ... */}
   </section>
 {/* {prediction && <RankResult prediction={prediction}/>} */}
-
+<Session1QuickHub/>
        
 
 

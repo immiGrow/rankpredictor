@@ -5,6 +5,7 @@ import HubPage from "@/components/HubPage";
 import Script from "next/script";
 import { FaBell, FaCheckCircle, FaExclamationTriangle, FaExternalLinkAlt } from "react-icons/fa";
 import OfficialTracker from "@/components/OfficialTracker";
+import Session1QuickHub from "@/components/Session1QuickHub";
 export const metadata = {
   title: "JEE Main 2026 Shift Wise Marks vs Percentile vs Rank Analysis (Session 1)",
   description:
@@ -297,6 +298,8 @@ export default function JeeMain2026ShiftWiseAnalysis() {
     </p>
   </div>
 </section>
+
+<Session1QuickHub/>
 
  <div className=" mx-20 sm:mx-32">
              <OfficialTracker />
