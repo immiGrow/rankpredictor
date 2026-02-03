@@ -45,14 +45,7 @@ export default function Navbar() {
             </Link>
           </li>
 
-          <li>
-            <Link
-              href="/"
-              className="hover:text-blue-400 transition"
-            >
-              Percentile Predictor
-            </Link>
-          </li>
+       
           <li>
             <Link
               href="/josaa-college-predictor"
@@ -70,6 +63,22 @@ export default function Navbar() {
               className="hover:text-blue-400 transition"
             >
               Marks vs Rank
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/jee-main-2026-official-answer-key-pdf-shiftwise-download"
+              className="hover:text-blue-400 transition"
+            >
+             Answer Keys
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/jee-main-2026-session-1-result-scorecard-download"
+              className="hover:text-blue-400 transition"
+            >
+             JEE Result 2026
             </Link>
           </li>
 

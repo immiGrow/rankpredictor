@@ -72,13 +72,15 @@ export default function Footer() {
           <ul className="space-y-4 text-sm">
             <li><Link href="/jee-mains-2026-shift-wise-marks-percentile-analysis" className="hover:text-white transition">Shift-wise Analysis</Link></li>
             <li><Link href="/jee_main_cutoff_2026" className="hover:text-white transition">Expected Cutoffs </Link></li>
-          
+            <li><Link href="/jee-main-2026-official-answer-key-pdf-shiftwise-download" className="hover:text-white transition">Official Answer Key</Link></li>
+            <li><Link href="/jee-main-2026-session-1-result-scorecard-download" className="hover:text-white transition">JEE Result out</Link></li>
             <li><Link href="/blog/nta_percentile_calculation" className="hover:text-white transition">NTA Normalization</Link></li>
           
             <li><Link href="/josaa-opening-closing-rank-2026-nit-iiit-cutoff/nit-trichy" className="hover:text-white transition">College Cutoffs</Link></li>
             <li><Link href="/jee-main-2026-toughest-shift-analysis-january-session" className="hover:text-white transition">Toughest Shift Analysis</Link></li>
 
             <li><Link href="/top-nits-for-computer-science-cse-cutoff-2026" className="hover:text-white transition">Top NITs for CSE</Link></li>
+          
           </ul>
         </div>
 
