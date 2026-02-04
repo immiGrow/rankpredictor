@@ -4,10 +4,10 @@ import React from 'react'
 // app/jee-main-2026-official-answer-key-pdf-shiftwise-download/metadata.js
 
 export const metadata = {
-  title: "🔴 JEE Main 2026 Answer Key (LIVE): Download Shift-wise PDF & Response Sheet",
+  title: "🔴 JEE Main 2026 Answer Key (OUT): Download Shift-wise PDF & Response Sheet",
 
   description:
-    "Access the Official JEE Main 2026 Session 1 Answer Key. Shift-wise PDF links, Bonus Question tracker, and NTA response sheet login. Calculate your raw score now.",
+    "JEE Main 2026 Official Answer Key for Session 1 is expected today, Feb 4. Check live status, download shift-wise PDF, and use our tracker for Bonus Questions.",
 
   alternates: {
     canonical:
@@ -15,7 +15,7 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "🔴 JEE 2026 Answer Key LIVE - Download PDF & Check Bonus Questions",
+    title: "🔴 JEE 2026 Answer Key OUT - Download PDF & Check Bonus Questions",
     description:
       "Calculate your rank instantly. Full shift-wise analysis and challenge tracker for Jan-Feb 2026 attempt.",
     url: "https://www.jeerankpredictor.in/jee-main-2026-official-answer-key-pdf-shiftwise-download",
@@ -32,7 +32,7 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "🔴 JEE 2026 Answer Key LIVE - Download PDF & Check Bonus Questions",
+    title: "🔴 JEE 2026 Answer Key OUT - Download PDF & Check Bonus Questions",
     description:
       "Calculate your rank instantly. Full shift-wise analysis and challenge tracker for Jan-Feb 2026 attempt.",
     images: ["https://www.jeerankpredictor.in/jee-2026-result-live-banner.jpg"],
