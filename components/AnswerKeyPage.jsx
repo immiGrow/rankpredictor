@@ -2,18 +2,18 @@
 import React, { useState,useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { FaDownload, FaExclamationCircle, FaCalculator, FaCheckCircle, FaInfoCircle, FaEnvelopeOpenText,FaChevronDown, FaQuestionCircle } from 'react-icons/fa';
+import { FaDownload, FaExclamationCircle, FaCalculator, FaCheckCircle, FaInfoCircle, FaEnvelopeOpenText,FaChevronDown, FaQuestionCircle, FaExternalLinkAlt, FaChartLine } from 'react-icons/fa';
 import Script from 'next/script';
 import Image from 'next/image';
 
 export default function AnswerKeyPage() {
   const shifts = [
-      { date: "Jan 21, 2026", s1: "Link Pending", s2: "Link Pending", diff: "Easy" },
-      { date: "Jan 22, 2026", s1: "Link Pending", s2: "Link Pending", diff: "Moderate" },
-      { date: "Jan 23, 2026", s1: "Link Pending", s2: "Link Pending", diff: "Moderate-Hard" },
-      { date: "Jan 24, 2026", s1: "Link Pending", s2: "Link Pending", diff: "Hard" },
-    { date: "Jan 28, 2026", s1: "Link Pending", s2: "Link Pending", diff: "Moderate" },
-    { date: "Feb 01, 2026", s1: "Link Pending", s2: "Link Pending", diff: "Moderate-Hard" },
+      { date: "Jan 21, 2026", s1: "Download PDF", s2: "Download PDF", diff: "Easy" },
+      { date: "Jan 22, 2026", s1: "Download PDF", s2: "Download PDF", diff: "Moderate" },
+      { date: "Jan 23, 2026", s1: "Download PDF", s2: "Download PDF", diff: "Moderate-Hard" },
+      { date: "Jan 24, 2026", s1: "Download PDF", s2: "Download PDF", diff: "Hard" },
+    { date: "Jan 28, 2026", s1: "Download PDF", s2: "Download PDF", diff: "Moderate" },
+    { date: "Feb 01, 2026", s1: "Download PDF", s2: "Download PDF", diff: "Moderate-Hard" },
   ];
 
   // We can now use state and event handlers!
@@ -154,76 +154,112 @@ const faqs = [
   }}
 />
       <main className="bg-white min-h-screen">
-        {/* HERO SECTION */}
-        <section className="bg-slate-950 text-white pt-24 pb-16 px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-[10px] font-black uppercase tracking-[0.2em] mb-6">
-              <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-              Live Update: Session 1 
+       {/* HERO SECTION - MODIFIED FOR 'RELEASED' STATUS */}
+        <section className="bg-slate-950 text-white pt-24 pb-16 px-4 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+             <div className="absolute top-10 left-10 w-64 h-64 bg-blue-500 rounded-full blur-[120px]"></div>
+          </div>
+          
+          <div className="max-w-6xl mx-auto text-center relative z-10">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-500/20 border border-green-500/30 text-green-400 text-[10px] font-black uppercase tracking-[0.2em] mb-6 shadow-lg shadow-green-500/10">
+              <span className="w-2 h-2 rounded-full bg-green-500 animate-ping"></span>
+              Confirmed: Answer Key is Live
             </div>
           
             <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
-              JEE Main 2026 <span className="text-blue-500">Official Answer Key</span>
+              JEE Main 2026 <span className="text-blue-500">Session 1 Answer Key</span> (Released)
             </h1>
             <p className="text-slate-400 text-lg max-w-2xl mx-auto mb-8">
-              NTA is set to release the Session 1 Provisional Answer Key and Response Sheets. Access the direct login link and shift-wise PDFs below.
+              NTA has officially uploaded the Provisional Answer Key and Response Sheets for Session 1. Check your scores and challenge discrepancies before Feb 6.
             </p>
             
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="#download-table" className="px-8 py-4 bg-blue-600 text-white font-black text-xs uppercase tracking-widest rounded-2xl hover:bg-blue-700 transition">
-                Download Shift-wise PDF
+              <a href="https://jeemain.nta.nic.in/" target="_blank" className="px-8 py-4 bg-blue-600 text-white font-black text-xs uppercase tracking-widest rounded-2xl hover:bg-blue-700 transition flex items-center gap-2">
+                <FaExternalLinkAlt /> Official NTA Login
               </a>
-              <a href="#challenge-guide" className="px-8 py-4 bg-slate-800 text-white font-black text-xs uppercase tracking-widest rounded-2xl hover:bg-slate-700 transition">
-                How to Challenge?
+              <a href="#importance" className="px-8 py-4 bg-slate-800 text-white font-black text-xs uppercase tracking-widest rounded-2xl hover:bg-slate-700 transition">
+                Why This Key Matters?
               </a>
             </div>
           </div>
         </section>
 
-        {/* QUICK SNIPPET FOR GOOGLE */}
-        <div className="max-w-5xl mx-auto px-4 -mt-8">
-          <div className="bg-white p-6 rounded-3xl shadow-2xl border border-slate-100 flex flex-col md:flex-row items-center gap-6">
-            <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center shrink-0">
-              <FaExclamationCircle size={24}/>
-            </div>
-            <p className="text-sm text-slate-600 font-medium">
-              <strong>Quick Update:</strong> The NTA Answer Key Challenge window usually stays open for 48-72 hours. You must pay ₹200 per question challenged. Once processed, a Final Answer Key will be released before the <Link href="/jee-mains-2026-shift-wise-marks-percentile-analysis" className="text-blue-600 font-bold underline">Results</Link>.
-            </p>
-          </div>
-        </div>
 
-        {/* SHIFT-WISE TABLE SECTION */}
-        <section id="download-table" className="max-w-6xl mx-auto px-4 py-20">
-          <h2 className="text-3xl font-black text-slate-900 mb-8">Shift-wise Answer Key & Analysis</h2>
-          <div className="overflow-hidden rounded-[2.5rem] border border-slate-200 shadow-sm">
-            <table className="w-full text-left">
-              <thead className="bg-slate-50 border-b border-slate-200">
-                <tr>
-                  <th className="p-6 text-xs font-black uppercase text-slate-500 tracking-widest">Exam Date</th>
-                  <th className="p-6 text-xs font-black uppercase text-slate-500 tracking-widest">Shift 1 (Link)</th>
-                  <th className="p-6 text-xs font-black uppercase text-slate-500 tracking-widest">Shift 2 (Link)</th>
-                  <th className="p-6 text-xs font-black uppercase text-slate-500 tracking-widest">Difficulty Bridge</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-100">
-                {shifts.map((s, i) => (
-                  <tr key={i} className="hover:bg-slate-50/50 transition-colors">
-                    <td className="p-6 font-bold text-slate-900">{s.date}</td>
-                    <td className="p-6 text-blue-600 font-bold text-sm">
-                      <span className="flex items-center gap-2 cursor-not-allowed opacity-50"><FaDownload size={12}/> {s.s1}</span>
-                    </td>
-                    <td className="p-6 text-blue-600 font-bold text-sm">
-                      <span className="flex items-center gap-2 cursor-not-allowed opacity-50"><FaDownload size={12}/> {s.s2}</span>
-                    </td>
-                    <td className="p-6">
-                      <Link href="/jee-main-2026-toughest-shift-analysis-january-session" className="text-xs font-black text-slate-600 hover:text-blue-600 uppercase tracking-tighter">
-                        Check {s.diff} Level →
-                      </Link>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+       
+
+     {/* UPDATED SHIFT TABLE */}
+<section id="download-table" className="max-w-6xl mx-auto px-4 py-16">
+  <div className="flex justify-between items-end mb-8">
+    <h2 className="text-3xl font-black text-slate-900">Shift-wise Answer Key 2026</h2>
+    <p className="text-xs font-bold text-slate-400">Status: <span className="text-green-600 animate-pulse">Official Keys Released</span></p>
+  </div>
+  <div className="overflow-x-auto rounded-[2.5rem] border border-slate-200 shadow-xl">
+    <table className="w-full text-left min-w-[700px]">
+      <thead className="bg-slate-50 border-b border-slate-200">
+        <tr>
+          <th className="p-6 text-xs font-black uppercase text-slate-500">Exam Date</th>
+          <th className="p-6 text-xs font-black uppercase text-slate-500">Shift 1 (9 AM - 12 PM)</th>
+          <th className="p-6 text-xs font-black uppercase text-slate-500">Shift 2 (3 PM - 6 PM)</th>
+          <th className="p-6 text-xs font-black uppercase text-slate-500">Shift Difficulty</th>
+        </tr>
+      </thead>
+      <tbody className="divide-y divide-slate-100">
+        {shifts.map((s, i) => (
+          <tr key={i} className="hover:bg-blue-50/30 transition-colors">
+            <td className="p-6 font-bold text-slate-900">{s.date}</td>
+            <td className="p-6">
+              <a href="https://jeemain.nta.nic.in/" target="_blank" className="flex items-center gap-2 text-blue-600 font-black text-sm hover:underline hover:text-blue-800">
+                <FaDownload size={12}/> {s.s1}
+              </a>
+            </td>
+            <td className="p-6">
+              <a href="https://jeemain.nta.nic.in/" target="_blank" className="flex items-center gap-2 text-blue-600 font-black text-sm hover:underline hover:text-blue-800">
+                <FaDownload size={12}/> {s.s2}
+              </a>
+            </td>
+            <td className="p-6">
+             <Link href={"/jee-main-2026-toughest-shift-analysis-january-session"}>
+            <span className="text-[10px] font-black px-3 py-1 bg-slate-100 hover:text-slate-800 rounded-full text-slate-500 uppercase tracking-tighter">
+                {s.diff}
+              </span> </Link> 
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+        {/* NEW SECTION: IMPORTANCE OF ANSWER KEY (SEO BOOSTER) */}
+        <section id="importance" className="max-w-6xl mx-auto px-4 py-16">
+          <div className="bg-blue-600 rounded-[3rem] p-8 md:p-16 text-white relative overflow-hidden">
+             <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                   <h2 className="text-3xl font-black mb-6 leading-tight">Why the Feb 4th Answer Key <br/><span className="text-blue-200">Is a Game Changer</span></h2>
+                   <div className="space-y-6">
+                      {[
+                        { title: "Raw Score Accuracy", desc: "Calculate your exact marks before the percentile normalization process begins." },
+                        { title: "Session 2 Strategy", desc: "If your score is below 150, use the key to identify weak topics for the April session." },
+                        { title: "Challenge Window", desc: "You only have 48 hours to report NTA's errors. After this, no changes are accepted." }
+                      ].map((item, idx) => (
+                        <div key={idx} className="flex gap-4">
+                           <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center shrink-0"><FaChartLine /></div>
+                           <div>
+                              <h4 className="font-bold text-lg">{item.title}</h4>
+                              <p className="text-blue-100 text-sm">{item.desc}</p>
+                           </div>
+                        </div>
+                      ))}
+                   </div>
+                </div>
+                <div className="bg-white/10 border border-white/20 p-8 rounded-[2rem] backdrop-blur-md text-center">
+                   <h3 className="text-xl font-black mb-4">Calculated your score?</h3>
+                   <p className="text-sm mb-6 text-blue-100">Don&apos;t wait for the official result. Predict your AIR based on current shift difficulty.</p>
+                   <Link href="/jee-rank-predictor" className="inline-block w-full py-4 bg-white text-blue-600 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-blue-50 transition">
+                      Predict My Rank Now →
+                   </Link>
+                </div>
+             </div>
           </div>
         </section>
 
@@ -262,7 +298,7 @@ const faqs = [
         <p className="text-sm text-slate-500 mb-6">Download the consolidated provisional answer key for all January shifts in PDF format.</p>
       </div>
       <a 
-        href="https://jeemain.nta.nic.in/public-notices/" 
+        href="https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/02/202602041670681672.pdf" 
         target="_blank" 
         rel="noopener noreferrer"
         className="block w-full text-center py-4 bg-slate-900 text-white rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-slate-800 transition-all"
