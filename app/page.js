@@ -7,17 +7,11 @@ import TrustSection from "@/components/TrustSection";
 import HowItWorks from "@/components/HowItWorks";
 import KeyFeatures from "@/components/KeyFeatures";
 import WhyChooseRP from "@/components/WhyChooseRP";
-import PercentileRankTable from "@/components/PercentileRankTable";
-import MarksPercentileTable from "@/components/MarksPercentileTable";
 import EssentialResources from "@/components/EssentialResources";
 import FAQSection from "@/components/FAQSection";
 import HubPage from "@/components/HubPage";
 import ShiftWiseTable from "@/components/ShiftWiseTable";
-
-
-import RankResult from "@/components/RankResult";
 import Head from "next/head";
-import { pre } from "framer-motion/client";
 import Session1QuickHub from "@/components/Session1QuickHub";
 
 
@@ -44,7 +38,7 @@ export default function Home() {
         />
 
         {/* Canonical */}
-        <link rel="canonical" href="https://www.jeerankpredictor.in" />
+        <link  rel="canonical" href="https://www.jeerankpredictor.in" />
 
         {/* Open Graph (Facebook, LinkedIn, Bing, etc.) */}
        <meta property="og:title" content="JEE Main Rank Predictor 2026: Calculate AIR & Percentile Instantly (LIVE)" />
@@ -241,16 +235,16 @@ export default function Home() {
 
       {/* NEW: QUICK ANALYTICS STRIP (Links to your internal pages) */}
   <section className="max-w-6xl mx-auto px-4 py-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-      <Link href="/jee-main-2026-toughest-shift-analysis-january-session" className="p-4 bg-white rounded-xl shadow-sm border border-slate-200 hover:border-indigo-500 transition-all group">
+      <Link prefetch={false} href="/jee-main-2026-toughest-shift-analysis-january-session" className="p-4 bg-white rounded-xl shadow-sm border border-slate-200 hover:border-indigo-500 transition-all group">
         <p className="text-xs text-slate-500 uppercase font-bold">Shift Analytics</p>
         <p className="text-slate-900 font-semibold group-hover:text-indigo-600">Which shift was toughest? →</p>
       </Link>
       
-      <Link href="/top-nits-for-computer-science-cse-cutoff-2026" className="p-4 bg-white rounded-xl shadow-sm border border-slate-200 hover:border-indigo-500 transition-all group">
+      <Link prefetch={false} href="/top-nits-for-computer-science-cse-cutoff-2026" className="p-4 bg-white rounded-xl shadow-sm border border-slate-200 hover:border-indigo-500 transition-all group">
         <p className="text-xs text-slate-500 uppercase font-bold">CSE Cutoffs 2026</p>
         <p className="text-slate-900 font-semibold group-hover:text-indigo-600">NIT Trichy vs Surathkal →</p>
       </Link>
-      <Link href="/jee-main-2026-toughest-shift-analysis-january-session" className="p-4 bg-white rounded-xl shadow-sm border border-slate-200 hover:border-indigo-500 transition-all group">
+      <Link prefetch={false} href="/jee-main-2026-toughest-shift-analysis-january-session" className="p-4 bg-white rounded-xl shadow-sm border border-slate-200 hover:border-indigo-500 transition-all group">
         <p className="text-xs text-slate-500 uppercase font-bold">Shiftwise Marks vs Percentile</p>
         <p className="text-slate-900 font-semibold group-hover:text-indigo-600">Check your shift analysis? →</p>
       </Link>

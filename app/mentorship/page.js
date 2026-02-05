@@ -1,123 +1,135 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { 
   FaBolt, FaCheckCircle, FaVideo, FaUserShield, 
-  FaStar, FaChalkboardTeacher, FaHistory, FaPhoneAlt 
+  FaStar, FaHistory, FaTimes, FaUserEdit, FaGraduationCap
 } from 'react-icons/fa';
 
 export default function Page() {
+  const router = useRouter();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedMentor, setSelectedMentor] = useState(null);
+  // ... inside your Mentorship Page component
+const [formData, setFormData] = useState({ percentile: '', category: 'General', state: '' });
+
   const mentors = [
-    { name: "Abhisha K.", college: "VNIT Nagpur", rank: "97.32%ile", tag: "CSE Expert" },
-    { name: "Rahul M.", college: "IIT Bombay", rank: "AIR 12xx", tag: "JoSAA Pro" },
-    { name: "Sneha P.", college: "NIT Trichy", rank: "99.1%ile", tag: "Choice Filling" },
+    { name: "Abhisha K.", college: "VNIT Nagpur", rank: "97.32%ile", tag: "CSE Expert", status: "Online" },
+    { name: "Rahul M.", college: "IIT Bombay", rank: "AIR 12xx", tag: "JoSAA Pro", status: "Busy (3m left)" },
+    { name: "Sneha P.", college: "NIT Trichy", rank: "99.1%ile", tag: "Choice Filling", status: "Online" },
   ];
 
+  const openBooking = (mentor) => {
+    setSelectedMentor(mentor);
+    setIsModalOpen(true);
+    
+  };
+
+  const handlePayment = (e) => {
+    e.preventDefault();
+  // Save data so it persists after the payment redirect
+  localStorage.setItem('student_session_data', JSON.stringify(formData));
+ router.push('/payment');
+};
+
   return (
-    <div className="bg-white min-h-screen text-slate-900">
+    <div className="bg-white min-h-screen text-slate-900 relative">
       {/* --- URGENCY HEADER --- */}
-      <div className="bg-amber-100 py-2 text-center text-amber-800 text-xs font-bold uppercase tracking-widest px-4">
-        ⚡ Limited Slots: Only 15 Sessions available for Feb 12th Results Day
+      <div className="bg-amber-100 py-2 text-center text-amber-800 text-xs font-black uppercase tracking-widest px-4 sticky top-16 z-50">
+        ⚡ Live: {mentors.filter(m => m.status === "Online").length} Mentors Online Now | Next Slot in 4 mins
       </div>
 
       {/* --- HERO SECTION --- */}
-      <section className="pt-16 pb-24 px-6 text-center bg-gradient-to-b from-blue-50 to-white">
+      <section className="pt-16 pb-20 px-6 text-center bg-linear-to-b from-blue-50 to-white">
         <div className="max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-bold mb-8">
             <FaStar /> The Trust-First Initiative
           </div>
           <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-8 leading-tight">
             Talk to an <span className="text-blue-600 underline decoration-blue-200">NITian / IITian</span> <br /> 
-            for just <span className="text-emerald-600">₹19</span>
+            for just <span className="text-emerald-600 font-mono italic">₹19</span>
           </h1>
           <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Stop taking advice from consultants who never cleared JEE. Get 15 minutes of raw, honest guidance from someone who is actually studying in your dream college.
+            Stop taking advice from consultants who never cleared JEE. Get 15 minutes of raw guidance from people who actually made it.
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-2xl font-black text-lg shadow-2xl shadow-blue-200 transition-all transform hover:-translate-y-1">
-              Book Your 15-Min Session
-            </button>
-            <Link href="/jee-rank-predictor" className="bg-slate-100 hover:bg-slate-200 text-slate-700 px-10 py-5 rounded-2xl font-bold text-lg transition-all">
-              Predict My Rank First
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* --- THE ₹19 COUNSELING MODEL --- */}
-      <section className="max-w-6xl mx-auto px-6 py-20 border-y border-slate-100">
-        <div className="grid md:grid-cols-3 gap-12">
-          <div className="space-y-4">
-            <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl shadow-inner">
-              <FaBolt />
-            </div>
-            <h3 className="text-2xl font-bold">15-Min Quick Analysis</h3>
-            <p className="text-slate-500 leading-relaxed">Discuss your marks, category, and state quota. Get a list of 5 Safe colleges you can apply to immediately.</p>
-          </div>
-          <div className="space-y-4">
-            <div className="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl shadow-inner">
-              <FaVideo />
-            </div>
-            <h3 className="text-2xl font-bold">Live Video Call</h3>
-            <p className="text-slate-500 leading-relaxed">Face-to-face interaction on Google Meet. No bots, no automated emails—just real engineering students.</p>
-          </div>
-          <div className="space-y-4">
-            <div className="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-2xl shadow-inner">
-              <FaUserShield />
-            </div>
-            <h3 className="text-2xl font-bold">Zero-Commitment</h3>
-            <p className="text-slate-500 leading-relaxed">It&apos;s just ₹19. If you like the guidance, hire them for JoSAA counseling. If not, you only lost a chai&apos;s worth of money.</p>
-          </div>
+          <button 
+            onClick={() => openBooking(null)}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-2xl font-black text-lg shadow-2xl shadow-blue-200 transition-all transform hover:-translate-y-1"
+          >
+            Start 15-Min Session (₹19)
+          </button>
         </div>
       </section>
 
       {/* --- MENTOR PREVIEW --- */}
-      <section className="py-24 bg-slate-900 text-white overflow-hidden">
+      <section className="py-20 bg-slate-950 text-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div>
-              <h2 className="text-4xl font-black mb-4">Our Elite Mentors</h2>
-              <p className="text-slate-400">Hand-picked students from India&apos;s top technical institutes.</p>
-            </div>
-            <div className="flex gap-2">
-                <span className="px-4 py-2 bg-white/10 rounded-full text-xs font-bold uppercase tracking-widest border border-white/10">VNIT Nagpur</span>
-                <span className="px-4 py-2 bg-white/10 rounded-full text-xs font-bold uppercase tracking-widest border border-white/10">IIT Bombay</span>
-                <span className="px-4 py-2 bg-white/10 rounded-full text-xs font-bold uppercase tracking-widest border border-white/10">NIT Trichy</span>
-            </div>
-          </div>
-
+          <h2 className="text-3xl font-black mb-12 text-center">Pick Your Expert</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {mentors.map((m, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-[2rem] hover:bg-white/10 transition-all group">
-                <div className="w-20 h-20 bg-slate-800 rounded-2xl mb-6 flex items-center justify-center text-3xl font-black text-blue-400">
+              <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-[2.5rem] relative group overflow-hidden">
+                <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter ${m.status === 'Online' ? 'bg-emerald-500/20 text-emerald-400' : 'bg-amber-500/20 text-amber-400'}`}>
+                   {m.status}
+                </div>
+                <div className="w-16 h-16 bg-slate-800 rounded-2xl mb-6 flex items-center justify-center text-2xl font-black text-blue-400">
                   {m.name[0]}
                 </div>
-                <h4 className="text-xl font-bold mb-1">{m.name}</h4>
+                <h4 className="text-xl font-bold">{m.name}</h4>
                 <p className="text-blue-400 font-bold text-sm mb-4">{m.college}</p>
-                <div className="flex items-center gap-2 text-xs text-slate-400 mb-6 font-medium">
-                  <FaHistory /> {m.rank}
-                </div>
-                <Link href={`/payment`}><button className="w-full py-3 bg-white text-slate-900 rounded-xl font-black text-sm group-hover:bg-blue-500 group-hover:text-white transition-all">
-                  Book Session
-                </button></Link>
+                <button 
+                  onClick={() => openBooking(m)}
+                  className="w-full py-4 bg-white text-slate-950 rounded-xl font-black text-xs uppercase tracking-widest hover:bg-blue-500 hover:text-white transition-all"
+                >
+                  Request Session
+                </button>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* --- TRUST FOOTER --- */}
-      <section className="py-20 max-w-3xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold mb-6">Still confused?</h2>
-        <p className="text-slate-500 mb-10 leading-relaxed">
-          The difference between a Better College and a Better Year is often one 15-minute conversation. Don&apos;t let your JEE hard work go to waste due to bad counseling.
-        </p>
-        <div className="flex items-center justify-center gap-6 text-slate-400 font-bold text-sm">
-            <span className="flex items-center gap-2"><FaCheckCircle className="text-emerald-500" /> Secure Payment</span>
-            <span className="flex items-center gap-2"><FaCheckCircle className="text-emerald-500" /> 100% Refundable</span>
+      {/* --- BOOKING MODAL (THE NEXT STEP) --- */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-100 flex items-center justify-center px-4">
+          <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm" onClick={() => setIsModalOpen(false)}></div>
+          <div className="bg-white w-full max-w-lg rounded-[2.5rem] relative z-10 p-8 md:p-12 shadow-2xl overflow-hidden">
+            <button onClick={() => setIsModalOpen(false)} className="absolute top-6 right-6 text-slate-400 hover:text-slate-900 transition-colors">
+              <FaTimes size={24} />
+            </button>
+            
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-black mb-2">Prepare Your Session</h3>
+              <p className="text-slate-500 text-sm">Fill your JEE details so the mentor is ready with your college list.</p>
+            </div>
+
+            <form className="space-y-4">
+              <div className="relative">
+                <FaUserEdit className="absolute left-4 top-4 text-slate-400" />
+                <input type="text" onChange={(e) => setFormData({...formData, percentile: e.target.value})} placeholder="JEE Percentile (e.g. 98.2)" className="w-full p-4 pl-12 bg-slate-50 border border-slate-100 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 outline-none" />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <select onChange={(e) => setFormData({...formData, category: e.target.value})} className="p-4 bg-slate-50 border border-slate-100 rounded-xl font-bold text-slate-500 outline-none">
+                  <option>Category</option>
+                  <option>General</option>
+                  <option>OBC-NCL</option>
+                  <option>SC/ST</option>
+                  <option>EWS</option>
+                </select>
+                <input type="text" onChange={(e) => setFormData({...formData, state: e.target.value})} placeholder="Home State" className="p-4 bg-slate-50 border border-slate-100 rounded-xl font-bold outline-none" />
+              </div>
+             <button onClick={handlePayment} className="block w-full bg-emerald-600 text-white text-center py-5 rounded-2xl font-black text-lg shadow-xl shadow-emerald-100 hover:bg-emerald-700 transition-all">
+                Pay ₹19 to Connect Now
+              </button>
+            </form>
+            
+            <p className="text-[10px] text-center text-slate-400 mt-6 font-medium uppercase tracking-widest">
+              You will be redirected to the secure payment gateway
+            </p>
+          </div>
         </div>
-      </section>
+      )}
     </div>
   );
 }

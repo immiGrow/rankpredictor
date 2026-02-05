@@ -22,7 +22,7 @@ export default function TopNITsCSEPage() {
   <title>Top 10 NITs for Computer Science (CSE) 2026: Cutoffs & Safe Scores</title>
   <meta name="description" content="Official JoSAA analysis for Top NITs for CSE. Compare NIT Trichy, Surathkal, and Warangal 2026 expected cutoffs, placement trends, and safe marks vs percentile." />
   <meta name="keywords" content="Best NIT for CSE 2026, NIT Computer Science Cutoff, NIT CSE Ranking, JoSAA 2026 Prediction, NIT Trichy vs NIT Surathkal CSE" />
-  <link rel="canonical" href="https://www.jeerankpredictor.in/top-nits-for-computer-science-cse-cutoff-2026" />
+  <Link prefetch={false} rel="canonical" href="https://www.jeerankpredictor.in/top-nits-for-computer-science-cse-cutoff-2026" />
   
   <meta property="og:title" content="2026 CSE Cutoffs: Top 10 NITs Comparison Table" />
   <meta property="og:description" content="Direct comparison of 2026 expected CSE cutoffs. See the 'Safe Percentile' for General, OBC, EWS, and SC/ST categories." />
@@ -131,10 +131,10 @@ export default function TopNITsCSEPage() {
                </div>
             </div>
             <div className="flex gap-3 w-full md:w-auto">
-              <Link href="/jee-rank-predictor" className="flex-1 md:flex-none text-center px-5 py-3 bg-slate-900 text-white text-xs font-black uppercase tracking-widest rounded-xl hover:bg-slate-800 transition">
+              <Link prefetch={false} href="/jee-rank-predictor" className="flex-1 md:flex-none text-center px-5 py-3 bg-slate-900 text-white text-xs font-black uppercase tracking-widest rounded-xl hover:bg-slate-800 transition">
                 Check Rank
               </Link>
-              <Link href="/jee-main-2026-toughest-shift-analysis-january-session" className="flex-1 md:flex-none text-center px-5 py-3 bg-emerald-100 text-emerald-700 text-xs font-black uppercase tracking-widest rounded-xl hover:bg-emerald-200 transition">
+              <Link prefetch={false} href="/jee-main-2026-toughest-shift-analysis-january-session" className="flex-1 md:flex-none text-center px-5 py-3 bg-emerald-100 text-emerald-700 text-xs font-black uppercase tracking-widest rounded-xl hover:bg-emerald-200 transition">
                 Shift Analysis
               </Link>
             </div>
@@ -168,7 +168,7 @@ export default function TopNITsCSEPage() {
           { title: "Frequently Asked Questions", id: "faq-section" },
         ].map((item) => (
           <li key={item.id}>
-            <Link 
+            <Link prefetch={false} 
               href={`#${item.id}`} 
               className="flex items-center gap-3 text-slate-700 hover:text-blue-600 font-bold transition-all group"
             >
@@ -230,7 +230,7 @@ export default function TopNITsCSEPage() {
 
                   {/* CTA */}
                   <div className="md:w-48">
-                    <Link 
+                    <Link prefetch={false} 
                       href={`/josaa-opening-closing-rank-2026-nit-iiit-cutoff/${nit.slug}`}
                       className="flex items-center justify-center gap-2 w-full py-4 bg-slate-900 text-white text-[10px] font-black uppercase tracking-widest rounded-xl group-hover:bg-blue-600 transition-colors"
                     >
@@ -254,10 +254,10 @@ export default function TopNITsCSEPage() {
              </p>
              
              <div className="flex flex-wrap justify-center gap-4 relative z-10">
-               <Link href="/jee-mains-150-marks-percentile-2025" className="bg-white text-blue-600 px-6 py-3 rounded-xl text-xs font-black uppercase hover:scale-105 transition-transform">
+               <Link prefetch={false} href="/jee-mains-150-marks-percentile-2025" className="bg-white text-blue-600 px-6 py-3 rounded-xl text-xs font-black uppercase hover:scale-105 transition-transform">
                  150 Marks Analysis
                </Link>
-               <Link href="/jee-mains-120-marks-percentile-2025" className="bg-blue-500/30 border border-white/20 text-white px-6 py-3 rounded-xl text-xs font-black uppercase hover:bg-blue-500/50 transition-colors">
+               <Link prefetch={false} href="/jee-mains-120-marks-percentile-2025" className="bg-blue-500/30 border border-white/20 text-white px-6 py-3 rounded-xl text-xs font-black uppercase hover:bg-blue-500/50 transition-colors">
                  120 Marks Strategy
                </Link>
              </div>
@@ -271,23 +271,23 @@ export default function TopNITsCSEPage() {
         Missed CSE? <span className="text-blue-600">Strategic Alternatives</span>
       </h2>
       <p className="text-slate-600 leading-relaxed mb-6 font-medium">
-        While <Link href="/josaa-opening-closing-rank-2026-nit-iiit-cutoff/nit-trichy" className="text-blue-600 underline">NIT Trichy CSE</Link> remains the gold standard, the 2026 trend shows students shifting toward <strong>AI/ML</strong> and <strong>Data Science</strong>. 
+        While <Link prefetch={false} href="/josaa-opening-closing-rank-2026-nit-iiit-cutoff/nit-trichy" className="text-blue-600 underline">NIT Trichy CSE</Link> remains the gold standard, the 2026 trend shows students shifting toward <strong>AI/ML</strong> and <strong>Data Science</strong>. 
       </p>
       <div className="space-y-4">
         <div className="p-4 bg-white border-l-4 border-blue-500 shadow-sm rounded-r-2xl">
           <h4 className="font-bold text-slate-900">Artificial Intelligence (AI)</h4>
-          <p className="text-xs text-slate-500">Often closes within 500 ranks of core CSE. Look at <Link href="/josaa-opening-closing-rank-2026-nit-iiit-cutoff/nit-karnataka" className="font-bold hover:text-blue-600">NIT Surathkal</Link>.</p>
+          <p className="text-xs text-slate-500">Often closes within 500 ranks of core CSE. Look at <Link prefetch={false} href="/josaa-opening-closing-rank-2026-nit-iiit-cutoff/nit-karnataka" className="font-bold hover:text-blue-600">NIT Surathkal</Link>.</p>
         </div>
         <div className="p-4 bg-white border-l-4 border-emerald-500 shadow-sm rounded-r-2xl">
           <h4 className="font-bold text-slate-900">Data Science & Engineering</h4>
-          <p className="text-xs text-slate-500">Perfect for ranks between 4,000-8,000. Check <Link href="/josaa-opening-closing-rank-2026-nit-iiit-cutoff/vnit-nagpur" className="font-bold hover:text-emerald-600">VNIT Nagpur</Link>.</p>
+          <p className="text-xs text-slate-500">Perfect for ranks between 4,000-8,000. Check <Link prefetch={false} href="/josaa-opening-closing-rank-2026-nit-iiit-cutoff/vnit-nagpur" className="font-bold hover:text-emerald-600">VNIT Nagpur</Link>.</p>
         </div>
       </div>
     </div>
     <div className="bg-slate-900 rounded-[2.5rem] p-8 text-white">
       <h4 className="text-xl font-bold mb-4 text-blue-400">The 2026 Shift Logic</h4>
       <p className="text-sm text-slate-400 leading-relaxed mb-6">
-        Our <Link href="/jee-mains-2026-shift-wise-marks-percentile-analysis" className="text-white underline">January Shift Analysis</Link> indicates that percentile inflation is high. If your rank is 1,000-2,000 places behind the core CSE cutoff, these specializations offer 95% identical placement opportunities.
+        Our <Link prefetch={false} href="/jee-mains-2026-shift-wise-marks-percentile-analysis" className="text-white underline">January Shift Analysis</Link> indicates that percentile inflation is high. If your rank is 1,000-2,000 places behind the core CSE cutoff, these specializations offer 95% identical placement opportunities.
       </p>
       <div className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10">
         <div className="text-2xl font-black text-blue-400">98%</div>
@@ -377,7 +377,7 @@ export default function TopNITsCSEPage() {
           <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-3 italic">
             {item.opinion}
           </p>
-          <Link href={item.link} className="text-blue-600 text-xs font-black uppercase tracking-widest hover:text-slate-900 flex items-center gap-2">
+          <Link prefetch={false} href={item.link} className="text-blue-600 text-xs font-black uppercase tracking-widest hover:text-slate-900 flex items-center gap-2">
             View Full Cutoff Table <FaArrowRight size={10} />
           </Link>
         </div>
@@ -415,7 +415,7 @@ export default function TopNITsCSEPage() {
             <span className="font-mono text-blue-300">HS: ~12k | OS: ~9k</span>
           </div>
         </div>
-        <Link href="/josaa-college-predictor" className="block mt-6 text-center py-3 bg-white text-indigo-900 rounded-xl font-black text-[10px] uppercase tracking-widest">
+        <Link prefetch={false} href="/josaa-college-predictor" className="block mt-6 text-center py-3 bg-white text-indigo-900 rounded-xl font-black text-[10px] uppercase tracking-widest">
           Check My State Quota Chances
         </Link>
       </div>
@@ -434,7 +434,7 @@ export default function TopNITsCSEPage() {
       { title: "Overall Marks vs Rank 2026", link: "/jee_main_marks_vs_rank_2026" },
       { title: "NTA Percentile Logic", link: "/blog/nta_percentile_calculation" }
     ].map((item, i) => (
-      <Link key={i} href={item.link} className="p-6 bg-white border border-slate-100 rounded-3xl flex items-center justify-between group hover:border-blue-500 transition-all">
+      <Link prefetch={false} key={i} href={item.link} className="p-6 bg-white border border-slate-100 rounded-3xl flex items-center justify-between group hover:border-blue-500 transition-all">
         <span className="font-bold text-slate-700 group-hover:text-blue-600">{item.title}</span>
         <FaArrowRight className="text-slate-300 group-hover:text-blue-500 group-hover:translate-x-1 transition-all" />
       </Link>
@@ -449,21 +449,21 @@ export default function TopNITsCSEPage() {
     <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
       <h4 className="font-bold text-slate-900 mb-3 text-lg">What is the expected percentile for CSE at top NITs?</h4>
       <p className="text-slate-600 leading-relaxed">
-        To secure a CSE seat in the top 3 NITs (Trichy, Surathkal, Warangal), you generally need a <strong>99.7+ percentile</strong>. For other top 10 NITs, a percentile above 99.2 is considered safe. Check our <Link href="/jee-mains-2026-shift-wise-marks-percentile-analysis" className="text-blue-600 font-bold underline">Marks vs Percentile Analysis</Link> to see your predicted score.
+        To secure a CSE seat in the top 3 NITs (Trichy, Surathkal, Warangal), you generally need a <strong>99.7+ percentile</strong>. For other top 10 NITs, a percentile above 99.2 is considered safe. Check our <Link prefetch={false} href="/jee-mains-2026-shift-wise-marks-percentile-analysis" className="text-blue-600 font-bold underline">Marks vs Percentile Analysis</Link> to see your predicted score.
       </p>
     </div>
 
     <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
       <h4 className="font-bold text-slate-900 mb-3 text-lg">Does a tough shift lower the CSE cutoff?</h4>
       <p className="text-slate-600 leading-relaxed">
-        Yes, in terms of marks. In a tough shift, you might get a 99.5 percentile at 180 marks, whereas in an easy shift, you might need 230 marks for the same percentile. Ranks (cutoffs) stay similar, but marks vary. View our <Link href="/jee-main-2026-toughest-shift-analysis-january-session" className="text-blue-600 font-bold underline">Shift Difficulty Report</Link> for details.
+        Yes, in terms of marks. In a tough shift, you might get a 99.5 percentile at 180 marks, whereas in an easy shift, you might need 230 marks for the same percentile. Ranks (cutoffs) stay similar, but marks vary. View our <Link prefetch={false} href="/jee-main-2026-toughest-shift-analysis-january-session" className="text-blue-600 font-bold underline">Shift Difficulty Report</Link> for details.
       </p>
     </div>
 
     <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
       <h4 className="font-bold text-slate-900 mb-3 text-lg">Can I get CSE in an NIT with 95 percentile?</h4>
       <p className="text-slate-600 leading-relaxed">
-        Getting core CSE in top NITs at 95 percentile is difficult for General OS candidates. However, you can target <strong>Home State Quota</strong> or newer NITs like NIT Srinagar, NIT Agartala, or Mizoram. Alternatively, check <Link href="/josaa-college-predictor" className="text-blue-600 font-bold underline">our College Predictor</Link> for specialized branches like AI or Data Science.
+        Getting core CSE in top NITs at 95 percentile is difficult for General OS candidates. However, you can target <strong>Home State Quota</strong> or newer NITs like NIT Srinagar, NIT Agartala, or Mizoram. Alternatively, check <Link prefetch={false} href="/josaa-college-predictor" className="text-blue-600 font-bold underline">our College Predictor</Link> for specialized branches like AI or Data Science.
       </p>
     </div>
 
@@ -480,7 +480,7 @@ export default function TopNITsCSEPage() {
       { name: "NIT Calicut", slug: "nit-calicut" },
       { name: "NIT Kurukshetra", slug: "nit-kurukshetra" }
     ].map((clg) => (
-      <Link 
+      <Link prefetch={false} 
         key={clg.slug}
         href={`/josaa-opening-closing-rank-2026-nit-iiit-cutoff/${clg.slug}`}
         className="px-4 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold text-slate-600 hover:border-blue-500 hover:text-blue-600 transition-all"
