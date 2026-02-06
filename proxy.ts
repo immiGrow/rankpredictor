@@ -1,4 +1,6 @@
 // proxy.ts
+export const runtime = 'edge'; // <--- THIS IS REQUIRED FOR CLOUDFLARE
+
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
