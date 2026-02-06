@@ -1,2 +1,9 @@
-import { defineCloudflareConfig } from "@opennextjs/cloudflare";
-export default defineCloudflareConfig({});
+const config = {
+  default: {
+    deployment: {
+      provider: "cloudflare-workers",
+    },
+  },
+};
+
+export default config;
