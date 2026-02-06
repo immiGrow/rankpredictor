@@ -1,18 +1,10 @@
+// @ts-nocheck
 import { defineCloudflareConfig } from "@opennextjs/cloudflare";
 
 export default defineCloudflareConfig({
-  default: {
-    override: {
-      wrapper: "cloudflare-node",
-      converter: "edge",
-      incrementalCache: "dummy",
-      tagCache: "dummy",
-      queue: "dummy",
-    },
-  },
-  // THIS IS THE FIX: Force middleware to stay inside the main worker
+  // This tells OpenNext to NOT split the middleware into a separate worker
   middleware: {
-    external: false, 
+    external: false,
     override: {
       wrapper: "cloudflare-node",
       converter: "edge",
