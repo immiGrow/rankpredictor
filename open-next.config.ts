@@ -2,12 +2,12 @@
 import { defineCloudflareConfig } from "@opennextjs/cloudflare";
 
 export default defineCloudflareConfig({
+  // This tells OpenNext how to handle the edge runtime
+  default: {
+    runtime: "edge",
+  },
+  // This explicitly handles the middleware bundling
   middleware: {
-    external: false, // Keep this false to bundle it together
-    override: {
-      wrapper: "cloudflare-node",
-      converter: "edge",
-      proxyExternalRequest: "fetch",
-    },
+    external: false,
   },
 });
