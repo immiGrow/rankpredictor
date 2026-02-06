@@ -1,11 +1,22 @@
 import { defineCloudflareConfig } from "@opennextjs/cloudflare";
-import r2IncrementalCache from "@opennextjs/cloudflare/overrides/incremental-cache/r2-incremental-cache";
-import doQueue from "@opennextjs/cloudflare/overrides/queue/do-queue";
-import d1TagCache from "@opennextjs/cloudflare/overrides/tag-cache/d1-next-tag-cache";
 
 export default defineCloudflareConfig({
-  // Provide valid override implementations here:
-  incrementalCache: r2IncrementalCache,
-  queue: doQueue,
-  tagCache: d1TagCache,
+  default: {
+    override: {
+      wrapper: "cloudflare-node",
+      converter: "edge",
+      incrementalCache: "dummy",
+      tagCache: "dummy",
+      queue: "dummy",
+    },
+  },
+  // THIS IS THE FIX: Force middleware to stay inside the main worker
+  middleware: {
+    external: false, 
+    override: {
+      wrapper: "cloudflare-node",
+      converter: "edge",
+      proxyExternalRequest: "fetch",
+    },
+  },
 });
