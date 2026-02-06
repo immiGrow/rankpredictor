@@ -1,10 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Force the edge runtime for the proxy/middleware layer
-  experimental: {
-    runtime: 'edge',
-  }
+  // DO NOT add experimental: { runtime: 'edge' } here yet
+  // as it can conflict with the proxy/middleware logic in Next 16
 };
 
 export default nextConfig;
