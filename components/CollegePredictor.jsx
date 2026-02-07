@@ -81,7 +81,7 @@ const chanceInfo = chanceMap.find(c => college.score >= c.min) || {
 }
 
 
-function EmailCTA({ rank, colleges }) {
+function EmailCTA({ rank, colleges,form,rankType }) {
   const [email, setEmail] = useState("");
   const [done, setDone] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -104,7 +104,7 @@ function EmailCTA({ rank, colleges }) {
     const res = await fetch("/api/college-predictor/lead", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, rank, colleges }),
+      body: JSON.stringify({ email, rank, colleges,category:form.category,gender:form.gender,quota:form.quota,rankType }),
     });
 
     const data = await res.json();
@@ -483,7 +483,7 @@ const predict = async () => {
               
                
                    <div id="unlock-cta">
-{result && <EmailCTA rank={rank} colleges={result} />}
+{result && <EmailCTA rank={rank} colleges={result} form={form} rankType={rankType}/>}
 </div>
              
             </>
