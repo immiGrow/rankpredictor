@@ -23,7 +23,7 @@ export const metadata = {
   openGraph: {
     type: "article",
     url: "https://www.jeerankpredictor.in/jee-main-2026-session-1-result-scorecard-download",
-    title: "🔴 JEE Main 2026 Session 1 Result OUT: Check Your Percentile Here!",
+    title: "🔴 JEE Main 2026 Session 1 Result OUT: Check Your Marks, Percentile Here!",
     description:
       "The NTA has released the Jan Session results. Use our direct link to download your scorecard and predict your AIR instantly.",
     siteName: "JEE Rank Predictor",
