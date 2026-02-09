@@ -1,11 +1,14 @@
 import { NextResponse } from "next/server";
-import {connectDB} from "@/lib/mongodb";
-import Mentors from "@/models/Mentors";
 
+import Mentors from "@/models/Mentors";
+import { MongoClient } from "mongodb";
+
+const MONGO_URI = process.env.MONGO_URI;
 
 export async function POST(req) {
   try {
-    await connectDB();
+     const client = new MongoClient(MONGO_URI);
+    await client.connect();
     const data = await req.formData();
 
     // Extract fields from FormData
